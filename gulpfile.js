@@ -5,9 +5,10 @@ const sourcemaps  = require('gulp-sourcemaps');
 const rimraf      = require('rimraf');
 
 
+
 gulp.task('js', function () {
     return gulp.src([
-            'app/src/**/*.js'
+            'app/**/*.js'
         ])
         .pipe(sourcemaps.init())
         .pipe(concat('main.js'))
@@ -26,13 +27,22 @@ gulp.task('sass', function () {
         .pipe(gulp.dest('bin/css'))
 });
 
+gulp.task('css', function() {
+    return gulp.src('/app/src/**/*.css')
+        .pipe(concat('main.css'))
+        .pipe(gulp.dest('./bin/css'))
+        .pipe(reload({ stream: true }));
+});
+
 gulp.task('clean', function del(cb) {
     return rimraf('bin', cb);
 });
 
 gulp.task('watch', function () {
     gulp.watch('app/src/**/*.js',  gulp.series('js')),
-    gulp.watch('app/src/**/*.sass',  gulp.series('sass'))
+    gulp.watch('app/src/**/*.sass',  gulp.series('sass')),
+        gulp.watch('app/src/**/*.css',  gulp.series('css'))
+
 });
 
 gulp.task('default', gulp.series(
