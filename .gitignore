@@ -1,5 +1,8 @@
 node_modules
 
+
+.vscode
 .idea
 bin
 vendor
+package-lock.json
