@@ -1,6 +1,6 @@
 {
   "name": "hillel-evo-event-messenger",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "hillel-evo event messenger",
   "main": "index.js",
   "scripts": {
@@ -25,6 +25,7 @@
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.1",
     "node-static": "^0.7.10",
-    "rimraf": "^2.6.2"
+    "rimraf": "^2.6.2",
+    "ws": "^3.3.2"
   }
 }
