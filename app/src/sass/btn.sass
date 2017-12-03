@@ -1,0 +1,47 @@
+.button
+  font-family: "Arial Black"
+  font-size: 14px
+  height: 30px
+  width: 80px
+  border: 0px
+  padding-left: 10px
+  padding-right: 10px
+  align-items: center
+  border-radius: 15px
+  transition: 0.2s
+
+.btn-submit
+  @extend .button
+  background-color: #9bb00f
+  color: black
+  &:hover
+    background-color: #d3e84b
+  &:active
+    background-color: #d3e84b
+
+.btn-cancel
+  @extend .button
+  background-color: #8f9e61
+  color: #faffdb
+  &:hover
+    background-color: #86877d
+  &:active
+    background-color: #8f9e61
+
+.btn-info
+  @extend .button
+  background-color: #d6ded9
+  color: black
+  &:hover
+    background-color: #b5b6ac
+  &:active
+    background-color: #ebebeb
+
+.btn-warning
+  @extend .button
+  background-color: #fbc325
+  color: black
+  &:hover
+    background-color: #ffde7f
+  &:active
+    background-color: #fbc325
