@@ -5,7 +5,7 @@ const sourcemaps = require('gulp-sourcemaps');
 const rimraf = require('rimraf');
 
 let paths = {
-  js: 'app/src/**/*.js',
+  js: 'app/**/*.js',
   sass: {
     blocks: 'app/src/**/*.sass',
     common: 'app/sass/**/*.sass',

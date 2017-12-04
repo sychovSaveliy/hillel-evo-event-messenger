@@ -1,49 +1,32 @@
 app.config(function($stateProvider, $urlRouterProvider){ 
                                                                                                                  
-    $urlRouterProvider.otherwise("/view-1"); 
+    $urlRouterProvider.otherwise("/login"); 
         
     $stateProvider
-    
-        .state('view-1', { 
-            url: '/view-1',
-            views: {
-                "viewA": {
-                    templateUrl: 'app/src/page-blocks/layouts/...',  
-                    controller: 'view-1A.controller'
-                },
-                "viewB": {
-                    templateUrl: 'app/src/page-blocks/layouts/...',  
-                    controller: 'view-1B.controller'
-                }
-            }
-        })
         
-        .state('view-2', { 
-            url: '/view-2', 
+        .state('main', { 
+            url: '/main', 
             views: {
-                "viewA": {
-                    templateUrl: 'app/src/page-blocks/layouts/...',  
-                    controller: 'view-2.controller'
+                "":{
+                    templateUrl: 'app/src/page-blocks/layouts/main/l-main.html',
+                    controller: 'l-main.controller'
                 },
-                "viewB": {
-                    templateUrl: 'app/src/page-blocks/layouts/...',  
-                    controller: 'view-2.controller'
+                "header@main": {
+                    templateUrl: 'app/src/page-blocks/layouts/main/l-header.html',  
+                    controller: 'l-header.controller'
+                },
+                "chats@main": {
+                    templateUrl: 'app/src/page-blocks/layouts/main/l-chats.html',  
+                    controller: 'l-chats.controller'
+                },
+                "dialog@main": {
+                    templateUrl: 'app/src/page-blocks/layouts/main/l-dialog.html',
+                    controller: 'l-dialog.controller'
+                },
+                "event@main": {
+                    templateUrl: 'app/src/page-blocks/layouts/main/l-event.html',
+                    controller: 'l-event.controller'
                 }
             }            
         })
-      
-        .state('view-3', {
-            url: '/view-3',
-            templateUrl: 'app/src/blocks/page-blocks/layouts/...',
-            controller: 'view-3.controller'
-        })
-
-});
-
-app.filter('trustUrl', function ($sce) {
-    
-    return function(url) {
-        return $sce.trustAsResourceUrl(url);
-    };
-
 });
