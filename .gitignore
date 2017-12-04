@@ -6,3 +6,4 @@ node_modules
 bin
 vendor
 package-lock.json
+templates/compiled

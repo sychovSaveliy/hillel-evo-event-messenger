@@ -8,7 +8,8 @@ let paths = {
   js: 'app/src/**/*.js',
   sass: {
     blocks: 'app/src/**/*.sass',
-    common: 'app/sass/**/*.sass'
+    common: 'app/sass/**/*.sass',
+    templates: 'templates/**/*.sass'
   },
   css: {
     libs: 'app/libs/**/*.css',
@@ -44,12 +45,18 @@ gulp.task('clean', function del(cb) {
 });
 
 gulp.task('watch', function () {
-  gulp.watch(paths.js, gulp.series('js')),
-  gulp.watch([paths.sass.blocks, paths.sass.common], gulp.series('sass'))
+  gulp.watch(paths.js, ['js']),
+  gulp.watch([paths.sass.blocks, paths.sass.common], ['sass'])
 });
 
-gulp.task('default', gulp.series(
-  'clean',
-  gulp.parallel('sass', 'js'),
-  gulp.parallel('watch')
-));
+gulp.task('sass:templates', function () {
+  return gulp.src(paths.sass.templates)
+    .pipe(sass())
+    .pipe(gulp.dest('./templates/compiled/'))
+});
+
+
+gulp.task('watch:templates', function () {
+  gulp.start('sass:templates')
+  gulp.watch(paths.sass.templates, ['sass:templates']);
+});
