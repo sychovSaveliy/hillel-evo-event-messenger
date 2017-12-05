@@ -1,0 +1,29 @@
+{
+  "user": {
+    "id": "002",
+    "name": "Name of user 002",
+    "birthday": "22.02.1991",
+    "sex": "female",
+    "photo": "./mock/api/collections/users/id_002/photo_user.png"
+  },
+  "contacts": [
+    {
+      "id": "002",
+      "name": "My friend 01"
+    },
+    {
+      "id": "003",
+      "name": "My friend 02"
+    }
+  ],
+  "events": [
+    {
+      "date": "01.01.2018",
+      "name": "NY"
+    },
+    {
+      "date": "07.01.2018",
+      "name": "X-mass"
+    }
+  ]
+}

@@ -8,7 +8,7 @@ open 2-n windows http://localhost:3003/ws/
 
 create messages
 
-# flexboxgrid 
+# flexboxgrid
 
 http://flexboxgrid.com/
 
@@ -29,7 +29,12 @@ http://flexboxgrid.com/
 
 #
 
-Следить за имзенениями: 
+Следить за имзенениями:
 
 `gulp watch:templates`
+
+# Mock
+
+'npm run mock'
+
 

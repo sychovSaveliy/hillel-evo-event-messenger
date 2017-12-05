@@ -4,7 +4,8 @@
   "description": "hillel-evo event messenger",
   "main": "index.js",
   "scripts": {
-    "server": "node server/index.js"
+    "server": "node server/index.js",
+    "mock": "node ./mock/index.js"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,7 @@
   "homepage": "https://github.com/sychovSaveliy/hillel-evo-event-messenger#readme",
   "devDependencies": {
     "angular": "^1.6.7",
+    "angular-ui-router": "^0.4.3",
     "browser-sync": "^2.18.13",
     "eslint": "^4.12.0",
     "gulp": "^3.9.1",

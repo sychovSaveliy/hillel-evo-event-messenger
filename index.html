@@ -6,48 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>EVENT messenger</title>
     <link rel="stylesheet" href="bin/css/main.css">
-    <script src="vendor/angular.js"></script>
     <link rel="stylesheet" href="app/src/css/flexboxgrid.css">
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="node_modules/angular-ui-router/release/angular-ui-router.js"></script>
+    <!--<script src="app/js/app.js"></script>-->
+  <script src="bin/js/main.js"></script>
+    <!--<script src="app/js/config/route.config.js"></script>-->
+
 </head>
 <body>
-    <div class="div-row-loginpage">
-        <div class="div-logotype">
-            <img src="app/img/main/logo_login_page.png" alt="EVENT messenger">
-        </div>
-        <br>
-        <div>
-        <form class="login-form">
-            <div>
-                <span>Enter login or e-mail: </span><input type="text" class="input-primary" required>
-            </div>
-            <br>
-            <div>
-                <span>Enter password: </span><input type="password" class="input-primary" required>
-            </div>
-            <br>
-            <div>
-                <input type="submit" class="btn-submit" value="enter"> <button class="btn-cancel">clear</button>
-            </div>
-        </form>
-        </div>
-        <div>
-            <a href="#" class="text-a-forgotPass"><span>Forgot password?</span></a>
-        </div>
-        <div class="spacer-loginpage"></div>
-        <div class="block-social-buttons">
-            <span class="text-loginpage">Fast registration: </span>
-            <img src="app/img/icons/fb-little.png" class="img-social-button" alt="Feacebook">
-            <img src="app/img/icons/twitter-little.png" class="img-social-button" alt="Twitter">
-            <img src="app/img/icons/google-little.png" class="img-social-button" alt="G+">
-            <img src="app/img/icons/linked-little.png" class="img-social-button" alt="Linkedin">
-        </div>
-           <div class="spacer-loginpage"></div>
-        <div><span class="text-loginpage">Примеры кнопок: </span>
-        <button class="btn-cancel">cancel</button>
-        <button class="btn-submit">submit</button>
-        <button class="btn-warning">warning</button>
-        <button class="btn-info">info</button>
-        </div>
-    </div>
+<div ui-view></div>
 </body>
 </html>

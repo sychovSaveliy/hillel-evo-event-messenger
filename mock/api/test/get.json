@@ -1,0 +1,10 @@
+{
+    "data": {
+        "action": "get test"
+    },
+    "list": [
+        {},
+        {},
+        false
+    ]
+}
