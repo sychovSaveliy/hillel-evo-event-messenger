@@ -1,49 +1,34 @@
-app.config(function($stateProvider, $urlRouterProvider){ 
-                                                                                                                 
-    $urlRouterProvider.otherwise("/view-1"); 
-        
+app.config(function($stateProvider, $urlRouterProvider){
+
+    $urlRouterProvider.otherwise("/test");
+
     $stateProvider
-    
-        .state('view-1', { 
-            url: '/view-1',
+
+        .state('loginPage', {
+            url: '/loginPage',
             views: {
-                "viewA": {
-                    templateUrl: 'app/src/page-blocks/layouts/...',  
-                    controller: 'view-1A.controller'
+                "login": {
+                    templateUrl: 'app/src/blocks/page-blocks/layouts/l-login/l-login.form.html',
+                    controller: 'l-login.controller'
                 },
-                "viewB": {
-                    templateUrl: 'app/src/page-blocks/layouts/...',  
-                    controller: 'view-1B.controller'
+                "socialBtn": {
+                    templateUrl: 'app/src/blocks/page-blocks/layouts/l-login/l-fast-registration.html',
+                    controller: 'l-fast-registration.controller'
                 }
             }
         })
-        
-        .state('view-2', { 
-            url: '/view-2', 
+
+        .state('test', {
+            url: '/test',
             views: {
-                "viewA": {
-                    templateUrl: 'app/src/page-blocks/layouts/...',  
-                    controller: 'view-2.controller'
+                "login": {
+                  templateUrl: 'app/src/blocks/page-blocks/layouts/l-login/l-login.html',
+                  controller: 'l-login.controller'
                 },
-                "viewB": {
-                    templateUrl: 'app/src/page-blocks/layouts/...',  
-                    controller: 'view-2.controller'
+                "buttons": {
+                    templateUrl: 'app/src/blocks/page-blocks/layouts/l-login/l-test-buttons.html',
+                    controller: 'l-test-buttons.controller'
                 }
-            }            
+            }
         })
-      
-        .state('view-3', {
-            url: '/view-3',
-            templateUrl: 'app/src/blocks/page-blocks/layouts/...',
-            controller: 'view-3.controller'
-        })
-
-});
-
-app.filter('trustUrl', function ($sce) {
-    
-    return function(url) {
-        return $sce.trustAsResourceUrl(url);
-    };
-
 });

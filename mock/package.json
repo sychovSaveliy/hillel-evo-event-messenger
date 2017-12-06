@@ -1,0 +1,18 @@
+{
+    "name": "mock-server",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "node ./index.js"
+    },
+    "dependencies": {},
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "body-parser": "^1.18.2",
+        "express": "^4.16.2",
+        "fs": "0.0.1-security",
+        "node-static": "^0.7.10"
+    }
+}

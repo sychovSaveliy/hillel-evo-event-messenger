@@ -5,7 +5,10 @@ const sourcemaps = require('gulp-sourcemaps');
 const rimraf = require('rimraf');
 
 let paths = {
-  js: 'app/src/**/*.js',
+  js: [
+    './app/js/**/*.js',
+    './app/src/**/*.js'
+  ],
   sass: {
     blocks: 'app/src/**/*.sass',
     common: 'app/sass/**/*.sass',
@@ -17,15 +20,21 @@ let paths = {
   }
 };
 
-gulp.task('js', function () {
-  return gulp.src([
-      paths.js
-    ])
-    .pipe(sourcemaps.init())
+gulp.task('js', function() {
+  return gulp.src(paths.js)
     .pipe(concat('main.js'))
-    .pipe(sourcemaps.write())
-    .pipe(gulp.dest('bin/js'))
+    .pipe(gulp.dest('./bin/js'));
 });
+
+// gulp.task('js', function () {
+//   return gulp.src([
+//       paths.js
+//     ])
+//     .pipe(sourcemaps.init())
+//     .pipe(concat('main.js'))
+//     .pipe(sourcemaps.write())
+//     .pipe(gulp.dest('bin/js'))
+// });
 
 gulp.task('sass', function () {
   return gulp.src(
@@ -45,6 +54,7 @@ gulp.task('clean', function del(cb) {
 });
 
 gulp.task('watch', function () {
+  gulp.start('js'),
   gulp.watch(paths.js, ['js']),
   gulp.watch([paths.sass.blocks, paths.sass.common], ['sass'])
 });
