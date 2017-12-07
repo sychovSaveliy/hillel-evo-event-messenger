@@ -1,0 +1,105 @@
+{
+	"id": "3758345c-7b09-aed4-433a-a358c9525281",
+	"name": "hillel-evo-event-messenger",
+	"description": "",
+	"order": [
+		"c099ee0b-cba4-c403-ce58-faa8eecefba7",
+		"9dba1893-302e-79b8-fa9e-dd89974cd26e",
+		"bb0d6359-d5a7-431c-e84c-86d9e1c07a2f"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1512656219066,
+	"owner": "3081094",
+	"public": false,
+	"events": [],
+	"variables": [],
+	"auth": null,
+	"requests": [
+		{
+			"id": "9dba1893-302e-79b8-fa9e-dd89974cd26e",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:5006/auth/002",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"events": [],
+			"auth": null,
+			"method": "POST",
+			"collectionId": "3758345c-7b09-aed4-433a-a358c9525281",
+			"data": [],
+			"dataMode": "raw",
+			"name": "postAuth - false",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1512908260345,
+			"version": 2,
+			"responses": [],
+			"currentHelper": null,
+			"helperAttributes": null,
+			"rawModeData": "{\n\t\"login\": \"\",\n\t\"password\": \"\"\n}"
+		},
+		{
+			"id": "bb0d6359-d5a7-431c-e84c-86d9e1c07a2f",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:5006/auth/001/",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"events": [],
+			"auth": null,
+			"method": "POST",
+			"collectionId": "3758345c-7b09-aed4-433a-a358c9525281",
+			"data": [],
+			"dataMode": "raw",
+			"name": "postAuth - true",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1512908292768,
+			"version": 2,
+			"responses": [],
+			"currentHelper": null,
+			"helperAttributes": null,
+			"rawModeData": "{\n\t\"login\": \"\",\n\t\"password\": \"\"\n}"
+		},
+		{
+			"id": "c099ee0b-cba4-c403-ce58-faa8eecefba7",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:5006/user/002/",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"events": [],
+			"auth": null,
+			"method": "GET",
+			"collectionId": "3758345c-7b09-aed4-433a-a358c9525281",
+			"data": null,
+			"dataMode": "params",
+			"name": "getUsrById",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1512836228452,
+			"version": 2,
+			"responses": [],
+			"currentHelper": null,
+			"helperAttributes": null
+		}
+	]
+}

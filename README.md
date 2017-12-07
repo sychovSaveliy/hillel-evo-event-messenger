@@ -32,3 +32,11 @@ http://flexboxgrid.com/
 Следить за имзенениями:
 
 `gulp watch:templates`
+
+#
+
+# Run mock server
+'npm run mock'
+
+# коллекция запросов для Postman
+'mock/hillel-evo-event-messenger.json'
