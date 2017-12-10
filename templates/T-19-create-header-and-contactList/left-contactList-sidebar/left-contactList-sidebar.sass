@@ -1,0 +1,37 @@
+@import variables
+@import contactList-search-form
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+.row 
+    margin: 0
+
+.left-contactList-sidebar
+    height: 100vh
+    padding: 0
+
+.contact-list 
+    padding: 0
+    height: 100%
+    background-color: $contact-list-color
+
+.contactList-user 
+    height: 80px
+    width: 100%
+    background: $contact-list-users-ba-color
+    display: flex
+    align-items: center
+    border: 1px solid $contact-list-users-border-color
+    .user-contactList-photo 
+        padding-left: 20px
+    
+    img 
+        height: 60px
+        align-self: center
+    
+    .user-contactList-name 
+        color: white
+        padding-left: 20px
