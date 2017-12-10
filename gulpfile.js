@@ -14,7 +14,13 @@ let paths = {
   css: {
     libs: 'app/libs/**/*.css',
     main: 'app/css/**/*.css'
-  }
+  },
+  bundle: {
+        js: [
+            './node_modules/angular/angular.js',
+            './node_modules/angular-ui-router/release/angular-ui-router.js'
+        ]
+    }
 };
 
 gulp.task('js', function () {
@@ -59,4 +65,10 @@ gulp.task('sass:templates', function () {
 gulp.task('watch:templates', function () {
   gulp.start('sass:templates')
   gulp.watch(paths.sass.templates, ['sass:templates']);
+});
+
+gulp.task('bundle:js', function() {
+    return gulp.src(paths.bundle.js)
+        .pipe(concat('bundle.js'))
+        .pipe(gulp.dest('./bin/vendor/'));
 });
