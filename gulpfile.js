@@ -23,26 +23,20 @@ let paths = {
     }
 };
 
-gulp.task('js', function () {
-  return gulp.src([
-      paths.js
-    ])
-    .pipe(sourcemaps.init())
+gulp.task('js', function() {
+  return gulp.src(paths.js)
     .pipe(concat('main.js'))
-    .pipe(sourcemaps.write())
-    .pipe(gulp.dest('bin/js'))
+    .pipe(gulp.dest('./bin/js'));
 });
 
 gulp.task('sass', function () {
-  return gulp.src(
-      paths.sass.blocks,
-      paths.sass.common)
-    .pipe(sourcemaps.init())
-    .pipe(concat('main.sass'))
+  return gulp.src([
+    paths.sass.blocks,
+    paths.sass.common])
     .pipe(sass({
       outputStyle: 'compressed'
     }).on("error", sass.logError))
-    .pipe(sourcemaps.write())
+    .pipe(concat('main.css'))
     .pipe(gulp.dest('bin/css'))
 });
 
@@ -50,9 +44,9 @@ gulp.task('clean', function del(cb) {
   return rimraf('bin', cb);
 });
 
-gulp.task('watch', function () {
-  gulp.watch(paths.js, ['js']),
-  gulp.watch([paths.sass.blocks, paths.sass.common], ['sass'])
+gulp.task('watch',['js', 'sass'], function () {
+    gulp.watch(paths.js, ['js']),
+    gulp.watch([paths.sass.blocks, paths.sass.common], ['sass'])
 });
 
 gulp.task('sass:templates', function () {
@@ -61,9 +55,7 @@ gulp.task('sass:templates', function () {
     .pipe(gulp.dest('./templates/compiled/'))
 });
 
-
-gulp.task('watch:templates', function () {
-  gulp.start('sass:templates')
+gulp.task('watch:templates', ['sass:templates'], function () {
   gulp.watch(paths.sass.templates, ['sass:templates']);
 });
 
