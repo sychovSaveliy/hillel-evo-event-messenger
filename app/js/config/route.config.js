@@ -8,23 +8,23 @@ app.config(function($stateProvider, $urlRouterProvider){
             url: '/main',
             views: {
                 "":{
-                    templateUrl: 'app/src/page-blocks/layouts/main/l-main.html',
+                    templateUrl: 'app/src/blocks/page-blocks/layouts/main/l-main.html',
                     controller: 'l-main.controller'
                 },
                 "header@main": {
-                    templateUrl: 'app/src/page-blocks/layouts/main/l-header.html',
+                    templateUrl: 'app/src/blocks/page-blocks/layouts/main/l-header.html',  
                     controller: 'l-header.controller'
                 },
                 "chats@main": {
-                    templateUrl: 'app/src/page-blocks/layouts/main/l-chats.html',
+                    templateUrl: 'app/src/blocks/page-blocks/layouts/main/l-chats.html',  
                     controller: 'l-chats.controller'
                 },
                 "dialog@main": {
-                    templateUrl: 'app/src/page-blocks/layouts/main/l-dialog.html',
+                    templateUrl: 'app/src/blocks/page-blocks/layouts/main/l-dialog.html',
                     controller: 'l-dialog.controller'
                 },
                 "event@main": {
-                    templateUrl: 'app/src/page-blocks/layouts/main/l-event.html',
+                    templateUrl: 'app/src/blocks/page-blocks/layouts/main/l-event.html',
                     controller: 'l-event.controller'
                 }
             }
