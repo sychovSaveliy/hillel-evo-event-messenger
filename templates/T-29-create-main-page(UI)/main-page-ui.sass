@@ -1,0 +1,39 @@
+@import variables
+
+body, .row
+    margin: 0
+    box-sizing: border-box
+    color: white
+    font-size: 30px   
+
+html, body
+    height: 100%
+
+header 
+    height: $header-height
+    background-color: $header-ba-color
+
+.content-and-sidebars
+    height: calc(100% - (#{$header-height} + #{$footer-height}))
+    padding: 0
+
+.left-sidebar
+    background-color: $left-sidebar-ba-color
+    height: 100% 
+
+.right-sidebar
+    background-color: $right-sidebar-ba-color
+
+.settings
+    background-color: $settings-ba-color
+    height: 70px
+
+.content
+    background-color: $content-ba-color
+    height: 100%
+    
+footer
+    height: $footer-height
+    background-color: $footer-ba-color
+
+
