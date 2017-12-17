@@ -1,0 +1,43 @@
+{
+  "data": {
+    "list": [
+      {
+        "id": 1,
+        "type": "Type",
+        "title": "Title 1",
+        "description": "Some descr 1",
+        "keywords": "",
+        "links": {
+          "google": "",
+          "docs": ""
+        }
+      },
+      {
+        "id": 2,
+        "type": "Type",
+        "title": "Title 2",
+        "description": "Some descr 2",
+        "keywords": "",
+        "links": {
+          "google": "",
+          "docs": ""
+        }
+      },
+      {
+        "id": 3,
+        "type": "Type",
+        "title": "Title 3",
+        "description": "Some descr 3",
+        "keywords": "",
+        "links": {
+          "google": "",
+          "docs": ""
+        }
+      }
+    ]
+  },
+  "metadata": {
+    "links": {},
+    "language": "en"
+  }
+}
