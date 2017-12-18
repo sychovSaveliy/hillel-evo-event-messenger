@@ -1,0 +1,17 @@
+@import "variables"
+@import "type-default"
+@import "functions"
+.input
+  font:
+    family: $font-primary
+    size: 15px
+  border: 1px solid rgb(203, 207, 162)
+  border-radius:  20px
+  min-height: 15px
+  margin: 5px
+  padding: 10px
+
+.input-primary
+  @extend .input
+  &:focus
+    border-color: map-get($bg-color, 'green')

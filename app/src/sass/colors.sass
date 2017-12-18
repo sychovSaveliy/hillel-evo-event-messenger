@@ -1,0 +1,71 @@
+@import "variables"
+@import "type-default"
+@import "functions"
+
+.bg-primary
+  background-color: map-get($bg-color, 'primary')
+.bg-gray-100
+  @include set-transparent($bg-color, 'gray', 0)
+.bg-gray-75
+  @include set-transparent($bg-color, 'gray', 0.25)
+.bg-gray-50
+  @include set-transparent($bg-color, 'gray', 0.5)
+.bg-gray-25
+  @include set-transparent($bg-color, 'gray', 0.75)
+.bg-dark-100
+  @include set-transparent($bg-color, 'dark', 0)
+.bg-dark-75
+  @include set-transparent($bg-color, 'dark', 0.25)
+.bg-dark-50
+  @include set-transparent($bg-color, 'dark', 0.5)
+.bg-dark-25
+  @include set-transparent($bg-color, 'dark', 0.75)
+.bg-green-100
+  @include set-transparent($bg-color, 'green', 0)
+.bg-green-75
+  @include set-transparent($bg-color, 'green', 0.25)
+.bg-green-50
+  @include set-transparent($bg-color, 'green', 0.5)
+.bg-green-25
+  @include set-transparent($bg-color, 'green', 0.75)
+.bg-orange-100
+  @include set-transparent($bg-color, 'orange', 0)
+.bg-orange-75
+  @include set-transparent($bg-color, 'orange', 0.25)
+.bg-orange-50
+  @include set-transparent($bg-color, 'orange', 0.5)
+.bg-orange-25
+  @include set-transparent($bg-color, 'orange', 0.75)
+
+.bg-gray-darker
+  @include color-dark($bg-color, 'gray', 30%)
+.bg-gray-dark
+  @include color-dark($bg-color, 'gray', 10%)
+.bg-gray-light
+  @include color-light($bg-color, 'gray', 10%)
+.bg-gray-lighter
+  @include color-light($bg-color, 'gray', 30%)
+.bg-dark-darker
+  @include color-dark($bg-color, 'dark', 30%)
+.bg-dark-dark
+  @include color-dark($bg-color, 'dark', 10%)
+.bg-dark-light
+  @include color-light($bg-color, 'dark', 10%)
+.bg-dark-lighter
+  @include color-light($bg-color, 'dark', 30%)
+.bg-green-darker
+  @include color-dark($bg-color, 'green', 30%)
+.bg-green-dark
+  @include color-dark($bg-color, 'green', 10%)
+.bg-green-light
+  @include color-light($bg-color, 'green', 10%)
+.bg-green-lighter
+  @include color-light($bg-color, 'green', 30%)
+.bg-orange-darker
+  @include color-dark($bg-color, 'orange', 30%)
+.bg-orange-dark
+  @include color-dark($bg-color, 'orange', 10%)
+.bg-orange-light
+  @include color-light($bg-color, 'orange', 10%)
+.bg-orange-lighter
+  @include color-light($bg-color, 'orange', 30%)
