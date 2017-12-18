@@ -7,8 +7,8 @@ const rimraf = require('rimraf');
 let paths = {
   js: 'app/**/*.js',
   sass: {
-    blocks: 'app/src/**/*.sass',
-    common: 'app/sass/**/*.sass',
+    blocks: 'app/src/blocks/**/*.sass',
+    common: 'app/src/sass/**/*.sass',
     templates: 'templates/**/*.sass'
   },
   css: {
@@ -46,7 +46,7 @@ gulp.task('clean', function del(cb) {
 
 gulp.task('watch',['js', 'sass'], function () {
     gulp.watch(paths.js, ['js']),
-    gulp.watch([paths.sass.blocks, paths.sass.common], ['sass'])
+    gulp.watch([paths.sass.common, paths.sass.blocks], ['sass'])
 });
 
 gulp.task('sass:templates', function () {
