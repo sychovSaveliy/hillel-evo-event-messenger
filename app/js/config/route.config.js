@@ -29,21 +29,34 @@ app.config(function($stateProvider, $urlRouterProvider){
                 }
             }
         })
-        .state('login', {
-            url: '/login',
-            views: {
-                "": {
-                    templateUrl: 'app/src/blocks/page-blocks/layouts/l-login/l-login.html',
-                    controller: 'l-login'
-                },
-              "login@login": {
-                templateUrl: 'app/src/blocks/page-blocks/layouts/l-login/l-login.form.html',
-                controller: 'l-login'
-              },
-                "fastReg@login": {
-                templateUrl: 'app/src/blocks/page-blocks/layouts/l-login/l-fast-registration.html',
-                controller: 'l-fast-registration'
-              },
-            }
-        })
+      .state('login', {
+        url: '/login',
+        views: {
+          "": {
+            templateUrl: 'app/src/blocks/page-blocks/layouts/l-login/l-login.html',
+            controller: 'l-login'
+          },
+          "login@login": {
+            templateUrl: 'app/src/blocks/page-blocks/layouts/l-login/l-login.form.html',
+            controller: 'l-login'
+          },
+          "fastReg@login": {
+            templateUrl: 'app/src/blocks/page-blocks/layouts/l-login/l-fast-registration.html',
+            controller: 'l-fast-registration'
+          },
+          "test@login": {
+            templateUrl: 'app/src/blocks/page-blocks/layouts/l-login/l-test-buttons.html',
+            controller: 'l-test-buttons'
+          }
+        }
+      })
+      .state('test', {
+        url: '/test',
+        views: {
+          "": {
+            templateUrl: 'app/src/blocks/page-blocks/layouts/l-login/l-test-buttons.html',
+            controller: 'l-test-buttons'
+          }
+        }
+      })
 });

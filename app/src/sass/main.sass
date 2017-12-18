@@ -1,0 +1,32 @@
+@import "type-default"
+@import "variables"
+@import "functions"
+body
+  margin: 0px
+  padding: 0px
+  font-family: $font-primary
+  background-color: map-get($bg-color, 'primary')
+
+.div-message-box
+  @include color-light($bg-color, 'gray', 30%)
+  margin: 2%
+  padding: 15px
+  @include set-border(0px, 20px)
+
+.div-message-box-descr
+  margin: 2%
+  padding: 5px
+  @include set-border(0px, 20px)
+
+.message-name
+  color: map-get($font-color, 'dark')
+  font:
+    size: map-get($font-message, 'name-size')
+    weight: map-get($font-message, 'name-weight')
+    style: map-get($font-message, 'name-style')
+
+.message-text
+  color: map-get($font-color, 'primary')
+  font:
+    size: map-get($font-message, 'text-size')
+    weight: map-get($font-message, 'text-weight')

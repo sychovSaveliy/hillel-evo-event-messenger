@@ -1,0 +1,42 @@
+$font-primary: Arial;
+
+$font-btn: (
+  'size': 14px,
+  'weight': 800
+);
+
+$font-link: (
+  'color': black,
+  'decoration': none,
+  'h-color': #373600,
+  'h-decoration': underline,
+  'h-line-color': #eda200,
+  'v-color': #656850,
+  'v-decoration': none
+);
+
+$font-description: (
+  'color': #656850,
+  'style': italic,
+  'weight': 200,
+  'size': 12px
+);
+
+$font-invert: (
+  'color': white
+);
+
+$font-header: (
+  'size': 20px,
+  'weight': 600,
+  'color': black
+);
+
+$font-message: (
+  'name-size': 12px,
+  'name-weight': 600,
+  'name-style': italic,
+  'text-size': 13px,
+  'text-weight': 200,
+  'text-color': #222222
+)

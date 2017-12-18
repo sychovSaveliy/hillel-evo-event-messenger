@@ -1,0 +1,84 @@
+@import "variables"
+@import "type-default"
+@import "functions"
+.button-default
+  font:
+    size: map-get($font-btn, 'size')
+    weight: map-get($font-btn, 'weight')
+  height: 36px
+  width: 80px
+  padding-left: 10px
+  padding-right: 10px
+  align-items: center
+  transition: 0.2s
+  @include set-border(0px, 18px)
+
+.button-round
+  height: 40px
+  width: 40px
+  padding: 5px
+  align-items: center
+  transition: 0.2s
+  @include set-border(0px, 20px)
+
+.btn-submit
+  @extend .button-default
+  @include color-light($bg-color, 'green', 5%)
+  color: map-get($font-color, 'primary')
+  &:hover
+    @include color-light($bg-color, 'green', 30%)
+  &:active
+    @include color-light($bg-color, 'green', 30%)
+
+.btn-cancel
+  @extend .button-default
+  background-color:  map-get($bg-color, 'dark')
+  color: map-get($font-color, 'gray')
+  &:hover
+    @include color-dark($bg-color, 'dark', 20%)
+  &:active
+    @include color-dark($bg-color, 'dark', 20%)
+
+.btn-info
+  @extend .button-default
+  background-color: map-get($bg-color, 'gray')
+  color: map-get($font-color, 'primary')
+  &:hover
+    @include color-dark($bg-color, 'gray', 20%)
+  &:active
+    @include color-dark($bg-color, 'gray', 30%)
+
+.btn-warning
+  @extend .button-default
+  background-color: map-get($bg-color, 'orange')
+  color: map-get($font-color, 'primary')
+  &:hover
+    @include color-light($bg-color, 'orange', 10%)
+    &:active
+      @include color-light($bg-color, 'orange', 30%)
+
+.btn-round-ok
+  @extend .button-round
+  @include color-light($bg-color, 'green', 5%)
+  color: map-get($font-color, 'primary')
+  &:hover
+    @include color-light($bg-color, 'green', 30%)
+  &:active
+    @include color-light($bg-color, 'green', 30%)
+
+.btn-round-cancel
+  @extend .button-round
+  background-color:  map-get($bg-color, 'dark')
+  color: map-get($font-color, 'gray')
+  &:hover
+    @include color-dark($bg-color, 'dark', 20%)
+  &:active
+    @include color-dark($bg-color, 'dark', 20%)
+
+.btn-round-maybe
+  @extend .button-round
+  color: map-get($font-color, 'primary')
+  &:hover
+    @include color-dark($bg-color, 'gray', 20%)
+    &:active
+      @include color-dark($bg-color, 'gray', 30%)
