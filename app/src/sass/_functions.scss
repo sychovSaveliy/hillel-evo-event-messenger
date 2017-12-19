@@ -18,3 +18,16 @@
 @mixin font-color-light($map, $name, $value){
   font-color: lighten(map-get($map, $name), $value);
 };
+
+@function type-scale($level) {
+  @return map-get($type-scale, $level);
+}
+
+@function line-height($level) {
+  @return map-get($line-heights, $level);
+}
+
+@mixin type-setting($level: 0) {
+  font-size: type-scale($level);
+  line-height: line-height($level);
+}
