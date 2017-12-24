@@ -12,6 +12,7 @@ function filereader(fsRef, path) {
 }
 
 function getUserById(req, res) {
+  console.log(reg);
   var servicePromise = filereader(fs, './mock/api/users/'+ req.params.id +'/get.json');
   servicePromise
     .then((response) => {
@@ -24,11 +25,10 @@ function getUserById(req, res) {
 }
 
 function postDataUserById(req, res) {
-  var servicePromise = filereader(fs, './mock/api/users/' + req.params.id +'/post.json');
+  var servicePromise;
+
+  servicePromise = filereader(fs, './mock/api/users/' + req.body.login +'/post.json');
   servicePromise
-    .then((response) => {
-      return response;
-    })
     .then((response) => {
       res.json(response);
     });
