@@ -24,7 +24,7 @@ app.get("/", function (req, res) {
 app.route('/user/:id/')
   .get($data.getUserById);
 
-app.route('/auth/:id/')
+app.route('/auth')
   .post($data.postDataUserById);
 
 
