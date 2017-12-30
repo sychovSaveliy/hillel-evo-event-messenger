@@ -1,0 +1,34 @@
+@import variables
+@import input-message
+
+body, .row
+    margin: 0
+
+footer
+    position: absolute
+    bottom: 0
+    background-color: $footer-background-color
+    color: $footer-color
+    height: 50px
+    width: 100%
+
+footer > div
+    height: 50px
+    padding: 0
+
+.footer-settings
+    +div-flex-property(flex, center, center)
+    background-color: $footer-settings-background-color
+
+footer .icon
+    padding: 0 10px 0 0
+    cursor: pointer
+
+.footer-message
+    width: 100%
+    +div-flex-property(flex, flex-start, center)
+
+
+
+
+
