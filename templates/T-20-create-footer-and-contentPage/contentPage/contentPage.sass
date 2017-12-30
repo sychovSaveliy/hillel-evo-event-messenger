@@ -1,0 +1,42 @@
+@import variables
+
+body, .row
+    margin: 0
+    box-sizing: border-box
+
+.left-side, .right-side
+    height: 100vh
+
+.content-part
+    padding: 0
+    height: 100vh
+    background-color: $content-background-color
+
+.message-example
+    position: relative
+    width: 150px
+    background-color: $message-example-background-color
+    padding: 15px 25px 10px 10px
+    margin: 20px
+    border-radius: 15px
+    font-size: 15px
+
+.message-example:before
+    content: ""
+    right: 100%
+    bottom: 14px
+    position: absolute
+    border-top: 9px solid transparent
+    border-right: 18px solid $message-example-background-color
+    border-bottom: 9px solid transparent
+
+.message-example .delete
+    position: absolute
+    right: 10px
+    top: 5px
+    cursor: pointer
+
+.message-example .message-name
+    font-weight: bold
+
+
