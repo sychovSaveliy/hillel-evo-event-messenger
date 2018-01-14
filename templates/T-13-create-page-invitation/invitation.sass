@@ -1,0 +1,58 @@
+@import variables
+
+body, .row
+    margin: 0
+    box-sizing: border-box
+
+.left-side, .right-side
+    height: 100vh
+
+.content-part
+    position: relative
+    width: 100%
+    padding: 0
+    height: 100vh
+    background-color: $content-background-color
+
+.event-card
+    position: absolute
+    bottom: 0px
+    width: 50%
+    background-color: $event-card-background-color
+    border-radius: 15px
+    padding: 30px
+    margin: 20px
+    font-family: $event-card-font
+
+.event-card table
+    border-spacing: 30px
+    font-size: 17px
+
+.event-card table th
+    font-size: 18px
+    font-weight: bold
+    text-align: left
+
+.event-card table .event-name
+    font-weight: bold
+
+.event-card .buttons
+    +div-flex-property(flex, center, center)
+
+.event-card .buttons button
+    background-color: $event-card-button-ba-color
+    border: none
+    border-radius: 10px
+    width: 100px
+    box-sizing: border-box
+    padding: 10px 15px
+    cursor: pointer
+    font-family: $event-card-font
+    font-size: 15px
+    font-weight: bold
+    margin: 30px 30px 10px 0
+    transition: 0.2s linear
+
+.event-card .buttons button:hover
+    background-color: $event-card-button-hover-ba-color
+
