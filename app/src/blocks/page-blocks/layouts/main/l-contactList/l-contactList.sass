@@ -1,0 +1,24 @@
+@import "../../../../../sass/variables"
+@import "../../../../../sass/type-default"
+@import "../../../../../sass/functions"
+
+.contactList-user
+    height: 80px
+    width: 100%
+    display: flex
+    align-items: center
+    .user-contactList-photo
+        padding-left: 20px
+
+    img
+        height: 60px
+        align-self: center
+
+    .user-contactList-name
+      color: map-get($bg-color, 'dark')
+      font:
+        size: 14px
+        weight: map-get($font-message, 'name-weight')
+        style: map-get($font-message, 'name-style')
+      padding-left: 20px
+

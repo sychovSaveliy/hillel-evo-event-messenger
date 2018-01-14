@@ -14,12 +14,21 @@
   @include set-border(0px, 18px)
 
 .button-round
-  height: 40px
-  width: 40px
+  height: 38px
+  width: 38px
   padding: 5px
   align-items: center
   transition: 0.2s
+  margin: 8px
   @include set-border(0px, 20px)
+
+.button-round-xs
+  height: 24px
+  width: 24px
+  padding: 4px
+  align-items: center
+  transition: 0.2s
+  @include set-border(0px, 50%)
 
 .btn-submit
   @extend .button-default
@@ -77,6 +86,42 @@
 
 .btn-round-maybe
   @extend .button-round
+  color: map-get($font-color, 'primary')
+  &:hover
+    @include color-dark($bg-color, 'gray', 20%)
+    &:active
+      @include color-dark($bg-color, 'gray', 30%)
+
+.btn-round-warning
+  @extend .button-round
+  background-color: map-get($bg-color, 'orange')
+  color: map-get($font-color, 'primary')
+  &:hover
+    @include color-light($bg-color, 'orange', 10%)
+    &:active
+      @include color-light($bg-color, 'orange', 30%)
+
+.btn-round-ok-xs
+  @extend .button-round-xs
+  @include color-light($bg-color, 'green', 5%)
+  color: map-get($font-color, 'primary')
+  background-image: url("app/img/icons/conf.png")
+  &:hover
+    @include color-light($bg-color, 'green', 30%)
+  &:active
+    @include color-light($bg-color, 'green', 30%)
+
+.btn-round-cancel-xs
+  @extend .button-round-xs
+  background-color:  map-get($bg-color, 'dark')
+  color: map-get($font-color, 'gray')
+  &:hover
+    @include color-dark($bg-color, 'dark', 20%)
+  &:active
+    @include color-dark($bg-color, 'dark', 20%)
+
+.btn-round-maybe-xs
+  @extend .button-round-xs
   color: map-get($font-color, 'primary')
   &:hover
     @include color-dark($bg-color, 'gray', 20%)

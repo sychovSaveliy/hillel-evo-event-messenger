@@ -12,19 +12,23 @@ app.config(function($stateProvider, $urlRouterProvider){
                     controller: 'l-main.controller'
                 },
                 "header@main": {
-                    templateUrl: 'app/src/blocks/page-blocks/layouts/main/l-header.html',  
+                    templateUrl: 'app/src/blocks/page-blocks/layouts/main/l-header/l-header.html',  
                     controller: 'l-header.controller'
                 },
-                "chats@main": {
-                    templateUrl: 'app/src/blocks/page-blocks/layouts/main/l-chats.html',  
-                    controller: 'l-chats.controller'
+                "contactList@main": {
+                  templateUrl: 'app/src/blocks/page-blocks/layouts/main/l-contactList/l-contactList.html',  
+                  controller: 'l-contactList.controller'
                 },
-                "dialog@main": {
-                    templateUrl: 'app/src/blocks/page-blocks/layouts/main/l-dialog.html',
-                    controller: 'l-dialog.controller'
+                "chat@main": {
+                    templateUrl: 'app/src/blocks/page-blocks/layouts/main/l-chat/l-chat.html',  
+                    controller: 'l-chat.controller'
+                },
+                "footer@main": {
+                    templateUrl: 'app/src/blocks/page-blocks/layouts/main/l-footer/l-footer.html',
+                    controller: 'l-footer.controller'
                 },
                 "event@main": {
-                    templateUrl: 'app/src/blocks/page-blocks/layouts/main/l-event.html',
+                    templateUrl: 'app/src/blocks/page-blocks/layouts/main/l-event/l-event.html',
                     controller: 'l-event.controller'
                 }
             }
