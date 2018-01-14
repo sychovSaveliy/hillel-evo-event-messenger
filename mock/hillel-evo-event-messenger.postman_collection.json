@@ -3,9 +3,10 @@
 	"name": "hillel-evo-event-messenger",
 	"description": "",
 	"order": [
-		"c099ee0b-cba4-c403-ce58-faa8eecefba7",
-		"9dba1893-302e-79b8-fa9e-dd89974cd26e",
-		"bb0d6359-d5a7-431c-e84c-86d9e1c07a2f"
+		"bb0d6359-d5a7-431c-e84c-86d9e1c07a2f",
+		"5b980474-b6d1-209a-96ab-5e987a88f85a",
+		"91488007-156b-1b4b-d289-fec159a357e1",
+		"4823ce7b-c076-8548-d189-4be7d0444ed1"
 	],
 	"folders": [],
 	"folders_order": [],
@@ -17,69 +18,7 @@
 	"auth": null,
 	"requests": [
 		{
-			"id": "9dba1893-302e-79b8-fa9e-dd89974cd26e",
-			"headers": "Content-Type: application/json\n",
-			"headerData": [
-				{
-					"key": "Content-Type",
-					"value": "application/json",
-					"description": "",
-					"enabled": true
-				}
-			],
-			"url": "http://localhost:5006/auth/002",
-			"queryParams": [],
-			"pathVariables": {},
-			"pathVariableData": [],
-			"events": [],
-			"auth": null,
-			"method": "POST",
-			"collectionId": "3758345c-7b09-aed4-433a-a358c9525281",
-			"data": [],
-			"dataMode": "raw",
-			"name": "postAuth - false",
-			"description": "",
-			"descriptionFormat": "html",
-			"time": 1512908260345,
-			"version": 2,
-			"responses": [],
-			"currentHelper": null,
-			"helperAttributes": null,
-			"rawModeData": "{\n\t\"login\": \"\",\n\t\"password\": \"\"\n}"
-		},
-		{
-			"id": "bb0d6359-d5a7-431c-e84c-86d9e1c07a2f",
-			"headers": "Content-Type: application/json\n",
-			"headerData": [
-				{
-					"key": "Content-Type",
-					"value": "application/json",
-					"description": "",
-					"enabled": true
-				}
-			],
-			"url": "http://localhost:5006/auth/001/",
-			"queryParams": [],
-			"pathVariables": {},
-			"pathVariableData": [],
-			"events": [],
-			"auth": null,
-			"method": "POST",
-			"collectionId": "3758345c-7b09-aed4-433a-a358c9525281",
-			"data": [],
-			"dataMode": "raw",
-			"name": "postAuth - true",
-			"description": "",
-			"descriptionFormat": "html",
-			"time": 1512908292768,
-			"version": 2,
-			"responses": [],
-			"currentHelper": null,
-			"helperAttributes": null,
-			"rawModeData": "{\n\t\"login\": \"\",\n\t\"password\": \"\"\n}"
-		},
-		{
-			"id": "c099ee0b-cba4-c403-ce58-faa8eecefba7",
+			"id": "4823ce7b-c076-8548-d189-4be7d0444ed1",
 			"headers": "",
 			"headerData": [],
 			"url": "http://localhost:5006/user/002/",
@@ -92,14 +31,98 @@
 			"collectionId": "3758345c-7b09-aed4-433a-a358c9525281",
 			"data": null,
 			"dataMode": "params",
-			"name": "getUsrById",
+			"name": "getUsrById - 002",
 			"description": "",
 			"descriptionFormat": "html",
-			"time": 1512836228452,
+			"time": 1515665024447,
 			"version": 2,
 			"responses": [],
 			"currentHelper": null,
 			"helperAttributes": null
+		},
+		{
+			"id": "5b980474-b6d1-209a-96ab-5e987a88f85a",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:5006/auth",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"events": [],
+			"auth": null,
+			"method": "POST",
+			"collectionId": "3758345c-7b09-aed4-433a-a358c9525281",
+			"data": [],
+			"dataMode": "raw",
+			"name": "postAuth - false",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1515664682718,
+			"version": 2,
+			"responses": [],
+			"currentHelper": null,
+			"helperAttributes": null,
+			"rawModeData": "{\n\t\"login\": \"002\"\n}"
+		},
+		{
+			"id": "91488007-156b-1b4b-d289-fec159a357e1",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:5006/user/001",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"events": [],
+			"auth": null,
+			"method": "GET",
+			"collectionId": "3758345c-7b09-aed4-433a-a358c9525281",
+			"data": null,
+			"dataMode": "params",
+			"name": "getUsrById - 001",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1515664997933,
+			"version": 2,
+			"responses": [],
+			"currentHelper": null,
+			"helperAttributes": null
+		},
+		{
+			"id": "bb0d6359-d5a7-431c-e84c-86d9e1c07a2f",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:5006/auth",
+			"queryParams": [],
+			"events": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"auth": null,
+			"time": 1515664551223,
+			"name": "postAuth - true",
+			"description": "",
+			"collectionId": "3758345c-7b09-aed4-433a-a358c9525281",
+			"responses": [],
+			"currentHelper": null,
+			"helperAttributes": null,
+			"rawModeData": "{\n\t\"login\": \"001\"\n}"
 		}
 	]
 }
