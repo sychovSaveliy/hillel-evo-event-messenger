@@ -1,5 +1,9 @@
-<div ui-view="header"></div>
-<div ui-view="chats"></div>
-<div ui-view="dialog"></div>
-<div ui-view="event"></div>
-<div>l-main </div>
+<header class="row _row col-xs-12" ui-view="header">header</header>
+<section class="row _row content-and-sidebars">
+    <div class="left-sidebar col-xs-2" ui-view="contactList">left-sidebar</div>
+    <div class="content col-xs-8" ui-view="chat">content</div>
+    <div class="right-sidebar col-xs-2" ui-view="event">right-sidebar</div>
+</section>
+<footer class="row _row xs-12">
+    <div class="settings col-xs-2" ui-view="footer">settings</div>
+</footer>

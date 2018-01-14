@@ -1,0 +1,72 @@
+@import ../../../../../sass/_variables.scss
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+.row 
+    margin: 0
+
+.left-contactList-sidebar
+    height: 100vh
+    padding: 0
+
+.contact-list 
+    padding: 0
+    height: 100%
+    background-color: $contact-list-color
+
+.contactList-user 
+    height: 80px
+    width: 100%
+    background: $contact-list-users-ba-color
+    display: flex
+    align-items: center
+    border: 1px solid $contact-list-users-border-color
+    .user-contactList-photo 
+        padding-left: 20px
+    
+    img 
+        height: 60px
+        align-self: center
+    
+    .user-contactList-name 
+        color: white
+        padding-left: 20px
+
+.contactList-search
+  position: relative
+  width: 100%
+  height: 42px
+  
+input 
+  height: 42px
+  width: 0
+  padding: 0 42px 0px 15px
+  border: none
+  border-bottom: 2px solid transparent
+  outline: none
+  background: transparent
+  transition: .4s cubic-bezier(0, 0.8, 0, 1)
+  position: absolute
+  top: 0
+  right: 0
+  z-index: 2
+  color: white
+
+input:focus 
+  width: 100%
+  z-index: 1
+  border-bottom: 2px solid $search-button-color
+
+button
+    background-color: $search-button-ba-color
+    color: $search-button-color
+    border: none
+    height: 42px
+    width: 42px
+    position: absolute
+    top: 0
+    right: 0
+    cursor: pointer
