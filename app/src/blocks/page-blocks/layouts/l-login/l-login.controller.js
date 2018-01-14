@@ -5,10 +5,13 @@ app.controller('l-login', function($scope, $state, $flowData){
   $scope.setAuth = function (params) {
     $flowData.req(params)
       .then(function (response) {
-        $state.go('test');
+        $state.go('main');
         },
         function (error) {
           $scope.errorMessage = error.info.message;
         })
+  };
+  $scope.goToTestPage = function () {
+    $state.go('test');
   }
 });

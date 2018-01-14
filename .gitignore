@@ -7,3 +7,4 @@ package-lock.json
 templates/compiled
 mock/node_modules
 mock/package-lock.json
+mock/JSON_Schemas

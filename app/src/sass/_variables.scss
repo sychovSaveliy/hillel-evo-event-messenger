@@ -2,6 +2,8 @@ $bg-color: (
   'primary': white,
   'gray': rgba(214, 222, 217, 1),
   'dark': rgba(94, 116, 25, 1),
+  'lighter': rgba(183, 217, 77, 1),
+  'darker': rgba(60, 74, 16, 1),
   'green': rgba(155, 176, 15, 1),
   'orange': rgba(251, 195, 37, 1)
 );
@@ -13,3 +15,7 @@ $font-color: (
   'green': rgba(155, 176, 15, 1),
   'orange': rgba(251, 195, 37, 1)
 );
+
+$btn-round-img-ok: url('../../img/icons/conf.png');
+$footer-height: 70px;
+$header-height: 70px;

@@ -15,3 +15,6 @@
   background-color: darken(map-get($map, $name), $value);
 }
 
+@mixin font-color-light($map, $name, $value){
+  font-color: lighten(map-get($map, $name), $value);
+};
