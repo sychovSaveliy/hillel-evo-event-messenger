@@ -1,0 +1,79 @@
+@import '_variable'
+*
+  box-sizing: border-box
+body, html
+  min-height: 100%
+
+body
+  margin: 0
+  font-family: Roboto, sans-serif
+.row
+  height: 100vh
+
+.event-menu__list
+  list-style-type: none
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  padding-top: 30px
+  padding-left: 0
+  margin: 0
+
+.event-menu__item
+  display: flex
+  align-items: center
+  justify-content: flex-start
+  height: 70px
+  width: 100%
+  padding-left: 45px
+  cursor: pointer
+  transition: background-color .4s
+  &:hover, &.active
+    background-color: $em_color_active
+    color: $em_white
+    font-size: 18px
+
+.event-menu
+  height: 100%
+  background-color: $em_color_static
+  color: $em_color_font
+  font-weight: bold
+  font-size: 16px
+
+.event-menu__status
+  display: flex
+  align-items: center
+  justify-content: flex-start
+  padding: 40px 45px 0 45px
+
+.event-menu__title
+  margin-top: 40px
+  position: relative
+
+.event-menu__close
+  position: absolute
+  height: 20px
+  width: 20px
+  right: -30px
+  top: 0
+  cursor: pointer
+  &:after
+    content: " "
+    height: 15px
+    width: 3px
+    background-color: $em_color_font
+    position: absolute
+    top: 0
+    left: 50%
+    transform: rotate(45deg)
+  &:before
+    content: " "
+    height: 15px
+    width: 3px
+    top: 0
+    left: 50%
+    background-color: $em_color_font
+    position: absolute
+    transform: rotate(-45deg)
+
+
