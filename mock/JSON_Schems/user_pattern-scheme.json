@@ -1,0 +1,100 @@
+{
+  "$id": "user_pattern",
+  "type": "object",
+  "definitions": {},
+  "$schema": "",
+  "additionalProperties": false,
+  "properties": {
+    "user": {
+      "$id": "/properties/user",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "$id": "/properties/user/properties/id",
+          "type": "string",
+          "title": "The Id Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "001"
+          ]
+        },
+        "name": {
+          "$id": "/properties/user/properties/name",
+          "type": "string",
+          "title": "The Name Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "Jane Dow"
+          ]
+        },
+        "token": {
+          "$id": "/properties/user/properties/token",
+          "type": "string",
+          "title": "The Token Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "thisIsTokenForUserOne"
+          ]
+        },
+        "contacts": {
+          "$id": "/properties/user/properties/contacts",
+          "type": "array",
+          "additionalItems": false,
+          "items": {
+            "$id": "/properties/user/properties/contacts/items",
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "$id": "/properties/user/properties/contacts/items/properties/id",
+                "type": "string",
+                "title": "The Id Schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": [
+                  "002"
+                ]
+              }
+            }
+          }
+        },
+        "events": {
+          "$id": "/properties/user/properties/events",
+          "type": "array",
+          "additionalItems": false,
+          "items": {
+            "$id": "/properties/user/properties/events/items",
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "$id": "/properties/user/properties/events/items/properties/id",
+                "type": "string",
+                "title": "The Id Schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": [
+                  "01.01.2018"
+                ]
+              }
+            }
+          }
+        },
+        "avatar": {
+          "$id": "/properties/user/properties/avatar",
+          "type": "string",
+          "title": "The Avatar Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "photo_user.png"
+          ]
+        }
+      }
+    }
+  }
+}

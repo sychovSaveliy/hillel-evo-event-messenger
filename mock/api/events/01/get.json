@@ -1,0 +1,68 @@
+{
+  "event": {
+    "id": "01",
+    "name": "Name event 01",
+    "status": true,
+    "date": [
+      {
+        "drafts": [
+          {
+            "date": "01.02.2018",
+            "votes": 1
+          },
+          {
+            "date": "03.02.2018",
+            "votes": 3
+          },
+          {
+            "date": "05.02.2018",
+            "votes": 0
+          }
+        ],
+        "confirmed": "05.02.2018"
+      }
+    ],
+    "place": [
+      {
+        "drafts": [
+          {
+            "place": "Address 01",
+            "votes": 2
+          },
+          {
+            "place": "Address 02",
+            "votes": 1
+          },
+          {
+            "place": "Address 03",
+            "votes": 0
+          }
+        ],
+        "confirmed": "Address 01"
+      }
+    ],
+    "members": [
+      {
+        "invited": [
+          {
+            "id": "001",
+            "role": "user",
+            "chat_success": false
+          },
+          {
+            "id": "002",
+            "role": "admin",
+            "chat_success": true
+          },
+          {
+            "id": "003",
+            "role": "user",
+            "chat_success": false
+          }
+        ],
+        "confirmed": [
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "$id": "registration_new_user",
+  "type": "object",
+  "definitions": {},
+  "$schema": "",
+  "additionalProperties": false,
+  "properties": {
+    "post-data": {
+      "$id": "/properties/post-data",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "username": {
+          "$id": "/properties/post-data/properties/username",
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "type": {
+              "$id": "/properties/post-data/properties/username/properties/type",
+              "type": "string",
+              "title": "The Type Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "string"
+              ]
+            },
+            "maxLength": {
+              "$id": "/properties/post-data/properties/username/properties/maxLength",
+              "type": "integer",
+              "title": "The Maxlength Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                20
+              ]
+            },
+            "pattern": {
+              "$id": "/properties/post-data/properties/username/properties/pattern",
+              "type": "string",
+              "title": "The Pattern Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "[-a-z0-9!#$%&'*+/=?^_`{|}~]+(\\.[-a-z0-9!#$%&'*+/=?^_`{|}~]+)*"
+              ]
+            }
+          }
+        },
+        "password": {
+          "$id": "/properties/post-data/properties/password",
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "type": {
+              "$id": "/properties/post-data/properties/password/properties/type",
+              "type": "string",
+              "title": "The Type Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "string"
+              ]
+            },
+            "maxLength": {
+              "$id": "/properties/post-data/properties/password/properties/maxLength",
+              "type": "integer",
+              "title": "The Maxlength Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                20
+              ]
+            },
+            "pattern": {
+              "$id": "/properties/post-data/properties/password/properties/pattern",
+              "type": "string",
+              "title": "The Pattern Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "[a-z\\d~+-]+"
+              ]
+            }
+          }
+        },
+        "e-mail": {
+          "$id": "/properties/post-data/properties/e-mail",
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "type": {
+              "$id": "/properties/post-data/properties/e-mail/properties/type",
+              "type": "string",
+              "title": "The Type Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "string"
+              ]
+            },
+            "maxLength": {
+              "$id": "/properties/post-data/properties/e-mail/properties/maxLength",
+              "type": "integer",
+              "title": "The Maxlength Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": 0,
+              "examples": [
+                30
+              ]
+            },
+            "pattern": {
+              "$id": "/properties/post-data/properties/e-mail/properties/pattern",
+              "type": "string",
+              "title": "The Pattern Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "/^[a-zA-Z0-9.!#$%&'*+/=​?^_`{|}~-]+@​[a-zA-Z0-9](?:​[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:​\\.[a-zA-Z0-9](?:​[a-zA-Z0-9-]{0,     61}[a-zA-Z0-9])?)*$/"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
