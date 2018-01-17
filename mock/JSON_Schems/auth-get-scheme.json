@@ -1,0 +1,44 @@
+{
+  "$id": "authorization",
+  "type": "object",
+  "definitions": {},
+  "$schema": "",
+  "properties": {
+    "login": {
+      "$id": "/properties/login",
+      "type": "object",
+      "properties": {
+        "username": {
+          "$id": "/properties/login/properties/username",
+          "type": "string",
+          "title": "The Username Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "001"
+          ]
+        },
+        "password": {
+          "$id": "/properties/login/properties/password",
+          "type": "string",
+          "title": "The Password Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "pass"
+          ]
+        },
+        "token": {
+          "$id": "/properties/login/properties/token",
+          "type": "string",
+          "title": "The Token Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "thisIsTokenForUserOne"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -22,7 +22,10 @@ app.get("/", function (req, res) {
 });
 
 app.route('/user/:id/')
-  .get($data.getUserById);
+  .get($data.getUser);
+
+app.route('/event/:id/')
+  .get($data.getEventById);
 
 app.route('/auth')
   .post($data.postDataUserById);

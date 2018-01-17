@@ -1,0 +1,34 @@
+{
+  "user": {
+    "id": "003",
+    "name": "Jane Dow3",
+    "token": "003",
+    "contacts": [
+      {
+        "id": "001",
+        "name": "Jane Dow"
+      },
+      {
+        "id": "002",
+        "name": "Jane Dow2"
+      },
+      {
+        "id": "004",
+        "name": "Jane Dow4"
+      },
+      {
+        "id": "005",
+        "name": "Jane Dow5"
+      }
+    ],
+    "events": [
+      {
+        "id": "02"
+      },
+      {
+        "id": "03"
+      }
+    ],
+    "avatar": "./mock/api/collections/users/003/photo_user.png"
+  }
+}

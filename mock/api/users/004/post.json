@@ -1,8 +1,8 @@
 {
   "info": {
-    "success": false,
+    "success": true,
     "message": "Authorization isn't ok and it's not funny",
-    "id": "002",
-    "token": "002"
+    "id": "004",
+    "token": "004"
   }
 }
