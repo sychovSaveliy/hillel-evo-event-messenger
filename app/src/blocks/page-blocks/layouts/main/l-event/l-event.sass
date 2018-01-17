@@ -1,15 +1,6 @@
-@import ../../../../../sass/_variables.scss
-*
-  box-sizing: border-box
-body, html
-  min-height: 100%
-
-body
-  margin: 0
-  font-family: Roboto, sans-serif
-.row
-  height: 100vh
-
+@import "../../../../../sass/variables"
+@import "../../../../../sass/type-default"
+@import "../../../../../sass/functions"
 .event-menu__list
   list-style-type: none
   display: flex
@@ -29,14 +20,10 @@ body
   cursor: pointer
   transition: background-color .4s
   &:hover, &.active
-    background-color: $em_color_active
-    color: $em_white
     font-size: 18px
 
 .event-menu
   height: 100%
-  background-color: $em_color_static
-  color: $em_color_font
   font-weight: bold
   font-size: 16px
 
@@ -61,7 +48,6 @@ body
     content: " "
     height: 15px
     width: 3px
-    background-color: $em_color_font
     position: absolute
     top: 0
     left: 50%
@@ -72,6 +58,5 @@ body
     width: 3px
     top: 0
     left: 50%
-    background-color: $em_color_font
     position: absolute
     transform: rotate(-45deg)

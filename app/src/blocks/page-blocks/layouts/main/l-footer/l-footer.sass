@@ -1,8 +1,6 @@
-@import ../../../../../sass/_variables.scss
-
-body, .row
-    margin: 0
-    box-sizing: border-box
+@import "../../../../../sass/variables"
+@import "../../../../../sass/type-default"
+@import "../../../../../sass/functions"
 
 .left-side, .right-side
     height: 100vh
@@ -10,12 +8,10 @@ body, .row
 .content-part
     padding: 0
     height: 100vh
-    background-color: $content-background-color
 
 .message-example
     position: relative
     width: 150px
-    background-color: $message-example-background-color
     padding: 15px 25px 10px 10px
     margin: 20px
     border-radius: 15px
@@ -27,7 +23,6 @@ body, .row
     bottom: 14px
     position: absolute
     border-top: 9px solid transparent
-    border-right: 18px solid $message-example-background-color
     border-bottom: 9px solid transparent
 
 .message-example .delete
@@ -38,4 +33,15 @@ body, .row
 
 .message-example .message-name
     font-weight: bold
+
+.div-row-footer
+  display: flex
+  flex-direction: row
+  justify-content: flex-start
+  align-items: center
+  min-height: 60px
+  margin: 0
+  padding: 0
+
+
 

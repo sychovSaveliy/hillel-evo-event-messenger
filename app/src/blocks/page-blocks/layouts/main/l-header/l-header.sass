@@ -1,22 +1,17 @@
-@import ../../../../../sass/_variables.scss
-
-body
-    margin: 0
-
-.row
-    margin: 0
-    
-.header-main-chat-window
-    height: 50px
-    background-color: $header-background-color
+@import "../../../../../sass/variables"
+@import "../../../../../sass/type-default"
+@import "../../../../../sass/functions"
 
 .user-profile-photo
-    margin-left: 20px
-    margin-right: 20px
-    height: 40px
-    width: 40px
-    background-image: $user-profile-photo-ba-image
+    margin: 5px
+    max-height: 40px
+    width: auto
     background-size: contain
+    @include set-border(0px, 50%)
 
-.user-profile-name
-    color: $user-names-color
+.header-date-time
+  color: map-get($bg-color, 'lighter')
+  font:
+    size: map-get($font-message, 'name-size')
+    weight: map-get($font-message, 'name-weight')
+    style: map-get($font-message, 'name-style')

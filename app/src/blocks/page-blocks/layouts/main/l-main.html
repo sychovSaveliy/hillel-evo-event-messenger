@@ -1,9 +1,40 @@
-<header class="row _row col-xs-12" ui-view="header">header</header>
-<section class="row _row content-and-sidebars">
-    <div class="left-sidebar col-xs-2" ui-view="contactList">left-sidebar</div>
-    <div class="content col-xs-8" ui-view="chat">content</div>
-    <div class="right-sidebar col-xs-2" ui-view="event">right-sidebar</div>
-</section>
-<footer class="row _row xs-12">
-    <div class="settings col-xs-2" ui-view="footer">settings</div>
-</footer>
+<div class="col-xs-12
+            col-sm-12
+            col-md-12
+            col-lg-12
+            div-row-main-page
+            bg-dark-dark"
+     ui-view="header">header</div>
+<div class="col-xs-12
+            col-sm-12
+            col-md-12
+            col-lg-12
+            top-xs
+            div-row-main-page-center
+            bg-gray-dark">
+  <div class="col-xs-6
+              col-sm-6
+              col-md-3
+              col-lg-3"
+       ui-view="contactList">left-sidebar</div>
+  <div class="col-xs-6
+              col-sm-6
+              col-md-6
+              col-lg-6
+              bg-gray-light
+              left-sidebar"
+       ui-view="chat">content</div>
+  <div class="col-xs-3
+              col-sm-3
+              col-md-3
+              col-lg-3
+              right-sidebar"
+       ui-view="event">right-sidebar</div>
+</div>
+<div class="div-row-main-page
+            col-xs-12
+            col-sm-12
+            col-md-12
+            col-lg-12
+            bg-dark-dark"
+     ui-view="footer">settings</div>

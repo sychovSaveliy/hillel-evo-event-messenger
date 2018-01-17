@@ -10,5 +10,8 @@ app.controller('l-login', function($scope, $state, $flowData){
         function (error) {
           $scope.errorMessage = error.info.message;
         })
+  };
+  $scope.goToTestPage = function () {
+    $state.go('test');
   }
 });

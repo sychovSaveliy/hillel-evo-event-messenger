@@ -1,24 +1,19 @@
-@import ../../../../../sass/_variables.scss
-
-body, .row
-    margin: 0
-    box-sizing: border-box
-
+@import "../../../../../sass/variables"
+@import "../../../../../sass/type-default"
+@import "../../../../../sass/functions"
 .left-side, .right-side
     height: 100vh
 
 .content-part
     padding: 0
     height: 100vh
-    background-color: $content-background-color
 
 .message-example
     position: relative
     width: 150px
-    background-color: $message-example-background-color
     padding: 15px 25px 10px 10px
     margin: 20px
-    border-radius: 15px
+    @include set-border(10px, 10px)
     font-size: 15px
 
 .message-example:before
@@ -27,7 +22,6 @@ body, .row
     bottom: 14px
     position: absolute
     border-top: 9px solid transparent
-    border-right: 18px solid $message-example-background-color
     border-bottom: 9px solid transparent
 
 .message-example .delete
