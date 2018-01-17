@@ -24,6 +24,9 @@ app.get("/", function (req, res) {
 app.route('/user/:id/')
   .get($data.getUserById);
 
+app.route('/event/:id/')
+  .get($data.getEventById);
+
 app.route('/auth')
   .post($data.postDataUserById);
 
