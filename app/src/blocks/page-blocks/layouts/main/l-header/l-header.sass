@@ -1,0 +1,20 @@
+@import "../../../../../sass/variables"
+@import "../../../../../sass/type-default"
+@import "../../../../../sass/functions"
+
+.div-row-main-page
+    height: $header-height
+    
+.user-profile-photo
+    margin: 5px
+    max-height: 40px
+    width: auto
+    background-size: contain
+    @include set-border(0px, 50%)
+
+.header-date-time
+  color: map-get($bg-color, 'lighter')
+  font:
+    size: map-get($font-message, 'name-size')
+    weight: map-get($font-message, 'name-weight')
+    style: map-get($font-message, 'name-style')

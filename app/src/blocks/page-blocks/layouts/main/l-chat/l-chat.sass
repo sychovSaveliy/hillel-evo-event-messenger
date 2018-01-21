@@ -1,0 +1,36 @@
+@import "../../../../../sass/variables"
+@import "../../../../../sass/type-default"
+@import "../../../../../sass/functions"
+.left-side, .right-side
+    height: 100vh
+
+.content-part
+    padding: 0
+    height: 100vh
+
+.message-example
+    position: relative
+    width: 150px
+    padding: 15px 25px 10px 10px
+    margin: 20px
+    @include set-border(10px, 10px)
+    font-size: 15px
+
+.message-example:before
+    content: ""
+    right: 100%
+    bottom: 14px
+    position: absolute
+    border-top: 9px solid transparent
+    border-bottom: 9px solid transparent
+
+.message-example .delete
+    position: absolute
+    right: 10px
+    top: 5px
+    cursor: pointer
+
+.message-example .message-name
+    font-weight: bold
+
+

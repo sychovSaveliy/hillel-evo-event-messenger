@@ -1,27 +1,24 @@
 @import variables
 
-.footer-message form
-    width: 100%
-    padding: 0 25px 0 0
+.footer-message
+    form
+        width: 100%
+        padding: 0 25px 0 0
+    input
+        width: 300px
+        height: 30px
+        padding-left: 15px
+        border-radius: 45px
+        border: 2px solid $footer-input-border-background-color
+        background-color: $footer-input-background-color
+        color: $footer-color
+        outline: none
+        transition: .3s lineare 
+    input:focus
+        width: 100%
 
-.footer-message input
-    width: 300px
-    height: 30px
-    padding-left: 15px
-    border-radius: 45px
-    border: 2px solid $footer-input-border-background-color
-    background-color: $footer-input-background-color
-    color: $footer-color
-    outline: none
-    transition: .3s linear
-
-.footer-message input:focus
-    width: 100%
-
-.footer-message button
-    background: none
-    border: none
-    color: $footer-color
-    cursor: pointer
-
-
+    button
+        background: none
+        border: none
+        color: $footer-color
+        cursor: pointer
