@@ -11,12 +11,22 @@ function filereader(fsRef, path) {
     })
 }
 
-function getUserById(req, res) {
-  console.log(reg);
-  var servicePromise = filereader(fs, './mock/api/users/'+ req.params.id +'/get.json');
+function getUser(req, res) {
+  var servicePromise = filereader(fs, './mock/api/users/'+ req.params.id +'/user_pattern/get.json');
+
   servicePromise
     .then((response) => {
-    console.log(response);
+      return response.user;
+    })
+    .then((response) => {
+      res.json(response);
+    });
+}
+
+function getEventById(req, res) {
+  var servicePromise = filereader(fs, './mock/api/events/'+ req.params.id +'/get.json');
+  servicePromise
+    .then((response) => {
       return response;
     })
     .then((response) => {
@@ -34,4 +44,4 @@ function postDataUserById(req, res) {
     });
 }
 
-module.exports = { getUserById, postDataUserById };
+module.exports = { getUser, postDataUserById, getEventById };

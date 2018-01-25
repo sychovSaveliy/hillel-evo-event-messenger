@@ -1,0 +1,30 @@
+{
+  "user": {
+    "id": "001",
+    "name": "Jane Dow",
+    "token": "thisIsTokenForUserOne",
+    "contacts": [
+      {
+        "id": "002"
+      },
+      {
+        "id": "003"
+      },
+      {
+        "id": "004"
+      },
+      {
+        "id": "005"
+      }
+    ],
+    "events": [
+      {
+        "id": "01.01.2018"
+      },
+      {
+        "id": "07.01.2018"
+      }
+    ],
+    "avatar": "./mock/api/collections/users/id_001/photo_user.png"
+  }
+}

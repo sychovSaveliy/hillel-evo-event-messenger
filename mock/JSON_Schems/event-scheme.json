@@ -1,0 +1,198 @@
+{
+  "$id": "event",
+  "type": "object",
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "properties": {
+    "event": {
+      "$id": "/properties/event",
+      "type": "object",
+      "properties": {
+        "id": {
+          "$id": "/properties/event/properties/id",
+          "type": "string",
+          "title": "The Id Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "a01"
+          ]
+        },
+        "name": {
+          "$id": "/properties/event/properties/name",
+          "type": "string",
+          "title": "The Name Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "Name event"
+          ]
+        },
+        "status": {
+          "$id": "/properties/event/properties/status",
+          "type": "boolean",
+          "title": "The Status Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": false,
+          "examples": [
+            true
+          ]
+        },
+        "date": {
+          "$id": "/properties/event/properties/date",
+          "type": "array",
+          "items": {
+            "$id": "/properties/event/properties/date/items",
+            "type": "object",
+            "properties": {
+              "drafts": {
+                "$id": "/properties/event/properties/date/items/properties/drafts",
+                "type": "array",
+                "items": {
+                  "$id": "/properties/event/properties/date/items/properties/drafts/items",
+                  "type": "object",
+                  "properties": {
+                    "date": {
+                      "$id": "/properties/event/properties/date/items/properties/drafts/items/properties/date",
+                      "type": "string",
+                      "title": "The Date Schema",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": "",
+                      "examples": [
+                        "01.02.2018"
+                      ]
+                    },
+                    "votes": {
+                      "$id": "/properties/event/properties/date/items/properties/drafts/items/properties/votes",
+                      "type": "integer",
+                      "title": "The Votes Schema",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": 0,
+                      "examples": [
+                        2
+                      ]
+                    }
+                  }
+                }
+              },
+              "confirmed": {
+                "$id": "/properties/event/properties/date/items/properties/confirmed",
+                "type": "string",
+                "title": "The Confirmed Schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": [
+                  "05.02.2018"
+                ]
+              }
+            }
+          }
+        },
+        "place": {
+          "$id": "/properties/event/properties/place",
+          "type": "array",
+          "items": {
+            "$id": "/properties/event/properties/place/items",
+            "type": "object",
+            "properties": {
+              "drafts": {
+                "$id": "/properties/event/properties/place/items/properties/drafts",
+                "type": "array",
+                "items": {
+                  "$id": "/properties/event/properties/place/items/properties/drafts/items",
+                  "type": "object",
+                  "properties": {
+                    "place": {
+                      "$id": "/properties/event/properties/place/items/properties/drafts/items/properties/place",
+                      "type": "string",
+                      "title": "The Place Schema",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": "",
+                      "examples": [
+                        "Address 01"
+                      ]
+                    },
+                    "votes": {
+                      "$id": "/properties/event/properties/place/items/properties/drafts/items/properties/votes",
+                      "type": "integer",
+                      "title": "The Votes Schema",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": 0,
+                      "examples": [
+                        2
+                      ]
+                    }
+                  }
+                }
+              },
+              "confirmed": {
+                "$id": "/properties/event/properties/place/items/properties/confirmed",
+                "type": "string",
+                "title": "The Confirmed Schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": [
+                  "Address 01"
+                ]
+              }
+            }
+          }
+        },
+        "members": {
+          "$id": "/properties/event/properties/members",
+          "type": "array",
+          "items": {
+            "$id": "/properties/event/properties/members/items",
+            "type": "object",
+            "properties": {
+              "invited": {
+                "$id": "/properties/event/properties/members/items/properties/invited",
+                "type": "array",
+                "items": {
+                  "$id": "/properties/event/properties/members/items/properties/invited/items",
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "$id": "/properties/event/properties/members/items/properties/invited/items/properties/id",
+                      "type": "string",
+                      "title": "The Id Schema",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": "",
+                      "examples": [
+                        "001"
+                      ]
+                    },
+                    "role": {
+                      "$id": "/properties/event/properties/members/items/properties/invited/items/properties/role",
+                      "type": "string",
+                      "title": "The Role Schema",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": "",
+                      "examples": [
+                        "user"
+                      ]
+                    },
+                    "chat_success": {
+                      "$id": "/properties/event/properties/members/items/properties/invited/items/properties/chat_success",
+                      "type": "boolean",
+                      "title": "The Chat_success Schema",
+                      "description": "An explanation about the purpose of this instance.",
+                      "default": false,
+                      "examples": [
+                        false
+                      ]
+                    }
+                  }
+                }
+              },
+              "confirmed": {
+                "$id": "/properties/event/properties/members/items/properties/confirmed",
+                "type": "array"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
