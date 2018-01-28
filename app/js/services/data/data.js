@@ -1,21 +1,22 @@
 app.factory('$data', ['$resource', '$defautService', '$q', function ($resource, $defautService, $q) {
-    var src = $resource($defautService.getURI() + '/auth/'+':param',{param: '@param'},{
+	let _$data = {},
+		_url = $defautService.getURI();
+
+    _$data.auth = $resource(_url + '/auth/',{},{
 		action:{
 			method: "POST"
 		}
 	});
-	src.request = function (param) {
-		var promise  = $q(function(resolve, reject){
-			src.action(param, function(resp){
-				if (resp.info.success == true) {
-					resolve(resp);
-				}
-				else {
-					reject(resp);
-				}
-			});
-		});
-		return promise;
-	};
-return src;
+	
+	_$data.main = $resource(_url + '/user/:token', {},{
+		action:{ 	
+			method: "GET",
+			params:{
+				token:"@token"
+			}
+		}
+	});
+
+
+return _$data;
 }]);
