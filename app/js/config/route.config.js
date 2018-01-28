@@ -9,18 +9,18 @@ app.config(function($stateProvider, $urlRouterProvider){
             views: {
                 "":{
                     templateUrl: 'app/src/blocks/page-blocks/layouts/main/l-main.html',
-                    controller: 'l-main.controller'
+                    controller: 'main'
                 },
                 "header@main": {
-                    templateUrl: 'app/src/blocks/page-blocks/layouts/main/l-header/l-header.html',  
+                    templateUrl: 'app/src/blocks/page-blocks/layouts/main/l-header/l-header.html',
                     controller: 'l-header.controller'
                 },
                 "contactList@main": {
-                  templateUrl: 'app/src/blocks/page-blocks/layouts/main/l-contactList/l-contactList.html',  
-                  controller: 'l-contactList.controller'
+                  templateUrl: 'app/src/blocks/page-blocks/layouts/main/l-contactList/l-contactList.html',
+                  controller: 'main.contactList'
                 },
                 "chat@main": {
-                    templateUrl: 'app/src/blocks/page-blocks/layouts/main/l-chat/l-chat.html',  
+                    templateUrl: 'app/src/blocks/page-blocks/layouts/main/l-chat/l-chat.html',
                     controller: 'l-chat.controller'
                 },
                 "footer@main": {

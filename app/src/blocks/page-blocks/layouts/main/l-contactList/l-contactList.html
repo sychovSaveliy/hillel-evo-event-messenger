@@ -10,12 +10,8 @@
       <button type="submit" class="btn-round-ok-xs" value=""><div class="icon"><i class="fa fa-search" aria-hidden="true"></i></div></button>
     </form>
   </div>
-  <div class="contactList-user">
+  <div class="contactList-user" ng-repeat="item in main.contactsList.contacts">
     <div class="user-contactList-photo"><img src="app/src/img/default-profile-image.png"></div>
-    <div class="user-contactList-name">Name LastName</div>
-  </div>
-  <div class="contactList-user">
-    <div class="user-contactList-photo"><img src="app/src/img/default-profile-image.png"></div>
-    <div class="user-contactList-name">Name LastName</div>
+    <div class="user-contactList-name">{{item.name}}</div>
   </div>
 </div>
