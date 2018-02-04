@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Create event</title>
+		<link rel="stylesheet" href="../compiled/T-12-create-page-create-event/T-12-create-page-create-event.css">
+	</head>
+	<body>
+		<div class="form">
+			<form acition="#" method="post" autocomplete="on" enctype="multipart/form-data" id="form">
+				<div class="event-name row">
+					<div class="cell">
+						<label for="event-name">Event name:</label>
+					</div>
+					<input id="event-name" name="event_name" required="required" type="text" placeholder="Event name"/>
+					<span class="avatar">
+						<input id="avatar" name="avatar" type="file" accept="image/*"/>
+						<label for="avatar">Choose avatar for event</label>
+					</span>
+				</div>
+				<div class="date row">
+					<div class="cell">
+						<span>Date:</span><label for="date-from">from:</label>
+					</div>
+					<input id="date-from" name="date_from" required="required" type="datetime-local"/>
+					<label for="date-to"> to:</label>
+					<input id="date-to" name="date_to" required="required" type="datetime-local"/>
+				</div>
+				<div class="switch row">
+				    <div class="cell"></div>
+				    <input type="checkbox" id="switch1" class="checkbox">
+				    <label for="switch1" class="switch-label">Allow voting for participants</label>
+				</div>
+				<div class="place row">
+					<div class="cell">
+						<span>Place:</span>
+					</div>
+					<input id="place" name="place" required="required" type="text"/><img src="./img/map-marker-icon_34392.ico" alt="pic">
+					<span>Choose on map</span>
+				</div>
+				<div class="switch row">
+				    <div class="cell"></div>
+				    <input type="checkbox" id="switch2" class="checkbox">
+				    <label for="switch2" class="switch-label">Allow voting for participants</label>
+				</div>
+				<div class="participants row">
+					<div class="cell">
+						<label for="participants">Participants:</label>
+					</div>
+					<select id="participants" name="participants" required="required" >
+						<option value="p1">select participants</option>
+					</select>
+					<input type="checkbox" id="switch3" class="checkboxalone" checked>
+				    <label for="switch3" >Send to all</label>
+				    <div class="selected">
+						<span> Send invitations to:</span><span class="selected-participants"></span>
+					</div>
+				</div>
+				<div class="reminders row">
+					<div class="cell">
+						<label for="reminders">Reminders:</label>
+					</div>
+					<input type="checkbox" id="switch" class="checkbox">
+				    <label for="switch" class="switch-label">Receive notifications in:</label>
+				    <span class="time">
+				    	<input id="days" name="days" type="number" min="0" max="99"/>
+						<label for="days">days</label>
+						<input id="hours" name="hours" type="number" min="0" max="24"/>
+						<label for="hours">hours</label>
+						<input id="minutes" name="minutes" type="number" min="0" max="59"/>
+						<label for="minutes">minutes</label>
+					</span>
+				</div>
+				<div class="ad-information row">
+					<label for="AdInformation">Aditional information</label>
+					<textarea name="AdInformation" maxlength="500"></textarea>
+				</div>
+				<div class="button row">
+					<input id="create-event-button" type="submit" value="Create event"/>
+				</div>
+			</form>
+		</div>
+	</body>
+</html>
