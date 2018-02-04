@@ -1,18 +1,18 @@
 {
   "event": {
-    "id": "03",
-    "name": "Name event 03",
+    "id": "001",
+    "name": "Name event 01",
     "status": true,
     "date": [
       {
         "drafts": [
           {
             "date": "01.02.2018",
-            "votes": 2
+            "votes": 1
           },
           {
             "date": "03.02.2018",
-            "votes": 1
+            "votes": 3
           },
           {
             "date": "05.02.2018",

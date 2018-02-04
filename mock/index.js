@@ -27,6 +27,9 @@ app.route('/user/:id/')
 app.route('/event/:id/')
   .get($data.getEventById);
 
+app.route('/chat/:id/')
+  .get($data.getChatById);
+
 app.route('/auth')
   .post($data.postDataUserById);
 

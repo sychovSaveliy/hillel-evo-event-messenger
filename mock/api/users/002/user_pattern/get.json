@@ -5,29 +5,25 @@
     "token": "002",
     "contacts": [
       {
-        "id": "001",
-        "name": "Jane Dow"
+        "id": "002",
+        "name": ""
       },
       {
         "id": "003",
-        "name": "Jane Dow3"
+        "name": ""
       },
       {
         "id": "004",
-        "name": "Jane Dow4"
-      },
-      {
-        "id": "005",
-        "name": "Jane Dow5"
+        "name": ""
       }
     ],
     "events": [
-      {
-        "id": "01"
-      },
-      {
-        "id": "02"
-      }
+      "001",
+      "003"
+    ],
+    "chats": [
+      "001",
+      "002"
     ],
     "avatar": "./mock/api/collections/users/002/photo_user.png"
   }
