@@ -7,9 +7,9 @@ app.factory('$data', ['$resource', '$defautService', '$q', function ($resource, 
 			method: "POST"
 		}
 	});
-	
+
 	_$data.main = $resource(_url + '/user/:token', {},{
-		action:{ 	
+		action:{
 			method: "GET",
 			params:{
 				token:"@token"
@@ -17,6 +17,15 @@ app.factory('$data', ['$resource', '$defautService', '$q', function ($resource, 
 		}
 	});
 
+	_$data.chats = $resource(_url + '/chat/:token', {}, {
+	  action: {
+	    method: "GET",
+      params: {
+	      params: "@token"
+      }
+    }
+  });
 
-return _$data;
+
+  return _$data;
 }]);
