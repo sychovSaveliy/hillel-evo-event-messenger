@@ -16,28 +16,28 @@ function getUser(req, res) {
 
   servicePromise
     .then((response) =>{
-      let contactsArr = [];
-      let oneUser = {};
-      let stop = 0;
-      let length = response.user.contacts.length;
+      let contactsArr = [],
+          oneUser = {},
+          stop = 0,
+          length = response.user.contacts.length,
+          data = response;
       for (let i =0; i < length; i++){
-        let id = response.user.contacts[i].id;
-
-        let newarr = filereader(fs, './mock/api/users/'+ id +'/user_pattern/get.json');
-        newarr
-          .then((response) =>{
-            oneUser = {
-              "name": response.user.name,
-              "id": response.user.id
-            };
-            contactsArr.push(oneUser);
-            stop = stop + 1;
-            if(length === stop){
-              response.user.contacts = contactsArr;
-              return res.json(response.user);
-            }
-            return contactsArr;
-          })
+        let key = response.user.contacts[i].id;
+        let newarr = filereader(fs, './mock/api/users/'+ key +'/user_pattern/get.json');
+            newarr
+              .then((response) =>{
+                oneUser = {
+                  "name": response.user.name,
+                  "id": response.user.id
+                };
+                contactsArr.push(oneUser);
+                stop = stop + 1;
+                if(length === stop){
+                  data.user.contacts = contactsArr;
+                  return res.json(data.user);
+                }
+                return contactsArr;
+              })
       }
     })
 }
