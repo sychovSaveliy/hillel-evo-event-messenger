@@ -7,9 +7,8 @@ app.controller('main.contactList', function($scope, $flowDataChats, $transferSer
     $scope.main.contactList = {};
   }
 
-  $scope.onClickContact = function (index) {
-    let id = $scope.main.contactsList.contacts[index].id;
-    $flowDataChats.getDataChats({token: $scope.main.chatId})
+  $scope.onClickContact = function (id) {
+    $flowDataChats.getDataChats({token: id})
       .then(function(response){
         $transferService.setData({name: 'chats', data: response.messages});
         $transferService.getData('chats');

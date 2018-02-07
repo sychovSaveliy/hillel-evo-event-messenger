@@ -2,19 +2,20 @@
 @import "type-default"
 @import "functions"
 .button-default
+  @include type-setting(-1)
   font:
-    size: map-get($font-btn, 'size')
-    weight: map-get($font-btn, 'weight')
+  weight: map-get($font-btn, 'weight')
   height: 36px
-  width: 80px
   padding-left: 10px
   padding-right: 10px
   align-items: center
   transition: 0.2s
   @include set-border(0px, 18px)
+  &:hover, &:active
+    cursor: pointer
 
 .button-round
-  height: 38px
+  height: 38px;
   width: 38px
   padding: 5px
   align-items: center
@@ -23,7 +24,7 @@
   @include set-border(0px, 20px)
 
 .button-round-xs
-  height: 24px
+  height: 24px;
   width: 24px
   padding: 4px
   align-items: center
@@ -34,6 +35,7 @@
   @extend .button-default
   @include color-light($bg-color, 'green', 5%)
   color: map-get($font-color, 'primary')
+  width: 80px
   &:hover
     @include color-light($bg-color, 'green', 30%)
   &:active
@@ -43,6 +45,7 @@
   @extend .button-default
   background-color:  map-get($bg-color, 'dark')
   color: map-get($font-color, 'gray')
+  width: 80px
   &:hover
     @include color-dark($bg-color, 'dark', 20%)
   &:active
@@ -52,6 +55,7 @@
   @extend .button-default
   background-color: map-get($bg-color, 'gray')
   color: map-get($font-color, 'primary')
+  width: 80px
   &:hover
     @include color-dark($bg-color, 'gray', 20%)
   &:active
@@ -61,6 +65,7 @@
   @extend .button-default
   background-color: map-get($bg-color, 'orange')
   color: map-get($font-color, 'primary')
+  width: 80px
   &:hover
     @include color-light($bg-color, 'orange', 10%)
     &:active
@@ -97,7 +102,7 @@
   background-color: map-get($bg-color, 'orange')
   color: map-get($font-color, 'primary')
   &:hover
-    @include color-light($bg-color, 'orange', 10%)
+    @include color-light($bg-color, 'orange', 30%)
     &:active
       @include color-light($bg-color, 'orange', 30%)
 
@@ -105,7 +110,6 @@
   @extend .button-round-xs
   @include color-light($bg-color, 'green', 5%)
   color: map-get($font-color, 'primary')
-  background-image: url("app/img/icons/conf.png")
   &:hover
     @include color-light($bg-color, 'green', 30%)
   &:active
@@ -127,3 +131,29 @@
     @include color-dark($bg-color, 'gray', 20%)
     &:active
       @include color-dark($bg-color, 'gray', 30%)
+
+
+.btn-right-side-menu
+  @include type-setting(0)
+  list-style: none
+  font:
+    weight: map-get($font-btn, 'weight')
+  align-items: center
+  transition: 0.2s
+  @include set-border(0px, 18px)
+  @include color-dark($bg-color, 'gray', 10%)
+  color: map-get($font-color, 'primary')
+  width: 80%
+  height: auto
+  padding: 10px
+  margin: 10px
+  &:hover
+    @include color-dark($bg-color, 'gray', 20%)
+  &:active
+    @include color-dark($bg-color, 'gray', 30%)
+
+.btn-right-side-menu-click
+  &:hover
+    color: white
+    cursor: pointer
+

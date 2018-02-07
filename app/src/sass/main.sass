@@ -8,6 +8,10 @@ body
   background-color: map-get($bg-color, 'primary')
   overflow-x: hidden
 
+.ul-right-side-menu
+  padding: 0px
+  margin: 0px
+
 .div-message-box
   @include color-light($bg-color, 'gray', 30%)
   margin: 2%
@@ -20,28 +24,37 @@ body
   @include set-border(0px, 20px)
 
 .message-name
+  @include type-setting(-1)
   color: map-get($font-color, 'dark')
   font:
-    size: map-get($font-message, 'name-size')
     weight: map-get($font-message, 'name-weight')
     style: map-get($font-message, 'name-style')
 
 .message-text
+  @include type-setting(-1)
   color: map-get($font-color, 'primary')
   font:
-    size: map-get($font-message, 'text-size')
     weight: map-get($font-message, 'text-weight')
 
 .div-inline-block
   display: inline-block
 
-.icon-size
+.icon-size,
+.icon-size.fa
   font-size: 22px
+
+.icon-size-xs
+  font-size: 15px
 
 .icon-color
   color: map-get($bg-color, 'darker')
 
+.icon-color-menu
+  color: map-get($font-color, 'primary')
+  margin-left: 15px
+
 .txt-header
+
   color: map-get($font-header, 'color')
   font:
     size: map-get($font-header, 'size')
@@ -74,9 +87,9 @@ body
     text-decoration: map-get($font-link, 'v-decoration')
 
 .txt-description
+  @include type-setting(-1)
   color: map-get($font-description, 'color')
   font:
-    size: map-get($font-description, 'size')
     style: map-get($font-description, 'style')
     weight: map-get($font-description, 'weight')
 

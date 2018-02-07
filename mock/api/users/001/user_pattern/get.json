@@ -1,30 +1,82 @@
 {
   "user": {
     "id": "001",
-    "name": "Jane Dow",
+    "name": "Jane Doe",
     "token": "001",
     "contacts": [
       {
         "id": "002",
-        "name": ""
+        "private_chat": "001002"
       },
       {
         "id": "003",
-        "name": ""
+        "private_chat": "001003"
       },
       {
         "id": "004",
-        "name": ""
+        "private_chat": "001004"
+      },
+      {
+        "id": "005",
+        "private_chat": "001005"
+      },
+      {
+        "id": "006",
+        "private_chat": "001006"
+      },
+      {
+        "id": "007",
+        "private_chat": "001007"
+      },
+      {
+        "id": "008",
+        "private_chat": "001008"
+      },
+      {
+        "id": "009",
+        "private_chat": "001009"
+      },
+      {
+        "id": "010",
+        "private_chat": "001010"
       }
     ],
     "events": [
-      "001",
-      "003"
+      {
+        "id": "001"
+      },
+      {
+        "id": "002"
+      },
+      {
+        "id": "003"
+      },
+      {
+        "id": "004"
+      },
+      {
+        "id": "005"
+      },
+      {
+        "id": "006"
+      },
+      {
+        "id": "007"
+      },
+      {
+        "id": "008"
+      },
+      {
+        "id": "009"
+      },
+      {
+        "id": "010"
+      }
     ],
     "chats": [
       "001",
       "002"
     ],
-    "avatar": "./mock/api/collections/users/001/photo_user.png"
+    "avatar": "./mock/api/users/001/photo_user.jpg"
   }
 }

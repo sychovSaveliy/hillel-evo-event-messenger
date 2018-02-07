@@ -1,0 +1,64 @@
+{
+  "event": {
+    "id": "004",
+    "name": "Just meeting2",
+    "status": true,
+    "date": [
+      {
+        "drafts": [
+          {
+            "date": "01.03.2018",
+            "votes": 2
+          },
+          {
+            "date": "03.03.2018",
+            "votes": 1
+          },
+          {
+            "date": "05.03.2018",
+            "votes": 0
+          }
+        ],
+        "confirmed": "05.03.2018"
+      }
+    ],
+    "place": [
+      {
+        "drafts": [
+          {
+            "place": "Address 01",
+            "votes": 2
+          },
+          {
+            "place": "Address 02",
+            "votes": 1
+          }
+        ],
+        "confirmed": ""
+      }
+    ],
+    "members": [
+      {
+        "invited": [
+          {
+            "id": "001",
+            "role": "user",
+            "chat_success": false
+          },
+          {
+            "id": "003",
+            "role": "admin",
+            "chat_success": true
+          },
+          {
+            "id": "004",
+            "role": "user",
+            "chat_success": false
+          }
+        ],
+        "confirmed": [
+        ]
+      }
+    ]
+  }
+}

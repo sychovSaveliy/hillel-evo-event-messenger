@@ -8,3 +8,4 @@ templates/compiled
 mock/node_modules
 mock/package-lock.json
 backups
+mock/JSON_Schems

@@ -1,7 +1,7 @@
 $font-primary: Arial;
 
 $font-btn: (
-  'size': 14px,
+  'size': 0.875rem,
   'weight': 800
 );
 
@@ -19,7 +19,7 @@ $font-description: (
   'color': #656850,
   'style': italic,
   'weight': 200,
-  'size': 12px
+  'size': 0.75rem
 );
 
 $font-invert: (
@@ -27,26 +27,42 @@ $font-invert: (
 );
 
 $font-header: (
-  'size': 20px,
-  'weight': 600,
+  'size': 1.25rem,
+  'weight': 500,
   'color': black
 );
 $font-header-green: (
-  'size': 20px,
+  'size': 1.25rem,
   'weight': 600,
   'color': rgba(155, 176, 15, 1)
 );
 $font-header-dark: (
-  'size': 20px,
+  'size': 1.25rem,
   'weight': 600,
   'color': rgba(155, 176, 15, 1)
 );
 
 $font-message: (
-  'name-size': 12px,
+  'name-size': 0.75rem,
   'name-weight': 600,
   'name-style': italic,
-  'text-size': 13px,
+  'text-size': 0.8125rem,
   'text-weight': 200,
   'text-color': #222222
-)
+);
+
+$type-scale: (
+  -1: 0.75rem,  // font-description,  font-message,  .input-search, font-btn
+  0: 1rem,      // font-header
+  1: 1.25rem,  // font-header-green ??? font-header-dark
+);
+
+$base-font-size: 1rem;
+$base-line-height: $base-font-size * 1.25;
+
+$line-heights: (
+  -1: $base-line-height,
+  0: $base-line-height,
+  1: $base-line-height,
+);
+
