@@ -1,0 +1,71 @@
+{
+  "event": {
+    "id": "009",
+    "name": "Girls business",
+    "status": true,
+    "date": [
+      {
+        "drafts": [
+          {
+            "date": "01.05.2018",
+            "votes": 2
+          },
+          {
+            "date": "03.06.2018",
+            "votes": 1
+          },
+          {
+            "date": "05.07.2018",
+            "votes": 0
+          }
+        ],
+        "confirmed": ""
+      }
+    ],
+    "place": [
+      {
+        "drafts": [
+          {
+            "place": "Address 01",
+            "votes": 2
+          },
+          {
+            "place": "Address 02",
+            "votes": 1
+          },
+          {
+            "place": "Address 03",
+            "votes": 0
+          }
+        ],
+        "confirmed": "Address 01"
+      }
+    ],
+    "members": [
+      {
+        "invited": [
+          {
+            "id": "001",
+            "role": "user",
+            "chat_success": false
+          },
+          {
+            "id": "004",
+            "role": "admin",
+            "chat_success": true
+          },
+          {
+            "id": "003",
+            "role": "user",
+            "chat_success": false
+          }
+        ],
+        "confirmed": [
+          {
+            "id": "004"
+          }
+        ]
+      }
+    ]
+  }
+}

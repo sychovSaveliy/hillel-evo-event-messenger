@@ -1,8 +1,8 @@
 {
   "user": {
     "id": "001",
-    "name": "Jane Dow",
-    "token": "thisIsTokenForUserOne",
+    "name": "Jane Doe",
+    "token": "001",
     "contacts": [
       {
         "id": "002"
@@ -12,19 +12,23 @@
       },
       {
         "id": "004"
-      },
-      {
-        "id": "005"
       }
     ],
     "events": [
       {
-        "id": "01.01.2018"
+        "id": "001"
       },
       {
-        "id": "07.01.2018"
+        "id": "002"
+      },
+      {
+        "id": "003"
       }
     ],
-    "avatar": "./mock/api/collections/users/id_001/photo_user.png"
+    "chats": [
+      "001",
+      "002"
+    ],
+    "avatar": "./mock/api/users/001/photo_user.jpg"
   }
 }

@@ -1,0 +1,64 @@
+{
+  "event": {
+    "id": "005",
+    "name": "Let me make you drunk#3",
+    "status": false,
+    "date": [
+      {
+        "drafts": [
+          {
+            "date": "01.04.2018",
+            "votes": 0
+          },
+          {
+            "date": "05.04.2018",
+            "votes": 0
+          }
+        ],
+        "confirmed": ""
+      }
+    ],
+    "place": [
+      {
+        "drafts": [
+          {
+            "place": "Address 01",
+            "votes": 2
+          },
+          {
+            "place": "Address 02",
+            "votes": 1
+          },
+          {
+            "place": "Address 03",
+            "votes": 0
+          }
+        ],
+        "confirmed": "Address 01"
+      }
+    ],
+    "members": [
+      {
+        "invited": [
+          {
+            "id": "001",
+            "role": "user",
+            "chat_success": false
+          },
+          {
+            "id": "004",
+            "role": "admin",
+            "chat_success": true
+          },
+          {
+            "id": "003",
+            "role": "user",
+            "chat_success": false
+          }
+        ],
+        "confirmed": [
+        ]
+      }
+    ]
+  }
+}

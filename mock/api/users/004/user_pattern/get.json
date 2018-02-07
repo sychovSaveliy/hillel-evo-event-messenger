@@ -1,30 +1,55 @@
 {
   "user": {
     "id": "004",
-    "name": "Jane Dow4",
+    "name": "Marry Doe 4",
     "token": "004",
     "contacts": [
       {
-        "id": "002",
-        "name": ""
+        "id": "002"
       },
       {
-        "id": "003",
-        "name": ""
+        "id": "003"
       },
       {
-        "id": "001",
-        "name": ""
+        "id": "001"
       }
     ],
     "events": [
-      "002",
-      "003"
+      {
+        "id": "001"
+      },
+      {
+        "id": "002"
+      },
+      {
+        "id": "003"
+      },
+      {
+        "id": "004"
+      },
+      {
+        "id": "005"
+      },
+      {
+        "id": "006"
+      },
+      {
+        "id": "007"
+      },
+      {
+        "id": "008"
+      },
+      {
+        "id": "009"
+      },
+      {
+        "id": "010"
+      }
     ],
     "chats": [
-      "002",
-      "003"
+      "001",
+      "002"
     ],
-    "avatar": "./mock/api/collections/users/002/photo_user.png"
+    "avatar": "./mock/api/users/004/photo_user.jpg"
   }
 }

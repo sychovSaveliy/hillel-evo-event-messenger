@@ -3,26 +3,53 @@
 тип: POST
 файл: registration.json
 задача BE:
-создать временную папку с именем post-data.username
-отправить по адресу post-data.e-mail е-мйл для подтверждения регистрации (что и как - я без понятия, можем обсудить)
-если в течении суток не пришло подтверждение - удалить временную папку
-если подтверждение пришло, переносим данные в api/users с тем же именем из post-data.username
-и заполняем: id = post-data.username, пароль и мыло из первоначального постзапроса + создаем token
-все это генерит файл user_pattern (свободные поля эзер будет заполнять и присылать PUT запросы)
+сохраить объект USER пример объекта (hillel-evo-event-messenger/mock/JSON_Schems/user_pattern.json),
+Выполняем метод POST на endpoint /user, данный user должен быть неактивным пока он не сделает подтверждение через свою почту
+200-OK({})
+409-Conflict if user exists ({"message":"User is already exist in Data Base"})
+если в течении суток не пришло подтверждение - удалить запись (low-level priority task)
+если подтверждение пришло, выставляем флаг в БД true
+
+на очту приходит ссылка с временным токеном для подтверждения пользователя, при нажатии на которую на BE мы выполняем авторизацию пользоватля
+и возвращаем объект с токеном,({
+                                     “access_token”:“2YotnFZFEjr1zCsicMWpAA”,
+                                     “token_type”:“example”,
+                                     “expires_in”:3600,
+                                     “refresh_token”:“tGzv3JOkF0XG5Qx2TlKWIA”,
+                                     “example_parameter”:“example_value”
+                                   })
+
 
 2. Авторизация
 2.1. FE отправляет запрос:
-тип: GET
-файл: auth-get.json
+тип: POST
+пример объекта файл: (hillel-evo-event-messenger/mock/JSON_Schems/auth-get.json)
 задача BE:
-найти в базе юзера пол логину (либо id, либо e-mail), вернуть "success": true, "token": "thisIsTokenForUserOne"
+найти в базе юзера пол логину (либо id, либо e-mail), проверить соответсвие пароля, вернуть объект:
+статус код 200:
+({
+                                     “access_token”:“2YotnFZFEjr1zCsicMWpAA”,
+                                     “token_type”:“example”,
+                                     “expires_in”:3600,
+                                     “refresh_token”:“tGzv3JOkF0XG5Qx2TlKWIA”,
+                                     “example_parameter”:“example_value”
+                                   })
+
+Статус код 403 (запрещено):
+{"message":"User is already exist in Data Base"}
+
+
+//////2.2. При успешной авторизации FE отправляет полученный токен и BE:
+//////1. собирает данные по юзеру
 
 3. Event
-3.1. Пользователь создает евент, он может его создавать не за раз, поэтому сохраняет draft:
+3.1. Пользователь создает евент, он может его создавать не за раз, поэтому он сразу сохраняет draft:
 тип: POST
-файл: event.json
-id генерится, в файл юзера добавляется этот id в массив events
-в самом евете по умолчанию будет "status": false, если он отправляет евет народу, он меняется на true (т е когда перестает быть draft)
+пример объекта файл: (hillel-evo-event-messenger/mock/JSON_Schems/event.json)
+генерится id евента
+На стороне БД мы должны связать юзера и евент по ID
+в самом евете будет "status": false, это значит, что этот евент пока не отправлен контактам, он меняется на true (т е когда перестает быть draft) как только юзер его отправляет друзьям.
+
 3.2. при голосовании за даты, места и т п отправляется запрос:
 тип: PUT
 где только один конкретный элемент переходит из массива date.drafts/place.drafts в confirmed
