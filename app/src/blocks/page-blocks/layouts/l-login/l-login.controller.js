@@ -4,7 +4,14 @@ app.controller('l-login', function($scope, $state, $flowDataAuth, $transferServi
     };
 
   $scope.setAuth = params => $flowDataAuth.requestAuth(params)
-          .then(response => {$transferService.setData({name:'auth',data:params}); $state.go('main')}, error => $scope.errorMessage = error.info.message);
+          .then(response => {
+            let _token = response;
+            $transferService.setData({name:'auth',data:response});
+            $transferService.setData({name: 'token', data:_token});
+              localStorage.setItem('token', _token);
+              $state.go('main');
+            },
+            error => $scope.errorMessage = error.info.message);
 
   $scope.goToTestPage = function () {
     $state.go('test');

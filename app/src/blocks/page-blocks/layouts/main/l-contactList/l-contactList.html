@@ -12,6 +12,6 @@
   </div>
   <div class="contactList-user" ng-repeat="item in main.contactsList.contacts">
     <div class="user-contactList-photo"><img src="app/src/img/default-profile-image.png"></div>
-    <div class="user-contactList-name">{{item.name}}</div>
+    <div class="user-contactList-name" ng-click="onClickContact($index)">{{item.name}}</div>
   </div>
 </div>

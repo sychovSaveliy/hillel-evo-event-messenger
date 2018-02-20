@@ -11,14 +11,11 @@
               col-sm-12
               col-md-12
               col-lg-12">
-    <div class="div-message-box">
-      <span class="message-name">User 001:</span>
-      <p class="message-text">This is my first message. If ypu want to tell me something - please, fill free! I'm waiting for your commentaries</p>
+    <div class="div-message-box" ng-repeat="item in chats">
+      <span class="message-name">{{item.author}}:</span>
+      <p class="message-text">{{item.text}}</p>
     </div>
-    <div class="div-message-box">
-      <span class="message-name">User 002:</span>
-      <p class="message-text">This is my first message. If ypu want to tell me something - please, fill free! I'm waiting for your commentaries</p>
-    </div>
+
     <div class="div-message-box-descr bg-gray-dark col-xs-4">
       <span class="txt-description">User 001 is typing...</span>
     </div>
