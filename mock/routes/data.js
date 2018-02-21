@@ -25,13 +25,15 @@ function getUser(req, res) {
           data = response;
         for (let i =0; i < length; i++){
           let key = response.user.contacts[i].id;
-          let newUserContactes = filereader(fs, './mock/api/users/'+ key +'/user_pattern/get.json');
-          newUserContactes
+          let private_chat = response.user.contacts[i].private_chat;
+          let newUserContacts = filereader(fs, './mock/api/users/'+ key +'/user_pattern/get.json');
+          newUserContacts
             .then((response) =>{
               oneUser = {
                 "name": response.user.name,
                 "id": response.user.id,
-                "avatar": response.user.avatar
+                "avatar": response.user.avatar,
+                "private_chat": private_chat
               };
               contactsArr.push(oneUser);
               stop = stop + 1;

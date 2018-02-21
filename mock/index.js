@@ -33,7 +33,6 @@ app.route('/chat/:id/')
 app.route('/auth')
   .post($data.postDataUserById);
 
-
 app.listen(port);
 console.log("Mock server listening on port " + port);
 

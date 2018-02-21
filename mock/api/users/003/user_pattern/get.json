@@ -5,13 +5,36 @@
     "token": "003",
     "contacts": [
       {
-        "id": "002"
+        "id": "001",
+        "private_chat": "001003"
       },
       {
-        "id": "001"
+        "id": "004",
+        "private_chat": "003004"
       },
       {
-        "id": "004"
+        "id": "005",
+        "private_chat": "003005"
+      },
+      {
+        "id": "006",
+        "private_chat": "003006"
+      },
+      {
+        "id": "007",
+        "private_chat": "003007"
+      },
+      {
+        "id": "008",
+        "private_chat": "003008"
+      },
+      {
+        "id": "009",
+        "private_chat": "003009"
+      },
+      {
+        "id": "010",
+        "private_chat": "003010"
       }
     ],
     "events": [
