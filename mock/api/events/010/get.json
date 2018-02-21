@@ -1,0 +1,65 @@
+{
+  "event": {
+    "id": "010",
+    "name": "Diving",
+    "status": true,
+    "date": [
+      {
+        "drafts": [
+          {
+            "date": "01.05.2018",
+            "votes": 2
+          },
+          {
+            "date": "03.05.2018",
+            "votes": 1
+          }
+        ],
+        "confirmed": "01.05.2018"
+      }
+    ],
+    "place": [
+      {
+        "drafts": [
+          {
+            "place": "Egipt, Sharm el Sheikh",
+            "votes": 2
+          }
+        ],
+        "confirmed": "Egipt, Sharm el Sheikh"
+      }
+    ],
+    "members": [
+      {
+        "invited": [
+          {
+            "id": "001",
+            "role": "user",
+            "chat_success": true
+          },
+          {
+            "id": "004",
+            "role": "admin",
+            "chat_success": true
+          },
+          {
+            "id": "003",
+            "role": "user",
+            "chat_success": true
+          }
+        ],
+        "confirmed": [
+          {
+            "id": "001"
+          },
+          {
+            "id": "004"
+          },
+          {
+            "id": "003"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -16,30 +16,88 @@ function getUser(req, res) {
 
   servicePromise
     .then((response) =>{
-      let contactsArr = [],
+
+      return new Promise(function(resolve, reject){
+        let contactsArr = [],
           oneUser = {},
           stop = 0,
           length = response.user.contacts.length,
           data = response;
-      for (let i =0; i < length; i++){
-        let key = response.user.contacts[i].id;
-        let newarr = filereader(fs, './mock/api/users/'+ key +'/user_pattern/get.json');
-            newarr
-              .then((response) =>{
-                oneUser = {
-                  "name": response.user.name,
-                  "id": response.user.id
-                };
-                contactsArr.push(oneUser);
-                stop = stop + 1;
-                if(length === stop){
-                  data.user.contacts = contactsArr;
-                  return res.json(data.user);
+        for (let i =0; i < length; i++){
+          let key = response.user.contacts[i].id;
+          let newUserContactes = filereader(fs, './mock/api/users/'+ key +'/user_pattern/get.json');
+          newUserContactes
+            .then((response) =>{
+              oneUser = {
+                "name": response.user.name,
+                "id": response.user.id,
+                "avatar": response.user.avatar
+              };
+              contactsArr.push(oneUser);
+              stop = stop + 1;
+              if(length === stop){
+                data.user.contacts = contactsArr;
+                response = data;
+                resolve(response);
+              }
+              return contactsArr;
+            })
+        }
+      })
+
+        .then((response) =>{
+          return new Promise(function(resolve, reject){
+              let eventsAll = {
+              currentEvents: {
+                title: "Current Events",
+                data: []
+              },
+              draftEvents: {
+                title: "Draft Events",
+                data: []
+              }
+            },
+              oneEvent = {},
+              stop = 0,
+              length = response.user.events.length,
+              data = response;
+            for (let i =0; i < length; i++){
+              let key = response.user.events[i].id;
+              let newUserEvents = filereader(fs, './mock/api/events/'+ key +'/get.json');
+              newUserEvents
+                .then((response) =>{
+                if(response.event.status === true){
+                  eventsAll.currentEvents.data.push(oneEvent = {
+                    "name": response.event.name,
+                    "id": response.event.id,
+                    "status": response.event.status
+                  })
                 }
-                return contactsArr;
-              })
-      }
+                if(response.event.status === false){
+                  eventsAll.draftEvents.data.push(oneEvent = {
+                    "name": response.event.name,
+                    "id": response.event.id,
+                    "status": response.event.status
+                  })
+                }
+                  stop = stop + 1;
+                  if(length === stop){
+                    data.user.events = eventsAll;
+                    response = data;
+                    resolve(response);
+                  }
+                  return eventsAll;
+                })
+            }
+          })
+        })
+        .then((response) => {
+          res.json(response.user);
+        });
+
     })
+
+
 }
 
 function getEventById(req, res) {

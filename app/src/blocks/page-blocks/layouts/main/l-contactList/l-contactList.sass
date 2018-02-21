@@ -11,14 +11,18 @@
         padding-left: 20px
 
     img
-        height: 60px
+        height: 50px
         align-self: center
+        @include set-border(0px, 50%)
 
     .user-contactList-name
-      color: map-get($bg-color, 'dark')
+      color: map-get($font-color, 'primary')
       font:
         size: 14px
         weight: map-get($font-message, 'name-weight')
         style: map-get($font-message, 'name-style')
       padding-left: 20px
+      &:hover
+        cursor: pointer
+        color: white
 

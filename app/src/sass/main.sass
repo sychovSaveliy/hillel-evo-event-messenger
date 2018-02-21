@@ -8,6 +8,10 @@ body
   background-color: map-get($bg-color, 'primary')
   overflow-x: hidden
 
+.ul-right-side-menu
+  padding: 0px
+  margin: 0px
+
 .div-message-box
   @include color-light($bg-color, 'gray', 30%)
   margin: 2%
@@ -38,8 +42,15 @@ body
 .icon-size
   font-size: 22px
 
+.icon-size-xs
+  font-size: 15px
+
 .icon-color
   color: map-get($bg-color, 'darker')
+
+.icon-color-menu
+  color: map-get($font-color, 'primary')
+  margin-left: 15px
 
 .txt-header
   color: map-get($font-header, 'color')
