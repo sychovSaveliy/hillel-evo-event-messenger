@@ -8,10 +8,10 @@ app.controller('main.contactList', function($scope, $flowDataChats, $transferSer
   }
 
   $scope.onClickContact = function (id) {
+    $scope.main.currID = id;
     $flowDataChats.getDataChats({token: id})
       .then(function(response){
         $transferService.setData({name: 'chats', data: response.messages});
-        $transferService.getData('chats');
       })
     return id;
   };

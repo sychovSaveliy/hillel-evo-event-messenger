@@ -26,6 +26,12 @@ app.factory('$data', ['$resource', '$defautService', '$q', function ($resource, 
     }
   });
 
+  _$data.sendMes = $resource(_url + '/sendmes/',{},{
+    action:{
+      method: "POST"
+    }
+  });
+
 
   return _$data;
 }]);

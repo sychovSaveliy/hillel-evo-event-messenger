@@ -5,13 +5,15 @@
     <div class="message-text">Click on the chat to see details...</div>
   </div>
 </div>
-<div class="row">
+<div class="row chat-wraper">
   <div class="bg-gray-darker
               col-xs-12
               col-sm-12
               col-md-12
               col-lg-12">
-    <div class="div-message-box" ng-repeat="item in chats">
+    <div class="div-message-box" ng-repeat="item in main.chats">
+      <span class="txt-description">{{item.date}}, </span>
+      <span class="txt-description">{{item.time}}, </span>
       <span class="message-name">{{item.author}}:</span>
       <p class="message-text">{{item.text}}</p>
     </div>

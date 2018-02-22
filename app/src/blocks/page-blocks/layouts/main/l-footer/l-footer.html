@@ -20,7 +20,8 @@
                 div-inline-block">
         <input class="text-block"
                type="text"
-               placeholder="Write a message...">
+               placeholder="Write a message..."
+               ng-model="main.message">
       </div>
       <div class="col-xs-2
                 col-sm-2
@@ -28,7 +29,11 @@
                 col-lg-2
                 end-xs
                 div-inline-block">
-        <button class="btn-round-ok icon-size icon-color" type="send"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+        <button class="btn-round-ok icon-size icon-color"
+                type="send"
+                ng-click="sendMesHandler(main.contactsList.name, main.currID, main.message, main.header.date | date:'dd-MM-yyyy', main.header.date | date:'HH:mm:ss')">
+          <i class="fa fa-paper-plane" aria-hidden="true"></i>
+        </button>
       </div>
     </div>
   </form>
