@@ -5,13 +5,16 @@
     "token": "004",
     "contacts": [
       {
-        "id": "002"
+        "id": "001",
+        "private_chat": "001004"
       },
       {
-        "id": "003"
+        "id": "003",
+        "private_chat": "003004"
       },
       {
-        "id": "001"
+        "id": "005",
+        "private_chat": "004005"
       }
     ],
     "events": [

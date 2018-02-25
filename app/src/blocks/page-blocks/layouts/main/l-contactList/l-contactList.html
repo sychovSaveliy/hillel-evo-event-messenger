@@ -12,6 +12,6 @@
   </div>
   <div class="contactList-user" ng-repeat="item in main.contactsList.contacts">
     <div class="user-contactList-photo"><img ng-src="{{ item.avatar}}"></div>
-    <div class="user-contactList-name" ng-click="onClickContact($index)">{{item.name}}</div>
+    <div class="user-contactList-name" ng-click="onClickContact(item.private_chat)">{{item.name}}</div>
   </div>
 </div>
