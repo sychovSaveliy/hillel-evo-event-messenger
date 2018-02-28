@@ -1,6 +1,6 @@
-<div id="down" class="non-vis" ng-click="scrollDown()">
-  <i class="scroll-down fa fa-long-arrow-down" aria-hidden="true"></i>
-</div>
+<button class="non-vis" id="down" ng-click="scrollDown()">
+  <i class="scroll-down fa fa-angle-double-down" aria-hidden="true"></i>
+</button>
 
 <div class="row chat-wraper">
   <div class="row">
@@ -17,8 +17,8 @@
               col-lg-12">
     <div class="div-message-box" ng-repeat="item in main.chats">
 
-      <span class="txt-description">{{item.date}}, </span>
-      <span class="txt-description">{{item.time}}, </span>
+      <span class="txt-description">{{item.date}}; </span>
+      <span class="txt-description">{{item.time}}; </span>
 
       <span class="message-name">{{item.author}}:</span>
       <p class="message-text">{{item.text}}</p>
