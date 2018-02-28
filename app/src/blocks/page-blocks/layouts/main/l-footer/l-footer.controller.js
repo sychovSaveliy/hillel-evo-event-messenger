@@ -3,8 +3,9 @@ app.controller('l-footer.controller', function($scope, $postSendMes){
     $scope.main.sendBtn = document.querySelector('button[type = "send"]');
     $scope.main.message;
 
+
       $scope.sendMesHandler = function(author, id, text, date, time){
-        console.log(date);
+
         if ($scope.main.inputMes.value === "") {
         return
         }
@@ -19,7 +20,6 @@ app.controller('l-footer.controller', function($scope, $postSendMes){
           .then(response => {
             console.log(response.messages);
             $scope.main.chats = response.messages;
-
           });
         $scope.main.inputMes.value = "";
       }

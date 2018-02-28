@@ -1,19 +1,25 @@
-<div class="row">
-  <div class="message-example bg-orange-lighter">
-    <div class="delete"><i class="fa fa-times" aria-hidden="true"></i></div>
-    <div class="message-name">You have new invitation!</div>
-    <div class="message-text">Click on the chat to see details...</div>
-  </div>
+<div id="down" class="non-vis" ng-click="scrollDown()">
+  <i class="scroll-down fa fa-long-arrow-down" aria-hidden="true"></i>
 </div>
+
 <div class="row chat-wraper">
+  <div class="row">
+    <div class="message-example bg-orange-lighter">
+      <div class="delete"><i class="fa fa-times" aria-hidden="true"></i></div>
+      <div class="message-name">You have new invitation!</div>
+      <div class="message-text">Click on the chat to see details...</div>
+    </div>
+  </div>
   <div class="bg-gray-darker
               col-xs-12
               col-sm-12
               col-md-12
               col-lg-12">
     <div class="div-message-box" ng-repeat="item in main.chats">
+
       <span class="txt-description">{{item.date}}, </span>
       <span class="txt-description">{{item.time}}, </span>
+
       <span class="message-name">{{item.author}}:</span>
       <p class="message-text">{{item.text}}</p>
     </div>
