@@ -1,26 +1,55 @@
-<div class="row">
-  <div class="message-example bg-orange-lighter">
-    <div class="delete"><i class="fa fa-times" aria-hidden="true"></i></div>
-    <div class="message-name">You have new invitation!</div>
-    <div class="message-text">Click on the chat to see details...</div>
+<button ng-if="main.showArrow" id="down" ng-click="scrollDown()">
+  <i class="scroll-down fa fa-angle-double-down" aria-hidden="true"></i>
+</button>
+<div class="chat-wraper">
+  <div class="chat-box">
+    <div class="bg-gray-darker chat-cont
+                col-xs-12
+                col-sm-12
+                col-md-12
+                col-lg-12">
+      <div class="div-message-box" ng-repeat="item in main.chats">
+
+        <span class="txt-description">{{item.date}}; </span>
+        <span class="txt-description">{{item.time}}; </span>
+
+        <span class="message-name">{{item.author}}:</span>
+        <p class="message-text">{{item.text}}</p>
+      </div>
+      <div class="div-message-box-descr non-vis bg-gray-dark col-xs-4" id="note">
+        <span class="txt-description">{{main.userName}} is typing...</span>
+      </div>
+    </div>
   </div>
 </div>
-<div class="row">
-  <div class="bg-gray-darker
-              col-xs-12
-              col-sm-12
-              col-md-12
-              col-lg-12">
-    <div class="div-message-box" ng-repeat="item in chats">
-      <span class="message-name">{{item.author}}:</span>
-      <p class="message-text">{{item.text}}</p>
+<div class="div-row-footer
+            col-xs-12
+            col-sm-12
+            col-md-12
+            col-lg-12">
+  <form class="footer-write-message">
+    <div class="div-inline-block">
+      <input class="text-block"
+             type="text"
+             placeholder="Write a message..."
+             ng-model="main.message"
+             ng-focus="showNote()"
+             ng-blur="showNote()">
     </div>
-
-    <div class="div-message-box-descr bg-gray-dark col-xs-4">
-      <span class="txt-description">User 001 is typing...</span>
+    <div class="div-inline-block">
+      <button class="btn-round-ok"
+              type="send"
+              ng-click="sendMesHandler(main.userName, main.currID, main.message)">
+        <i class="fa fa-paper-plane" aria-hidden="true"></i>
+      </button>
     </div>
-    <div class="div-message-box-descr bg-gray-light col-xs-4">
-      <span class="txt-description">User 001 is typing...</span>
-    </div>
+  </form>
+  <div class="div-inline-block">
+    <button class="btn-round-warning">
+      <i class="fa fa-paperclip icon-size icon-color" aria-hidden="true"></i></button>
+  </div>
+  <div class="div-inline-block">
+    <button class="btn-round-warning">
+      <i class="fa fa-smile-o icon-size icon-color" aria-hidden="true"></i></button>
   </div>
 </div>

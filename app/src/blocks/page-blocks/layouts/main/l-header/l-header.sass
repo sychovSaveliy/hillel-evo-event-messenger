@@ -3,7 +3,9 @@
 @import "../../../../../sass/functions"
 
 .div-row-main-page
-    height: $header-height
+  height: $header-height
+  padding-top: 5px
+  padding-left: 16px
 
 .user-profile-photo
     margin: 5px
@@ -12,8 +14,8 @@
     background-size: contain
     @include set-border(0px, 50%)
 
-.header-date-time
-  color: map-get($bg-color, 'lighter')
+.header-chat-name
+  color: map-get($font-color, 'dark-gray')
   font:
     size: map-get($font-message, 'name-size')
     weight: map-get($font-message, 'name-weight')

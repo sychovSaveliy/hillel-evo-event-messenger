@@ -15,8 +15,8 @@
     cursor: pointer
 
 .button-round
-  height: 38px
-  width: 38px
+  height: 40px
+  width: 40px
   padding: 5px
   align-items: center
   transition: 0.2s
@@ -74,6 +74,7 @@
 .btn-round-ok
   @extend .button-round
   @include color-light($bg-color, 'green', 5%)
+  font-size: 18px
   color: map-get($font-color, 'primary')
   &:hover
     @include color-light($bg-color, 'green', 30%)
@@ -91,17 +92,22 @@
 
 .btn-round-maybe
   @extend .button-round
+  font-size: 18px
   color: map-get($font-color, 'primary')
   &:hover
-    @include color-dark($bg-color, 'gray', 20%)
+    cursor: pointer
+    color: white
+    @include color-dark($bg-color, 'gray', 50%)
     &:active
       @include color-dark($bg-color, 'gray', 30%)
 
 .btn-round-warning
   @extend .button-round
+  font-size: 18px
   background-color: map-get($bg-color, 'orange')
   color: map-get($font-color, 'primary')
   &:hover
+    cursor: pointer
     @include color-light($bg-color, 'orange', 10%)
     &:active
       @include color-light($bg-color, 'orange', 30%)

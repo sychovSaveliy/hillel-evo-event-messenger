@@ -134,4 +134,29 @@ function postDataUserById(req, res) {
     });
 }
 
-module.exports = { getUser, postDataUserById, getEventById, getChatById };
+function postMessege(req, res) {
+  let pathToChat = './mock/api/chats/'+ req.body.id +'/get.json';
+  let promissForReadingFile = filereader(fs, pathToChat);
+  let newData = req.body;
+  let newArr;
+
+  promissForReadingFile
+    .then((response) => {
+
+      for (let i = 0; i < response.messages.length; i++){
+        newArr = response.messages.concat(newData);
+      }
+      let refresh = {
+        "messages": newArr
+      };
+      fs.writeFile(pathToChat, JSON.stringify(refresh));
+      return refresh;
+    }, (error) => {
+      console.log("POST - ERROR", pathToChat, error);
+    })
+    .then((response) => {
+      res.json(response);
+    });
+}
+
+module.exports = { getUser, postDataUserById, getEventById, getChatById, postMessege };

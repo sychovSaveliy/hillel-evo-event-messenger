@@ -19,9 +19,10 @@ body
   @include set-border(0px, 20px)
 
 .div-message-box-descr
-  margin: 2%
   padding: 5px
   @include set-border(0px, 20px)
+  position: absolute
+  left: 2%
 
 .message-name
   color: map-get($font-color, 'dark')
@@ -38,6 +39,8 @@ body
 
 .div-inline-block
   display: inline-block
+  padding-left: 16px
+  padding-right: 16px
 
 .icon-size
   font-size: 22px
@@ -60,6 +63,18 @@ body
 
 .txt-header-green
   color: map-get($bg-color, 'lighter')
+  font:
+    size: map-get($font-header, 'size')
+    weight: map-get($font-header, 'weight')
+
+.txt-header-dark-green
+  color: map-get($bg-color, 'darker')
+  font:
+    size: map-get($font-header, 'size')
+    weight: map-get($font-header, 'weight')
+
+.txt-header-gray
+  color: map-get($bg-color, 'gray')
   font:
     size: map-get($font-header, 'size')
     weight: map-get($font-header, 'weight')

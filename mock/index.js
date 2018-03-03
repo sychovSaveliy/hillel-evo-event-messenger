@@ -33,6 +33,9 @@ app.route('/chat/:id/')
 app.route('/auth')
   .post($data.postDataUserById);
 
+app.route('/sendmes')
+  .post($data.postMessege);
+
 app.listen(port);
 console.log("Mock server listening on port " + port);
 

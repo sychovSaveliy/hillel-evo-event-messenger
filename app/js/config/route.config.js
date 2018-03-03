@@ -24,10 +24,6 @@ app.config(function($stateProvider, $urlRouterProvider){
                     templateUrl: 'app/src/blocks/page-blocks/layouts/main/l-chat/l-chat.html',
                     controller: 'l-chat.controller'
                 },
-                "footer@main": {
-                    templateUrl: 'app/src/blocks/page-blocks/layouts/main/l-footer/l-footer.html',
-                    controller: 'l-footer.controller'
-                },
                 "event@main": {
                     templateUrl: 'app/src/blocks/page-blocks/layouts/main/l-event/l-event.html',
                     controller: 'l-event.controller as ctrl'
