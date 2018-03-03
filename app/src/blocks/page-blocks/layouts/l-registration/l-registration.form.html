@@ -1,0 +1,39 @@
+<div class="div-row-loginpage
+            col-xs-12
+            col-sm-12
+            col-md-9
+            col-lg-10">
+  <div class="div-logotype">
+    <img ng-src="{{ loginPage.logotype }}" alt="EVENT messenger">
+  </div>
+  <div class="col-xs">
+    <form class="login-form
+                 col-xs-offset-2
+                 col-sm-offset-2
+                 col-md-offset-2
+                 col-lg-offset-2"
+    >
+      <div class="col-xs-9">
+        <span>E-mail: </span><input type="email"
+                                             class="input-primary"
+                                             id="login" ng-model="params.eMail" required>
+      </div>
+      <div class="col-xs-9">
+        <span>Create password: </span><input type="password"
+                                      class="input-primary"
+                                      id="password" ng-model="params.password" required>
+      </div>
+      <div class="col-xs-9">
+        <span>Confirm password: </span><input type="password"
+                                      class="input-primary"
+                                      id="password_conf" ng-model="params.passwordConf" required>
+      </div>
+      <div class="col-xs-9">
+        {{errorMessage}}
+      </div>
+      <div class="col-xs-9">
+        <input type="submit" ng-click="setReg(params)" class="btn-submit div-margin-top-login-page"  value="enter">
+      </div>
+    </form>
+  </div>
+</div>

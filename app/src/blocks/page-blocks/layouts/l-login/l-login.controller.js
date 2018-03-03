@@ -16,4 +16,7 @@ app.controller('l-login', function($scope, $state, $flowDataAuth, $transferServi
   $scope.goToTestPage = function () {
     $state.go('test');
   };
+  $scope.goToRegistration = function () {
+    $state.go('registration');
+  };
 });
