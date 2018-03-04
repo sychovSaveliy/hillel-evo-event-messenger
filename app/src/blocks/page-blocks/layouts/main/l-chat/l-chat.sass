@@ -12,7 +12,7 @@
     position: relative
     width: 150px
     padding: 15px 25px 10px 10px
-    margin: 20px
+    margin: 0 20px 20px 20px
     @include set-border(10px, 10px)
     font-size: 15px
 
@@ -33,4 +33,44 @@
 .message-example .message-name
     font-weight: bold
 
+#down
+  z-index: 3
+  position: fixed
+  top: 60%
+  right: 30%
+  cursor: pointer
+  height: 46px
+  width: 46px
+  padding: 5px
+  align-items: center
+  transition: 0.5s
+  opacity: 0.8
+  @include set-border(0px, 25px)
+  font-size: 36px
+  background-color: map-get($bg-color, 'gray')
+  color: map-get($font-color, 'dark-gray')
+  &:hover, &:active
+    cursor: pointer
+    @include color-dark($bg-color, 'gray', 30%)
+    color: map-get($font-invert, 'color')
 
+
+.non-vis
+  display: none
+
+.chat-wraper
+  height: calc(100% - (#{$footer-height}))
+  overflow: auto
+  padding-left: 16px
+  padding-right: 16px
+  
+
+.footer-write-message
+
+
+.chat-box
+    padding: 20px 0 35px
+    
+.chat-cont
+    height: 100%
+    position: relative

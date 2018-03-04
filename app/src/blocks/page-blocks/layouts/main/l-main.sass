@@ -11,28 +11,21 @@ body
   justify-content: flex-start
   align-items: center
   margin: 0
-  padding-left: 0px
-  padding-right: 0px
-  padding-bottom: 0px
-  padding-top: 0px
-  
+  padding: 0
+
 .div-row-main-page-center
   display: flex
   flex-direction: row
   justify-content: space-between
   align-items: center
   margin: 0
-  padding-left: 0px
-  padding-right: 0px
-  padding-bottom: 0px
-  padding-top: 0px
-  height: calc(100% - (#{$header-height} + #{$footer-height}))
-  
+  padding: 0
+  height: calc(100% - (#{$header-height}))
+
 
 .contact-list
-    padding: 0
-    height: 100%
-    overflow: auto
+  height: 100%
+  overflow: auto
 
 .render-main-page
     height: 100vh
@@ -41,16 +34,38 @@ body
     padding: 0
 
 .left-sidebar
-    height: 100%
-    overflow: auto
+  height: calc(100% - (#{$footer-height}))
+  overflow: auto
+  padding-left: 16px
+  padding-right: 16px
+  padding-top: 16px
 
 .right-sidebar
     height: 100%
     overflow: auto
 
 .content
-   height: 100%
+  height: 100%
+  position: relative
 
-.footer-position
+.div-row-footer
+  display: flex
+  flex-direction: row
   position: fixed
   bottom: 0
+  height: $footer-height
+  align-items: center
+  padding-left: 10px
+  padding-right: 5px
+
+.div-row-enter-mess
+  display: flex
+  flex-direction: row
+  position: fixed
+  bottom: 0
+  min-height: $footer-height
+  justify-content: flex-start
+  align-items: center
+  margin: 0
+  padding-left: 10px
+  padding-right: 10px
