@@ -55,6 +55,19 @@ app.config(function($stateProvider, $urlRouterProvider){
           }
         }
       })
+      .state('registration', {
+        url: '/registration',
+        views: {
+          "": {
+            templateUrl: 'app/src/blocks/page-blocks/layouts/l-registration/l-registration.html',
+            controller: 'l-registration'
+          },
+          "registration@registration": {
+            templateUrl: 'app/src/blocks/page-blocks/layouts/l-registration/l-registration.form.html',
+            controller: 'l-registration'
+          }
+        }
+      })
       .state('test', {
         url: '/test',
         views: {
