@@ -1,6 +1,10 @@
 @import "variables"
 @import "type-default"
 @import "functions"
+
+button
+  outline: none
+
 .button-default
   font:
     size: map-get($font-btn, 'size')
@@ -17,7 +21,7 @@
 .button-round
   height: 40px
   width: 40px
-  padding: 5px
+  padding: 7px 5px 5px
   align-items: center
   transition: 0.2s
   margin: 8px
@@ -111,6 +115,7 @@
   @extend .button-round
   @include color-light($bg-color, 'green', 5%)
   font-size: 18px
+  cursor: pointer
   color: map-get($font-color, 'primary')
   &:hover
     @include color-light($bg-color, 'green', 30%)
