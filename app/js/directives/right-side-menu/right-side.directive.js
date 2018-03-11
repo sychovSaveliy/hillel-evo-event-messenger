@@ -3,13 +3,13 @@ app.directive("rightSide", function () {
     scope: {
       model: '='
     },
-    controller: function ($scope) {
+    controller: function ($scope, $state) {
       let plusCurr = document.getElementById("curr"),
           plusDraft = document.getElementById("draft");
           $scope.staticMenu = [
             {
               title: 'Create event' ,
-              link: "#"
+              link: "new-event"
 
             },
             {
@@ -35,7 +35,9 @@ app.directive("rightSide", function () {
       };
 
       $scope.oneEvent = function (data) {
-        console.log(data);
+      };
+      $scope.newEvent = function (data) {
+        $state.go(data);
       };
     },
     restrict: "A",

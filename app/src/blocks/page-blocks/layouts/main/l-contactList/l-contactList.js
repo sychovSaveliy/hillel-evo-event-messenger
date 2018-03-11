@@ -1,4 +1,4 @@
-app.controller('main.contactList', function($scope, $flowDataChats, $transferService){
+app.controller('main.contactList', function($scope, $flowDataChats, $transferService, $state){
   let ctrl = this;
   ctrl.$onInit = _init;
 
@@ -8,6 +8,7 @@ app.controller('main.contactList', function($scope, $flowDataChats, $transferSer
   }
 
   $scope.onClickContact = function (id) {
+    $state.go('chat');
     $scope.main.currID = id;
     $flowDataChats.getDataChats({token: id})
       .then(function(response){

@@ -46,3 +46,67 @@
     position: absolute
     transform: rotate(-45deg)
 
+.event-date-vote
+  font:
+    size: map-get($font-btn, 'size')
+    weight: map-get($font-btn, 'weight')
+  color: map-get($font-color, 'primary')
+  &:hover
+    color: map_get($font-color, 'orange')
+    cursor: pointer
+
+.event-content
+  height: calc(100% - (#{$footer-height}))
+  overflow: auto
+  padding-left: 16px
+  padding-right: 16px
+
+.event-name-list
+  color: map-get($font-color, 'gray')
+  padding-right: 5px
+  font:
+    size: map-get($font-message, 'name-size')
+    weight: map-get($font-message, 'name-weight')
+    style: map-get($font-message, 'name-style')
+
+.create-event-div-box
+  display: flex
+  flex-direction: row
+  align-items: center
+  padding-bottom: 10px
+  margin-top: 16px
+
+.create-event-spacer
+  height: 1px
+  width: 100%
+  background-color: map-get($font-color, 'gray')
+
+.checkbox-div
+  position: absolute
+  left: 150px
+  color: black
+  border-radius: 10px
+  flex-direction: row
+  justify-content: space-around
+  margin: 5px
+  padding: 20px
+  transition: .5s
+  max-height: 300px
+  min-width: 250px
+  overflow: auto
+
+.checkbox-ul
+  margin: 0px
+  padding: 0px
+
+.checkbox-div-list
+  list-style-type: none
+  margin: 0px
+  padding: 0px
+  font:
+    size: 16px
+    weight: 300
+    style: map-get($font-message, 'name-style')
+
+.checkbox-btn-block
+  margin-top: 20px

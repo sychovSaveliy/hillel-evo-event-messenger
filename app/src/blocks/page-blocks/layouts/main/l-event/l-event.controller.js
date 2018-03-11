@@ -1,6 +1,5 @@
 app.controller('l-event.controller', function($scope){
-  var ctrl = this;
-
+  let ctrl = this;
   ctrl.$onInit = _onInit;
 
   function _onInit() {

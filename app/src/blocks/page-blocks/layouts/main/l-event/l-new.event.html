@@ -1,0 +1,88 @@
+<div class="event-content">
+    <div class="col-xs-12
+                col-sm-12
+                col-md-12
+                col-lg-12">
+      <!--<form name="newEvent">-->
+        <div class="col-xs-12
+                    create-event-div-box">
+          <span class="event-name-list">Name: </span>
+          <input type="text"
+                 class="input-primary"
+                 id="eventName" required>
+        </div>
+        <div class="create-event-spacer"></div>
+        <div class="col-xs-12
+                    create-event-div-box">
+          <span class="event-name-list">Date: </span> <span class="txt-description"> from: </span>
+          <input type="date"
+                 class="input-date" required>
+          <span class="txt-description"> to: </span>
+          <input type="date"
+                 class="input-date">
+          <span class="event-name-list">Add date: </span>
+          <i class="fa fa-plus event-date-vote" aria-hidden="true"></i>
+          <br>
+        </div>
+          <div class="col-xs-12
+                    create-event-div-box">
+            <span class="event-name-list">Allow voting for date:&nbsp </span>
+            <i class="fa fa-toggle-off event-date-vote" id="dateVote" aria-hidden="true" ng-click="addDateVote()"></i>
+          </div>
+        <div class="create-event-spacer"></div>
+        <div class="col-xs-12
+                    create-event-div-box">
+          <span class="event-name-list">Place: </span>
+          <input type="text"
+                 class="input-primary"
+                 id="eventPlace" required>
+          <i class="fa fa-map-marker event-date-vote" aria-hidden="true" ></i>
+          <span class="event-name-list">Add place: </span>
+          <i class="fa fa-plus event-date-vote" aria-hidden="true"></i>
+        </div>
+        <div class="col-xs-12
+                    create-event-div-box">
+          <span class="event-name-list">Allow voting for place: </span>
+          <i class="fa fa-toggle-off event-date-vote" id="placeVote" aria-hidden="true" ng-click="addPlaceVote()"></i>
+        </div>
+        <div class="create-event-spacer"></div>
+        <div class="col-xs-12
+                    create-event-div-box">
+          <span class="event-name-list">Participants: </span>
+          <i class="fa fa-plus event-date-vote" id="addPpl" aria-hidden="true" ng-click="openList()"></i>
+          <div class="checkbox-div bg-gray-dark non-vis" id="nameList">
+            <ul class="checkbox-ul">
+              <li ng-repeat="item in main.dataUser.contacts" class="checkbox-div-list"><input ng-attr-id="{{item.id}}" class="names" type="checkbox">{{item.name}}</li>
+            </ul>
+            <div class="col-xs-12 checkbox-btn-block">
+              <input type="submit" class="btn-save-event" ng-click="confirmList()" value="confirm">
+              <input type="reset" class="btn-delete"  value="cancel" ng-click="closeList()">
+            </div>
+          </div>
+        </div>
+        <div class="create-event-spacer"></div>
+        <div class="col-xs-12
+                    create-event-div-box">
+          <span class="event-name-list">Remind me: </span>
+          <i class="fa fa-toggle-on event-date-vote" id="reminder" aria-hidden="true" ng-click="addDateVote()"></i>
+        </div>
+        <div class="create-event-spacer"></div>
+          <div class="col-xs-12
+                    create-event-div-box">
+            <span class="event-name-list">Additional information: </span>
+            <textarea type="text" rows="6"
+                      class="input-primary"
+                      id="additional"></textarea>
+          </div>
+        <div class="div-row-footer
+            col-xs-12
+            col-sm-12
+            col-md-12
+            col-lg-12">
+          <input type="submit" class="btn-send-event"  value="send invites">
+          <input type="submit" class="btn-save-event"  value="save event">
+          <input type="submit" class="btn-delete"  value="delete draft">
+          </div>
+      <!--</form>-->
+    </div>
+</div>

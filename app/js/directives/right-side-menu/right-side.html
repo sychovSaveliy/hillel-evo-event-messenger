@@ -1,6 +1,6 @@
 <div>
   <ul ng-repeat="item in staticMenu" class="ul-right-side-menu">
-    <li class="btn-right-side-menu btn-right-side-menu-click">
+    <li class="btn-right-side-menu btn-right-side-menu-click" ng-click="newEvent(item.link)">
       {{item.title}}
     </li>
   </ul>

@@ -41,6 +41,18 @@
   &:active
     @include color-light($bg-color, 'green', 30%)
 
+.btn-send-event
+  @extend .button-default
+  @include color-light($bg-color, 'green', 5%)
+  color: map-get($font-color, 'primary')
+  width: auto
+  margin-left: 16px
+  margin-right: 16px
+  &:hover
+    @include color-light($bg-color, 'green', 30%)
+  &:active
+    @include color-light($bg-color, 'green', 30%)
+
 .btn-cancel
   @extend .button-default
   background-color:  map-get($bg-color, 'dark')
@@ -51,6 +63,18 @@
   &:active
     @include color-dark($bg-color, 'dark', 20%)
 
+.btn-save-event
+  @extend .button-default
+  background-color: map-get($bg-color, 'gray')
+  color: map-get($font-color, 'primary')
+  width: auto
+  margin-left: 16px
+  margin-right: 16px
+  &:hover
+    @include color-dark($bg-color, 'gray', 20%)
+  &:active
+    @include color-dark($bg-color, 'gray', 30%)
+
 .btn-info
   @extend .button-default
   background-color: map-get($bg-color, 'gray')
@@ -60,6 +84,18 @@
     @include color-dark($bg-color, 'gray', 20%)
   &:active
     @include color-dark($bg-color, 'gray', 30%)
+
+.btn-delete
+  @extend .button-default
+  background-color: map-get($bg-color, 'orange')
+  color: map-get($font-color, 'primary')
+  width: auto
+  margin-left: 16px
+  margin-right: 16px
+  &:hover
+    @include color-light($bg-color, 'orange', 10%)
+    &:active
+      @include color-light($bg-color, 'orange', 30%)
 
 .btn-warning
   @extend .button-default
