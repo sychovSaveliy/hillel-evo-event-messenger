@@ -14,7 +14,7 @@ app.directive("rightSide", function () {
             },
             {
               title: 'My calendar' ,
-              link: "#"
+              link: "calendar"
 
             }
           ];
@@ -35,6 +35,9 @@ app.directive("rightSide", function () {
       };
 
       $scope.oneEvent = function (data) {
+      };
+      $scope.newEvent = function (data) {
+        $state.go(data);
       };
       $scope.newEvent = function (data) {
         $state.go(data);

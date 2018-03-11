@@ -12,14 +12,19 @@ let paths = {
     templates: 'templates/**/*.sass'
   },
   css: {
-    libs: 'app/libs/**/*.css',
+    libs: 'app/src/css/**/*.css',
     main: 'app/css/**/*.css'
   },
   bundle: {
         js: [
             './node_modules/angular/angular.js',
             './node_modules/angular-ui-router/release/angular-ui-router.js',
-            './node_modules/angular-resource/angular-resource.js'
+            './node_modules/angular-resource/angular-resource.js',
+            './node_modules/jquery/dist/jquery.min.js',
+            './node_modules/moment/min/moment.min.js',
+            './static_vendor/calendar.js',
+            './node_modules/fullcalendar/dist/fullcalendar.min.js',
+            './node_modules/fullcalendar/dist/gcal.js' 
         ]
     }
 };
@@ -29,6 +34,12 @@ gulp.task('js', function() {
     .pipe(concat('main.js'))
     .pipe(gulp.dest('./bin/js'));
 });
+
+gulp.task('css:libs', function(){
+  return gulp.src(paths.css.libs)
+  .pipe(concat('libs.css'))
+  .pipe(gulp.dest('./bin/css'))
+})
 
 gulp.task('sass', function () {
   return gulp.src([
@@ -45,9 +56,10 @@ gulp.task('clean', function del(cb) {
   return rimraf('bin', cb);
 });
 
-gulp.task('watch',['js', 'sass'], function () {
+gulp.task('watch',['js', 'sass', 'css:libs'], function () {
     gulp.watch(paths.js, ['js']),
-    gulp.watch([paths.sass.common, paths.sass.blocks], ['sass'])
+    gulp.watch([paths.sass.common, paths.sass.blocks], ['sass']),
+    gulp.watch(paths.css.libs, ['css:libs'])
 });
 
 gulp.task('sass:templates', function () {
