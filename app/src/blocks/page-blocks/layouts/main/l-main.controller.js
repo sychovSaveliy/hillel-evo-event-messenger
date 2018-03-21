@@ -1,6 +1,6 @@
 app.controller('main', function($scope, $flowDataUser, $transferService, $timeout){
 
-  let _token = $transferService.getData('token') || localStorage.getItem('token');
+  let _token = $transferService.getData('token') || sessionStorage.getItem('token');
 
   $scope.main = $scope.main || {};
   $scope.getUserDataById = params => $flowDataUser.getDataUser(params)

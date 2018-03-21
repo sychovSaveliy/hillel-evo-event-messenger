@@ -6,7 +6,7 @@ app.controller('l-registration', function($scope, $state, $flowDataRegistr, $tra
     .then(response => {
         // $transferService.setData({name:'auth',data:response});
         // $transferService.setData({name: 'token', data:_token});
-        // localStorage.setItem('token', _token);
+        // sessionStorage.setItem('token', _token);
         // $state.go('main');
       console.log("mail sent", response);
       },

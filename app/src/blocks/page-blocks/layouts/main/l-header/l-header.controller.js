@@ -7,7 +7,8 @@ app.controller('l-header.controller', function($scope, $state){
     $scope.main = $scope.main || {};
     $scope.main.header = {};
     $scope.main.header.date = new Date();
-
+    $scope.bureger = angular.element(document.querySelector('#bureger'));
+console.log($scope.bureger);
   }
   $scope.openProfile = function () {
     $state.go('profile');
@@ -21,7 +22,7 @@ app.controller('l-header.controller', function($scope, $state){
     if (!$scope.main.content) return;
     $scope.main.content = newVal;
   })
-  
+
   $scope.main.showHideEventHandler = function () {
     $scope.main.eventSideBar.classList.toggle('no-vis');
     $scope.main.eventSideBar.classList.toggle('is-vis');
@@ -31,5 +32,8 @@ app.controller('l-header.controller', function($scope, $state){
     $scope.main.content.classList.toggle('col-md-6');
     $scope.main.content.classList.toggle('col-lg-9');
     $scope.main.content.classList.toggle('col-md-9');
+    $scope.bureger.toggleClass("fa-indent");
+    $scope.bureger.toggleClass("fa-outdent");
+    $scope.bureger.toggleClass('hide-scroll');
   }
 });
