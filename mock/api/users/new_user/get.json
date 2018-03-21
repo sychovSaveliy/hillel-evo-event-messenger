@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "conf":{
     "scope": "read write",
     "expires_in": 1977,
@@ -7,5 +8,11 @@
     "username": "new_user",
     "token_type": "bearer",
     "email": "new_user@gmail.com"
+=======
+  "login":{
+    "username": "",
+    "password": "",
+    "access_token": "new_user"
+>>>>>>> T-53-event-injection-in-calendar
   }
 }

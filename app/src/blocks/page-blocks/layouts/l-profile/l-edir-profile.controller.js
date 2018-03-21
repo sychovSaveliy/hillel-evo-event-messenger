@@ -5,7 +5,7 @@ app.controller('l-edit-profile', function($scope, $state, $flowDataUser, $transf
   ctrl.$onInit = _onInit;
   $scope.profile = $scope.profile || {};
   function _onInit() {
-    let _token = sessionStorage.getItem('token');
+    let _token = localStorage.getItem('token');
     $scope.getUserDataById = params => $flowDataUser.getDataUser(params)
       .then(response => {
           $scope.profile.userData = response;

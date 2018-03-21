@@ -1,9 +1,15 @@
 {
   "info": {
     "success": true,
+<<<<<<< HEAD
     "message": "Check your email for the confirmation",
     "id": "new_user",
     "access_token": "new_user",
     "email": "new_user@gmail.com"
+=======
+    "message": "Authorization is ok and it's good ",
+    "id": "new_user",
+    "access_token": "new_user"
+>>>>>>> T-53-event-injection-in-calendar
   }
 }

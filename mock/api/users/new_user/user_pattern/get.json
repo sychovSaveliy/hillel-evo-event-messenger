@@ -1,9 +1,15 @@
 {
   "user": {
+<<<<<<< HEAD
     "username": "new_user",
     "name": "",
     "access_token": "new_user",
     "email": "new_user@gmail.com",
+=======
+    "id": "new_user",
+    "name": "",
+    "access_token": "new_user",
+>>>>>>> T-53-event-injection-in-calendar
     "contacts": [
     ],
     "events": [
