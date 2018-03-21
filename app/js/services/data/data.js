@@ -1,12 +1,37 @@
-app.factory('$data', ['$resource', '$defautService', '$q', function ($resource, $defautService, $q) {
-	let _$data = {},
-		_url = $defautService.getURI();
+app.factory('$data', ['$resource', '$defaultService', '$q', function ($resource, $defaultService, $q) {
+  let authorisation_token = function () {
+      return 'Bearer ' + localStorage.getItem("token");
+    };
 
-    _$data.auth = $resource(_url + '/auth/',{},{
+	let _$data = {},
+		_url = $defaultService.getURI();
+
+    _$data.auth = $resource(_url + '/signin/',{},{
 		action:{
 			method: "POST"
 		}
 	});
+  _$data.registration = $resource(_url + '/register/',{},{
+    action: {
+      method: "POST"
+    }
+    });
+  _$data.profile = $resource(_url + '/profile/',{},{
+    action: {
+      method: "POST",
+      headers: {
+        /**
+         * @return {string}
+         */
+        'Authorization': authorisation_token()
+      }
+    }
+  });
+  _$data.new_event = $resource(_url + '/new_event/',{},{
+    action: {
+      method: "POST"
+    }
+  });
 
 	_$data.main = $resource(_url + '/user/:token', {},{
 		action:{

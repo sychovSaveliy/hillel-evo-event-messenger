@@ -2,7 +2,7 @@
   "user": {
     "id": "002",
     "name": "Lumina Doe 2",
-    "token": "002",
+    "access_token": "002",
     "contacts": [
       {
         "id": "001",

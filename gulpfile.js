@@ -6,6 +6,9 @@ const rimraf = require('rimraf');
 
 let paths = {
   js: 'app/**/*.js',
+  mock: 'server/constants/app.default.mock.js',
+  server: 'server/constants/app.default.server.js',
+  localServer: 'server/constants/app.default.localserver.js',
   sass: {
     blocks: 'app/src/blocks/**/*.sass',
     common: 'app/src/sass/**/*.sass',
@@ -24,13 +27,31 @@ let paths = {
             './node_modules/moment/min/moment.min.js',
             './static_vendor/calendar.js',
             './node_modules/fullcalendar/dist/fullcalendar.min.js',
-            './node_modules/fullcalendar/dist/gcal.js' 
+            './node_modules/fullcalendar/dist/gcal.js'
         ]
     }
 };
-
+//compile js for mock 5006
 gulp.task('js', function() {
-  return gulp.src(paths.js)
+  return gulp.src([
+    paths.js,
+    paths.mock])
+    .pipe(concat('main.js'))
+    .pipe(gulp.dest('./bin/js'));
+});
+//compile js for live server
+gulp.task('server', function() {
+  return gulp.src([
+    paths.js,
+    paths.server])
+    .pipe(concat('main.js'))
+    .pipe(gulp.dest('./bin/js'));
+});
+//compile js for local server 8080
+gulp.task('localServer', function() {
+  return gulp.src([
+    paths.js,
+    paths.localServer])
     .pipe(concat('main.js'))
     .pipe(gulp.dest('./bin/js'));
 });
@@ -60,6 +81,14 @@ gulp.task('watch',['js', 'sass', 'css:libs'], function () {
     gulp.watch(paths.js, ['js']),
     gulp.watch([paths.sass.common, paths.sass.blocks], ['sass']),
     gulp.watch(paths.css.libs, ['css:libs'])
+});
+gulp.task('watch:server',['server', 'sass', 'css:libs'], function () {
+    gulp.watch(paths.js, ['js']),
+    gulp.watch([paths.sass.common, paths.sass.blocks], ['sass'])
+});
+gulp.task('watch:localServer',['localServer', 'sass', 'css:libs'], function () {
+    gulp.watch(paths.js, ['js']),
+    gulp.watch([paths.sass.common, paths.sass.blocks], ['sass'])
 });
 
 gulp.task('sass:templates', function () {

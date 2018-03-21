@@ -2,7 +2,7 @@
   "user": {
     "id": "003",
     "name": "Samira Doe 3",
-    "token": "003",
+    "access_token": "003",
     "contacts": [
       {
         "id": "001",

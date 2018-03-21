@@ -38,5 +38,14 @@ http://flexboxgrid.com/
 # Run mock server
 'npm run mock'
 
-# коллекция запросов для Postman
-'mock/hillel-evo-event-messenger.json'
+
+# Компиляция для live backend:
+
+`gulp watch:server`
+
+# Компиляция для local server backend:
+
+`gulp watch:localServer`
+
+# Сбор библиотек
+'gulp bundle:js'

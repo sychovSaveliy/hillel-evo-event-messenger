@@ -6,20 +6,24 @@
       <!--<form name="newEvent">-->
         <div class="col-xs-12
                     create-event-div-box">
-          <span class="event-name-list">Name: </span>
+          <span class="event-name-list">Event title: </span>
           <input type="text"
                  class="input-primary"
-                 id="eventName" required>
+                 id="eventName"
+                 ng-model="params.name" required>
         </div>
         <div class="create-event-spacer"></div>
         <div class="col-xs-12
                     create-event-div-box">
-          <span class="event-name-list">Date: </span> <span class="txt-description"> from: </span>
-          <input type="date"
-                 class="input-date" required>
-          <span class="txt-description"> to: </span>
-          <input type="date"
-                 class="input-date">
+          <span class="event-name-list">Date: </span>
+          <!--<span class="txt-description"> from: </span>-->
+          <input type="datetime-local"
+                 class="input-primary"
+                 ng-model="params.date"
+                 ng-change="setDate(value)" required>
+          <!--<span class="txt-description"> to: </span>-->
+          <!--<input type="date"-->
+                 <!--class="input-date">-->
           <span class="event-name-list">Add date: </span>
           <i class="fa fa-plus event-date-vote" aria-hidden="true"></i>
           <br>
@@ -35,7 +39,8 @@
           <span class="event-name-list">Place: </span>
           <input type="text"
                  class="input-primary"
-                 id="eventPlace" required>
+                 id="eventPlace"
+                 ng-model="params.place" required>
           <i class="fa fa-map-marker event-date-vote" aria-hidden="true" ></i>
           <span class="event-name-list">Add place: </span>
           <i class="fa fa-plus event-date-vote" aria-hidden="true"></i>
@@ -55,7 +60,7 @@
               <li ng-repeat="item in main.dataUser.contacts" class="checkbox-div-list"><input ng-attr-id="{{item.id}}" class="names" type="checkbox">{{item.name}}</li>
             </ul>
             <div class="col-xs-12 checkbox-btn-block">
-              <input type="submit" class="btn-save-event" ng-click="confirmList()" value="confirm">
+              <input type="submit" class="btn-save-event" ng-click="guestsList()" value="confirm">
               <input type="reset" class="btn-delete"  value="cancel" ng-click="closeList()">
             </div>
           </div>
@@ -79,7 +84,7 @@
             col-sm-12
             col-md-12
             col-lg-12">
-          <input type="submit" class="btn-send-event"  value="send invites">
+          <input type="submit" class="btn-send-event"  value="send invites" ng-click="sendNewEvent(params)">
           <input type="submit" class="btn-save-event"  value="save event">
           <input type="submit" class="btn-delete"  value="delete draft">
           </div>

@@ -2,7 +2,7 @@
   "user": {
     "id": "008",
     "name": "Idris Elba",
-    "token": "008",
+    "access_token": "008",
     "contacts": [
       {
         "id": "001",

@@ -151,6 +151,26 @@ app.config(function($stateProvider, $urlRouterProvider){
             }
           }
         })
+      .state('profile', {
+        url: '/profile',
+        views: {
+          "":{
+            templateUrl: 'app/src/blocks/page-blocks/layouts/l-profile/l-profile.html',
+            controller: 'l-profile as ctrl'
+          },
+          "header@profile": {
+            templateUrl: 'app/src/blocks/page-blocks/layouts/l-profile/l-profile-header.html',
+            controller: 'l-profile-header as ctrl'
+          },
+          "profile@profile": {
+            templateUrl: 'app/src/blocks/page-blocks/layouts/l-profile/l-edit-profile.html',
+            controller: 'l-edit-profile as ctrl'
+          }
+        },
+        params: {
+          data: {}
+        }
+      })
         .state('test', {
           url: '/test',
           views: {

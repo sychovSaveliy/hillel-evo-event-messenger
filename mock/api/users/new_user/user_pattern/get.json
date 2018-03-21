@@ -1,0 +1,14 @@
+{
+  "user": {
+    "id": "new_user",
+    "name": "",
+    "access_token": "new_user",
+    "contacts": [
+    ],
+    "events": [
+    ],
+    "chats": [
+    ],
+    "avatar": "./mock/api/users/new_user/default_avatar.png"
+  }
+}

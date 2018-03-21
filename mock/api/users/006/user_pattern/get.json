@@ -2,7 +2,7 @@
   "user": {
     "id": "006",
     "name": "Christopher Nolan",
-    "token": "006",
+    "access_token": "006",
     "contacts": [
       {
         "id": "001",
