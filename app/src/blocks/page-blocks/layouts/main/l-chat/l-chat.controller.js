@@ -11,6 +11,7 @@ app.controller('l-chat.controller', function($scope, $transferService, $timeout,
     $scope.main.chatBox = document.querySelector('.chat-box');
     $scope.main.head = document.querySelector('.div-row-main-page');
     $scope.main.footer = document.querySelector('.div-row-footer');
+    $scope.main.hiddenDiv = document.querySelector('.hiddenDiv');
     $scope.main.showArrow = false;
   }
   
@@ -51,7 +52,7 @@ app.controller('l-chat.controller', function($scope, $transferService, $timeout,
   $scope.sendMesHandler = function(author, id, text){
     let currentTime = new Date();
     let month = currentTime.getMonth() + 1;
-    if (!$scope.main.inputMes.value) return;
+    if (!$scope.main.message) return;
     let sender = {
       author: author,
       id: id,
@@ -59,15 +60,28 @@ app.controller('l-chat.controller', function($scope, $transferService, $timeout,
       date: currentTime.getDate() + '-'+month+'-'+currentTime.getFullYear(),
       time: currentTime.getHours() +':'+ currentTime.getMinutes() +':'+ currentTime.getSeconds()
     };
+    
     $postSendMes.sendMes(sender)
       .then(response => {
         $scope.main.chats = response.messages;
       });
     $scope.main.inputMes.value = "";
+    $scope.main.message = "";
 
-    $timeout(scrollHandler,100)
+    $timeout(scrollHandler,100);
+    $timeout(function(){
+      $scope.main.chatWrapper.style.height = (document.documentElement.clientHeight -
+      $scope.main.head.clientHeight -
+      $scope.main.footer.clientHeight) + "px";
+    },100)
   };
-
+  $scope.sendMesEnter = function (event) {
+    if (event.shiftKey && event.charCode == 13) return;
+    else if (event.charCode == 13) {
+      $scope.sendMesHandler($scope.main.userName, $scope.main.currID, $scope.main.message);
+      event.preventDefault();
+    }
+  }
   $scope.$watch(function() {
     return $transferService.getData('chats')
   }, function(newVal){
@@ -79,4 +93,13 @@ app.controller('l-chat.controller', function($scope, $transferService, $timeout,
   $scope.showNote = function () {
     note.classList.toggle('non-vis');
   }
+
+  $scope.$watch('main.inputMesHeight', function(newVal){
+    $scope.main.currInputMesHeight = newVal;
+    $scope.main.chatHeightVis = document.documentElement.clientHeight -
+    $scope.main.head.clientHeight  -
+    $scope.main.footer.clientHeight;
+    $scope.main.chatWrapper.style.height = $scope.main.chatHeightVis+"px";
+    $scope.main.chatWrapper.scrollTo(0, $scope.main.contentChatHeight-$scope.main.chatHeightVis);
+  })
 });

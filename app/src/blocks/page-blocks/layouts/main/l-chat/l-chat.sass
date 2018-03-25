@@ -8,6 +8,13 @@
     padding: 0
     height: 100vh
 
+.footer-write-message
+    height: 100%
+    width: 70%
+
+.message-input
+    width: 85%
+
 .message-example
     position: relative
     width: 150px
@@ -32,6 +39,7 @@
 
 .message-example .message-name
     font-weight: bold
+
 
 #down
   z-index: 3
@@ -63,10 +71,6 @@
   overflow: auto
   padding-left: 16px
   padding-right: 16px
-  
-
-.footer-write-message
-
 
 .chat-box
     padding: 20px 0 35px
@@ -74,3 +78,19 @@
 .chat-cont
     height: 100%
     position: relative
+
+.hidden
+    display: none
+
+.text-block[contenteditable=true]:focus 
+    color: black
+
+[contenteditable=true]:empty:not(:focus):before
+    content: attr(data-text)   
+
+.text-block[data-text]
+    color: #ccc;
+
+@media screen and (max-width: 62em)
+    #down
+        right: 5%
