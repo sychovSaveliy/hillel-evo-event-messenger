@@ -88,6 +88,35 @@ app.config(function($stateProvider, $urlRouterProvider){
               data: {}
             }
         })
+        .state('calendar', {
+          url: '/calendar',
+          views: {
+            "":{
+              templateUrl: 'app/src/blocks/page-blocks/layouts/main/l-calendar.html',
+              controller: 'main'
+            },
+            "header@calendar": {
+              templateUrl: 'app/src/blocks/page-blocks/layouts/main/l-header/l-header.html',
+              controller: 'l-header.controller as ctrl'
+            },
+            "contactList@calendar": {
+              templateUrl: 'app/src/blocks/page-blocks/layouts/main/l-contactList/l-contactList.html',
+              controller: 'main.contactList',
+              controllerAs: 'ctrl'
+            },
+            "calendar@calendar": {
+              templateUrl: 'app/src/blocks/page-blocks/layouts/main/l-calendar/l-calendar.html',
+              controller: 'calendar.controller'
+            },
+            "event@calendar": {
+              templateUrl: 'app/src/blocks/page-blocks/layouts/main/l-event/l-event.html',
+              controller: 'l-event.controller as ctrl'
+            }
+          },
+          params: {
+            data: {}
+          }
+        })
         .state('login', {
           url: '/login',
           views: {
