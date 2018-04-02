@@ -1,4 +1,4 @@
-app.service('$defautService', function($default){
+app.service('$defaultService', function($default){
     var self = this;
     this.getURI = getURI;
     function getURI(){

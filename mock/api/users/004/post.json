@@ -3,6 +3,6 @@
     "success": true,
     "message": "Authorization isn't ok and it's not funny",
     "id": "004",
-    "token": "004"
+    "access_token": "004"
   }
 }

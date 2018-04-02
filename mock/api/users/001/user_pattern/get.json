@@ -2,7 +2,7 @@
   "user": {
     "id": "001",
     "name": "Jane Doe",
-    "token": "001",
+    "access_token": "001",
     "contacts": [
       {
         "id": "002",

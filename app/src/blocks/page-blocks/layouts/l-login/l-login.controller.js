@@ -3,15 +3,17 @@ app.controller('l-login', function($scope, $state, $flowDataAuth, $transferServi
       logotype: "app/img/main/logo_login_page.png"
     };
 
-  $scope.setAuth = params => $flowDataAuth.requestAuth(params)
+  $scope.setAuth = params => {
+    $flowDataAuth.requestAuth(params)
           .then(response => {
             let _token = response;
-            $transferService.setData({name:'auth',data:response});
+            $transferService.setData({name:'signin',data:response});
             $transferService.setData({name: 'token', data:_token});
               localStorage.setItem('token', _token);
               $state.go('main');
             },
-            error => $scope.errorMessage = error.info.message);
+            error => $scope.errorMessage = error.message);
+  };
 
   $scope.goToTestPage = function () {
     $state.go('test');

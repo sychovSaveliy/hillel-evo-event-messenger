@@ -3,6 +3,6 @@
     "success": true,
     "message": "Authorization is ok and it's good ",
     "id": "008",
-    "token": "008"
+    "access_token": "008"
   }
 }

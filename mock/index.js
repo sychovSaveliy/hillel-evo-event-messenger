@@ -30,11 +30,17 @@ app.route('/event/:id/')
 app.route('/chat/:id/')
   .get($data.getChatById);
 
-app.route('/auth')
+app.route('/signin')
   .post($data.postDataUserById);
 
 app.route('/sendmes')
   .post($data.postMessege);
+
+app.route('/profile')
+  .post($data.postUserProfile);
+
+app.route('/new_event')
+  .post($data.postNewEvent);
 
 app.listen(port);
 console.log("Mock server listening on port " + port);

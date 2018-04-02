@@ -1,0 +1,8 @@
+{
+  "info": {
+    "success": true,
+    "message": "Your profile have been saved",
+    "id": "new_user",
+    "access_token": "new_user"
+  }
+}
