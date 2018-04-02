@@ -1,4 +1,4 @@
-app.controller('main', function($scope, $flowDataUser, $transferService){
+app.controller('main', function($scope, $flowDataUser, $transferService, $timeout){
 
   let _token = $transferService.getData('token') || localStorage.getItem('token');
 
@@ -13,4 +13,8 @@ app.controller('main', function($scope, $flowDataUser, $transferService){
   $scope.getUserDataById({token: _token});
   $scope.main.settings = $scope.main.settings || {};
   $scope.main.searchEvents = $scope.main.searchEvents || {};
+  $timeout(function(){
+    $scope.main.eventSideBar = document.querySelector('.right-sidebar');
+    $scope.main.content = document.querySelector('.content');
+  })
 });

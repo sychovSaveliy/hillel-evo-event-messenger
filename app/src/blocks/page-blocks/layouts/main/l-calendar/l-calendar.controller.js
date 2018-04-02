@@ -1,5 +1,4 @@
 app.controller('calendar.controller', function($scope, $compile, $timeout, uiCalendarConfig){
-
   let date = new Date();
   let d = date.getDate();
   let m = date.getMonth();

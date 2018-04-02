@@ -28,6 +28,7 @@ app.controller('l-chat.controller', function($scope, $transferService, $timeout,
     $scope.main.footer.clientHeight;
 
     $scope.main.chatWrapper.onscroll = function(){
+      let arrow = document.querySelector('#down');
       let scrolled = $scope.main.chatWrapper.pageYOffset || $scope.main.chatWrapper.scrollTop;
       $scope.main.chatHeightVis = document.documentElement.clientHeight -
       $scope.main.head.clientHeight -
@@ -41,6 +42,16 @@ app.controller('l-chat.controller', function($scope, $transferService, $timeout,
         else if (scrolled >= $scope.main.contentChatHeight-2*$scope.main.chatHeightVis) {
           $scope.main.showArrow = false;
           $scope.$apply();
+        }
+        if (arrow) {
+          if ($scope.main.eventSideBar.classList.contains('no-vis')) {
+            arrow.classList.remove('arrow-center');
+            arrow.classList.add('arrow-right');
+          }
+          else {
+            arrow.classList.add('arrow-center');
+            arrow.classList.remove('arrow-right');
+          }
         }
       };
       $scope.scrollDown = function () {

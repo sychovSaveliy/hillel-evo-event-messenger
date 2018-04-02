@@ -16,7 +16,6 @@ body
 .div-row-main-page-center
   display: flex
   flex-direction: row
-  justify-content: space-between
   align-items: center
   margin: 0
   padding: 0
@@ -41,12 +40,17 @@ body
   padding-top: 16px
 
 .right-sidebar
-    height: 100%
+    height: calc(100% -  (#{$header-height}))
     overflow: auto
+    position: absolute
+    width: 25%
+    min-width: 250px
+    z-index: 3
 
 .content
   height: 100%
   position: relative
+  transition: 0.5s
 
 .div-row-footer
   display: flex
@@ -70,3 +74,25 @@ body
   margin: 0
   padding-left: 10px
   padding-right: 10px
+
+.no-vis 
+  top: $header-height
+  right: -100%
+  transition: 1s
+    
+.is-vis
+  top: $header-height
+  right: 0
+  transition: 0.5s
+
+@media screen and (max-width: 62em)
+
+  .no-vis-sm-screen 
+    top: $header-height
+    right: -100%
+    transition: 1s
+      
+  .is-vis-sm-screen
+    top: $header-height
+    right: 0
+    transition: 0.5s   
