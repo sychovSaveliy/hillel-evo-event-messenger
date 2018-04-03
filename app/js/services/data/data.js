@@ -27,6 +27,14 @@ app.factory('$data', ['$resource', '$defaultService', '$q', function ($resource,
       }
     }
   });
+  _$data.confirm = $resource(_url + '/confirmation/',{},{
+    action: {
+      method: "GET",
+      params: {
+        token: "@token"
+      }
+    }
+  });
   _$data.new_event = $resource(_url + '/new_event/',{},{
     action: {
       method: "POST"

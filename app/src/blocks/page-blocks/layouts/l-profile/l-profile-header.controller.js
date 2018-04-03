@@ -2,5 +2,4 @@ app.controller('l-profile-header', function($scope, $state, $flowDataRegistr, $t
   $scope.profile.header = {
     title: "Edit your profile"
   };
-
 });
