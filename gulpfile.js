@@ -33,12 +33,19 @@ let paths = {
 };
 //compile js for mock 5006
 gulp.task('js', function() {
+  return gulp.src(
+    paths.js)
+    .pipe(concat('main.js'))
+    .pipe(gulp.dest('./bin/js'));
+});
+gulp.task('js.mock', function() {
   return gulp.src([
     paths.js,
     paths.mock])
     .pipe(concat('main.js'))
     .pipe(gulp.dest('./bin/js'));
 });
+
 //compile js for live server
 gulp.task('server', function() {
   return gulp.src([
@@ -60,7 +67,7 @@ gulp.task('css:libs', function(){
   return gulp.src(paths.css.libs)
   .pipe(concat('libs.css'))
   .pipe(gulp.dest('./bin/css'))
-})
+});
 
 gulp.task('sass', function () {
   return gulp.src([
@@ -77,17 +84,17 @@ gulp.task('clean', function del(cb) {
   return rimraf('bin', cb);
 });
 
-gulp.task('watch',['js', 'sass', 'css:libs'], function () {
-    gulp.watch(paths.js, ['js']),
+gulp.task('watch',['js.mock', 'sass', 'css:libs'], function () {
+    gulp.watch(paths.js, ['js.mock']),
     gulp.watch([paths.sass.common, paths.sass.blocks], ['sass']),
     gulp.watch(paths.css.libs, ['css:libs'])
 });
 gulp.task('watch:server',['server', 'sass', 'css:libs'], function () {
-    gulp.watch(paths.js, ['js']),
+    gulp.watch(paths.js, ['server']),
     gulp.watch([paths.sass.common, paths.sass.blocks], ['sass'])
 });
 gulp.task('watch:localServer',['localServer', 'sass', 'css:libs'], function () {
-    gulp.watch(paths.js, ['js']),
+    gulp.watch(paths.js, ['localServer']),
     gulp.watch([paths.sass.common, paths.sass.blocks], ['sass'])
 });
 
@@ -106,3 +113,6 @@ gulp.task('bundle:js', function() {
         .pipe(concat('bundle.js'))
         .pipe(gulp.dest('./bin/vendor/'));
 });
+
+gulp.task('build:local', ['localServer', 'sass', 'css:libs', 'bundle:js']);
+gulp.task('build:server', ['server', 'sass', 'css:libs', 'bundle:js']);

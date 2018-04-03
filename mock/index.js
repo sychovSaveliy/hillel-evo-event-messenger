@@ -43,6 +43,12 @@ app.route('/profile')
 app.route('/new_event')
   .post($data.postNewEvent);
 
+app.route('/register')
+  .post($data.postRegistrationNew);
+
+app.route('/confirmation')
+  .get($data.setConfirmNew);
+
 app.listen(port);
 console.log("Mock server listening on port " + port);
 

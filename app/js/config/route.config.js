@@ -181,6 +181,18 @@ app.config(function($stateProvider, $urlRouterProvider){
             }
           }
         })
+      .state('confirmation', {
+        url: '/confirmation/:id',
+        views: {
+          "": {
+            templateUrl: 'app/src/blocks/page-blocks/layouts/l-registration/l-confirm.html',
+            controller: 'l-confirmation as ctrl'
+          }
+        },
+        params: {
+          data: {}
+        }
+      })
       .state('profile', {
         url: '/profile',
         views: {

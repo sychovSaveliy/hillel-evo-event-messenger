@@ -23,7 +23,7 @@ app.controller('main.contactList', function($scope, $flowDataChats, $transferSer
       }
       else {
         $scope.main.dataUser = newVal;
-        $scope.main.chatId = $scope.main.dataUser.chats[0];
+        // $scope.main.chatId = $scope.main.dataUser.chats[0];
       }
     });
 });
