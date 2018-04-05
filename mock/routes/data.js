@@ -126,7 +126,7 @@ function getEventById(req, res) {
       return response;
     })
     .then((response) => {
-      res.json(response);
+      res.json(response.event);
     });
 }
 

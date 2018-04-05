@@ -19,7 +19,7 @@
             "votes": 0
           }
         ],
-        "confirmed": "05.03.2018"
+        "confirmed": "01.05.2018"
       }
     ],
     "place": [
@@ -42,23 +42,39 @@
         "invited": [
           {
             "id": "001",
+            "name": "Jane Doe",
             "role": "user",
             "chat_success": false
           },
           {
-            "id": "003",
+            "id": "009",
+            "name": "Jensen Ackles",
             "role": "admin",
             "chat_success": true
           },
           {
-            "id": "004",
+            "id": "003",
+            "name": "Samira Doe 3",
             "role": "user",
             "chat_success": false
           }
         ],
         "confirmed": [
+          {
+            "id": "009",
+            "name": "Jensen Ackles",
+            "role": "admin",
+            "chat_success": true
+          },
+          {
+            "id": "003",
+            "name": "Samira Doe 3",
+            "role": "user",
+            "chat_success": true
+          }
         ]
       }
-    ]
+    ],
+    "additional": "There is no information"
   }
 }

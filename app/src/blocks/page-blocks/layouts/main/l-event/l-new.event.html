@@ -21,9 +21,6 @@
                  class="input-primary"
                  ng-model="params.date"
                  ng-change="setDate(value)" required>
-          <!--<span class="txt-description"> to: </span>-->
-          <!--<input type="date"-->
-                 <!--class="input-date">-->
           <span class="event-name-list">Add date: </span>
           <i class="fa fa-plus event-date-vote" aria-hidden="true"></i>
           <br>
@@ -57,11 +54,11 @@
           <i class="fa fa-plus event-date-vote" id="addPpl" aria-hidden="true" ng-click="openList()"></i>
           <div class="checkbox-div bg-gray-dark non-vis" id="nameList">
             <ul class="checkbox-ul">
-              <li ng-repeat="item in main.dataUser.contacts" class="checkbox-div-list"><input ng-attr-id="{{item.id}}" class="names" type="checkbox">{{item.name}}</li>
+              <li ng-repeat="item in main.dataUser.contacts" class="checkbox-div-list"><input ng-attr-id="{{item.id}}" class="names" type="radio"><span class="checkbox-div-list">{{item.name}}</span> </li>
             </ul>
             <div class="col-xs-12 checkbox-btn-block">
-              <input type="submit" class="btn-save-event" ng-click="guestsList()" value="confirm">
-              <input type="reset" class="btn-delete"  value="cancel" ng-click="closeList()">
+              <input type="submit" class="btn-save-xs" ng-click="guestsList()" value="confirm">
+              <input type="reset" class="btn-info-xs"  value="cancel" ng-click="closeList()">
             </div>
           </div>
         </div>
@@ -84,9 +81,9 @@
             col-sm-12
             col-md-12
             col-lg-12">
-          <input type="submit" class="btn-send-event"  value="send invites" ng-click="sendNewEvent(params)">
-          <input type="submit" class="btn-save-event"  value="save event">
-          <input type="submit" class="btn-delete"  value="delete draft">
+          <input type="submit" class="btn-save-xs"  value="send invites" ng-click="sendNewEvent(params)">
+          <input type="submit" class="btn-info-xs"  value="save event">
+          <input type="submit" class="btn-warning-xs"  value="cancel" ng-click="cancel()">
           </div>
       <!--</form>-->
     </div>

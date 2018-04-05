@@ -9,7 +9,7 @@
     <i class="fa fa-plus icon-size-xs icon-color-menu btn-right-side-menu-click" id="curr" aria-hidden="true" ng-click="showCurrEvList()" ng-model="currEvList" ng-init="currEvList"></i>
     <div  ng-if="currEvList">
       <ul ng-repeat="item in model.currentEvents.data">
-        <li class="event-menu__list btn-right-side-menu-click" ng-click="oneEvent(item.id)" ng-repeat="x in item.date">{{ item.name }}
+        <li class="event-menu__list btn-right-side-menu-click" ng-click="onClickEvent(item.id)" ng-repeat="x in item.date">{{ item.name }}
           <br>
           <span class="txt-description">{{x.confirmed}}</span></li>
       </ul>
@@ -20,7 +20,7 @@
     <i class="fa fa-plus icon-size-xs icon-color-menu btn-right-side-menu-click" id="draft" aria-hidden="true" ng-click="showDraftList()" ng-model="draftEvList" ng-init="draftEvList"></i>
     <div ng-if="draftEvList">
       <ul ng-repeat="item in model.draftEvents.data">
-        <li class="event-menu__list btn-right-side-menu-click" ng-click="oneEvent(item.id)">{{ item.name }}</li>
+        <li class="event-menu__list btn-right-side-menu-click" ng-click="onClickEvent(item.id)">{{ item.name }}</li>
       </ul>
     </div>
   </div>

@@ -1,10 +1,11 @@
-app.controller('l-new.event', function($scope, $postNewEvent, $transferService){
+app.controller('l-new.event', function($scope, $postNewEvent, $state, $transferService){
   let ctrl = this,
-    dateVote = document.getElementById('dateVote'),
-    placeVote = document.getElementById('placeVote'),
-    nameList = document.getElementById('nameList'),
-    addPpl = document.getElementById('addPpl'),
     guests = [];
+    $scope.dateVote = angular.element(document.querySelector('#dateVote'));
+    $scope.placeVote = angular.element(document.querySelector('#placeVote'));
+    $scope.nameList = angular.element(document.querySelector('#nameList'));
+    $scope.addPpl = angular.element(document.querySelector('#addPpl'));
+
   let date = new Date();
 
   ctrl.$onInit = _onInit;
@@ -15,17 +16,14 @@ app.controller('l-new.event', function($scope, $postNewEvent, $transferService){
     $scope.checkboxDiv = false;
   }
   $scope.addDateVote = function () {
-    dateVote.classList.toggle('fa-toggle-off');
-    dateVote.classList.toggle('fa-toggle-on');
+    $scope.dateVote.toggleClass('fa-toggle-off').toggleClass('fa-toggle-on');
   };
   $scope.addPlaceVote = function () {
-    placeVote.classList.toggle('fa-toggle-off');
-    placeVote.classList.toggle('fa-toggle-on');
+    $scope.placeVote.toggleClass('fa-toggle-off').toggleClass('fa-toggle-on');
   };
   $scope.openList = function () {
-    nameList.classList.toggle('non-vis');
-    addPpl.classList.toggle("fa-plus");
-    addPpl.classList.toggle("fa-minus");
+    $scope.nameList.toggleClass('non-vis');
+    $scope.addPpl.toggleClass("fa-plus").toggleClass("fa-minus");
     let allInp = document.querySelectorAll('.names');
     let newGusts = [];
     for (let i=0; i<allInp.length;i++){
@@ -36,7 +34,8 @@ app.controller('l-new.event', function($scope, $postNewEvent, $transferService){
     guests = newGusts;
   };
   $scope.closeList = function () {
-    nameList.classList.add('non-vis');
+    $scope.nameList.toggleClass('non-vis');
+    $scope.addPpl.toggleClass("fa-plus").toggleClass("fa-minus");
   };
   $scope.guestsList = function () {
     let allInp = document.querySelectorAll('.names');
@@ -47,7 +46,7 @@ app.controller('l-new.event', function($scope, $postNewEvent, $transferService){
       }
     }
     guests = newGusts;
-    nameList.classList.add('non-vis');
+    $scope.nameList.toggleClass('non-vis');
   };
   $scope.setDate = function (value) {
     date.getMilliseconds(value);
@@ -87,7 +86,11 @@ app.controller('l-new.event', function($scope, $postNewEvent, $transferService){
     $postNewEvent.newEvent(paramsSend)
       .then(response => {
           console.log(response);
+          $state.go('main');
         },
         error => $scope.errorMessage = error.info.message);
+  };
+  $scope.cancel = function () {
+    $state.go('main');
   }
 });

@@ -31,10 +31,10 @@
           },
           {
             "place": "Address 03",
-            "votes": 0
+            "votes": 4
           }
         ],
-        "confirmed": "Address 01"
+        "confirmed": ""
       }
     ],
     "members": [
@@ -42,23 +42,27 @@
         "invited": [
           {
             "id": "001",
+            "name": "Jane Doe",
             "role": "user",
             "chat_success": false
           },
           {
-            "id": "004",
-            "role": "admin",
-            "chat_success": true
-          },
-          {
             "id": "003",
+            "name": "Samira Doe 3",
             "role": "user",
             "chat_success": false
           }
         ],
         "confirmed": [
+          {
+            "id": "005",
+            "name": "Neimar",
+            "role": "admin",
+            "chat_success": true
+          }
         ]
       }
-    ]
+    ],
+    "additional": ""
   }
 }
