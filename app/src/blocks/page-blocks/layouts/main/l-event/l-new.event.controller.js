@@ -86,7 +86,6 @@ app.controller('l-new.event', function($scope, $postNewEvent, $transferService){
 
     $postNewEvent.newEvent(paramsSend)
       .then(response => {
-          console.log(response);
         },
         error => $scope.errorMessage = error.info.message);
   }

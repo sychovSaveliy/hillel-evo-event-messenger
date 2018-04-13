@@ -1,7 +1,11 @@
 {
-  "login":{
-    "username": "",
-    "password": "",
-    "access_token": "new_user"
+  "conf":{
+    "scope": "read write",
+    "expires_in": 1977,
+    "jti": "string_0000",
+    "access_token": "new_user",
+    "username": "new_user",
+    "token_type": "bearer",
+    "email": "new_user@gmail.com"
   }
 }

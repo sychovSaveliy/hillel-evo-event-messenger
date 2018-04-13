@@ -1,6 +1,8 @@
 {
   "user": {
-    "id": "002",
+    "id": 2,
+    "username": "002",
+    "email": "new_user@gmail.com",
     "name": "Lumina Doe 2",
     "access_token": "002",
     "contacts": [
