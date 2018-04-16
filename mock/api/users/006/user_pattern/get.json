@@ -1,6 +1,8 @@
 {
   "user": {
-    "id": "006",
+    "id": 6,
+    "username": "006",
+    "email": "new_user@gmail.com",
     "name": "Christopher Nolan",
     "access_token": "006",
     "contacts": [

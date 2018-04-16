@@ -1,0 +1,145 @@
+<div class="event-content">
+  <div class="col-xs-12
+                col-sm-12
+                col-md-12
+                col-lg-12">
+    <div class="col-xs-12
+                    create-event-div-box">
+      <div class="col-xs-10">
+        <span class="txt-header">"{{model.title}}" by {{ model.creator }}</span>
+      </div>
+      <div class="col-xs-2">
+        <button class="btn-round-cancel-xs">
+          <i class="fa fa-pencil icon-color" aria-hidden="true" ng-click="openEditor()" id="openEditor"></i>
+        </button>
+      </div>
+    </div>
+    <div class="col-xs-12
+                    create-event-div-box">
+      <div class="col-lg-3
+                  col-md-3
+                  col-sm-3
+                  col-sx-3">
+        <span class="txt-description">Date:</span>
+      </div>
+      <div class="col-lg-9
+                  col-md-9
+                  col-sm-9
+                  col-sx-9">
+        <span class="txt-main-gray non-vis" id="dateConfr">{{model.dateConf}} </span>
+        <table class="table table-condensed non-vis" id="dateDrafts">
+          <tr>
+            <th>Dates</th>
+            <th>Votes</th>
+          </tr>
+          <tr ng-repeat="item in model.dateDrafts">
+            <td class="txt-main-gray">{{item.date}}</td>
+            <td class="txt-description-invert">{{item.votes}}</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="col-xs-12
+                    create-event-div-box">
+      <div class="col-lg-3
+                  col-md-3
+                  col-sm-3
+                  col-sx-3">
+        <span class="txt-description">Place:</span>&nbsp;
+      </div>
+      <div class="col-lg-9
+                  col-md-9
+                  col-sm-9
+                  col-sx-9">
+        <span class="txt-main-gray non-vis" id="placeConfr">{{model.placeConf}} </span>
+        <table class="table table-condensed non-vis" id="placeDrafts">
+          <tr>
+            <th>Places</th>
+            <th>Votes</th>
+          </tr>
+          <tr ng-repeat="item in model.placeDrafts">
+            <td class="txt-main-gray">{{item.place}}</td>
+            <td class="txt-description-invert">{{item.votes}}</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="col-xs-12
+                    create-event-div-box">
+      <div class="col-lg-3
+                  col-md-3
+                  col-sm-3
+                  col-sx-3">
+        <span class="txt-description">Participants invited: </span>
+      </div>
+      <div class="col-lg-9
+                  col-md-9
+                  col-sm-9
+                  col-sx-9">
+        <div ng-repeat="item in model.members.membersInv">
+          <span>{{item.name}}</span>&nbsp;&nbsp;
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12
+                    create-event-div-box">
+      <div class="col-lg-3
+                  col-md-3
+                  col-sm-3
+                  col-sx-3">
+        <span class="txt-description">Participants confirmed: </span>
+      </div>
+      <div class="col-lg-9
+                  col-md-9
+                  col-sm-9
+                  col-sx-9">
+        <div ng-repeat="item in model.members.membersConf">
+          <span class="txt-main-gray">{{item.name}}</span>&nbsp;&nbsp;
+        </div>
+      </div>
+    </div>
+    <div class="create-event-spacer"></div>
+    <div class="col-xs-12
+                    create-event-div-box">
+      <div class="col-lg-3
+                  col-md-3
+                  col-sm-3
+                  col-sx-3">
+        <span class="txt-description">Additional information: </span>
+      </div>
+      <div class="col-lg-9
+                  col-md-9
+                  col-sm-9
+                  col-sx-9">
+        <span class="txt-sm-gray">{{ model.additional }}</span>
+      </div>
+    </div>
+    <div class="div-row-footer
+            col-xs-12
+            col-sm-12
+            col-md-12
+            col-lg-12"
+            id="footer">
+      <input type="submit" class="btn-save-xs non-vis"  value="send invites" ng-click="sendNewEvent(params)" id="sendInv">
+      <input type="submit" class="btn-info-xs non-vis"  value="save event" ng-click="sendNewEvent(params)" id="saveEv">
+      <input type="submit" class="btn-save-xs non-vis"  value="confirm participation" id="confEv">
+      <input type="submit" class="btn-warning-xs non-vis"  value="delete draft" id="delDraft">
+    </div>
+  </div>
+</div>

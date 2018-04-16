@@ -4,6 +4,12 @@
             col-lg-12
             row middle-xs">
   <div class="col-xs-5 end-xs padding-box">
+    <span class="field-name"> Your ID</span>
+  </div>
+  <div class="col-xs-7 padding-box">
+    <span class="field-name"> {{ profile.userName }}</span>
+  </div>
+  <div class="col-xs-5 end-xs padding-box">
     <span class="field-name"> Avatar</span>
   </div>
   <div class="col-xs-7 padding-box">
@@ -12,7 +18,8 @@
   <div class="col-xs-5 end-xs padding-box">
     <span class="field-name">Upload new avatar</span></div>
   <div class="col-xs-7 padding-box">
-    <button type="submit" class="btn-send-event">choose file</button>
+    <button class="btn-round-ok">
+      <i class="fa fa-upload icon-size icon-color" aria-hidden="true"></i></button>
   </div>
 </div>
 <div class="profile-spacer"></div>
@@ -26,9 +33,18 @@
   <div class="col-xs-7 padding-box">
     <input type="text"
            class="input-primary"
-           id="eventName"
+           id="nickName"
+           placeholder="{{profile.nickName}}"
+           ng-value="profile.nickName"
            ng-model="params.name"
+           readonly
            required>
+    <button class="btn-round-ok-xs" id="nickBtn">
+      <i class="fa fa-pencil icon-color" aria-hidden="true" ng-click="readonlyremove('nickName', 'nickBtn', 'nickBtnCansl')"></i>
+    </button>
+    <button class="btn-round-cancel-xs non-vis" id="nickBtnCansl">
+      <i class="fa fa-remove icon-color" aria-hidden="true" ng-click="readonlyset('nickName', 'nickBtn', 'nickBtnCansl')"></i>
+    </button>
   </div>
 </div>
 <div class="profile-spacer"></div>
@@ -51,14 +67,23 @@
             col-md-12
             col-lg-12 row middle-xs">
   <div class="col-xs-5 end-xs padding-box">
-    <span class="field-name">E-mail: </span>
+    <span class="field-name">Primary e-mail: </span>
   </div>
   <div class="col-xs-7 padding-box">
     <input type="email"
+           id="primEmail"
            class="input-primary"
-           ng-value="profile.token"
-           ng-model="params.token"
+           ng-value="profile.email"
+           ng-model="params.email"
+           placeholder="{{profile.email}}"
            readonly>
+    <button class="btn-round-ok-xs" id="editMail">
+      <i class="fa fa-pencil icon-color" aria-hidden="true" ng-click="readonlyremove('primEmail', 'editMail', 'mailBtnCansl')"></i>
+    </button>
+    <button class="btn-round-cancel-xs non-vis" id="mailBtnCansl">
+      <i class="fa fa-remove icon-color" aria-hidden="true" ng-click="readonlyset('primEmail', 'editMail', 'mailBtnCansl')"></i>
+    </button>
+
   </div>
   <div class="col-xs-5 end-xs padding-box">
     <span class="field-name">Add e-mail: </span>
@@ -66,7 +91,7 @@
   <div class="col-xs-7 padding-box">
     <input type="email"
            class="input-primary"
-           ng-model="params.mail">
+           ng-model="params.addmail">
   </div>
 </div>
 <div class="profile-spacer"></div>
@@ -77,7 +102,7 @@
   <div class="col-xs-5 end-xs padding-box">
   </div>
   <div class="col-xs-7 padding-box">
-    <button class="btn-send-event" ng-click="setEditData(params)">save</button>
+    <button class="btn-save-xs" ng-click="setEditData(params)">save</button>
+    <button class="btn-info-xs" ng-click="cancelEdit()">cancel</button>
   </div>
 </div>
-

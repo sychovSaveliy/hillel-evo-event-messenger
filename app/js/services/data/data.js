@@ -42,6 +42,15 @@ app.factory('$data', ['$resource', '$defaultService', '$q', function ($resource,
 		}
 	});
 
+  _$data.event = $resource(_url + '/event/:id', {},{
+    action:{
+      method: "GET",
+      params:{
+        data:"@id"
+      }
+    }
+  });
+
 	_$data.chats = $resource(_url + '/chat/:token', {}, {
 	  action: {
 	    method: "GET",

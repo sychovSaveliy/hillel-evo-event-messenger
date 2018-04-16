@@ -18,6 +18,21 @@ button
   &:hover, &:active
     cursor: pointer
 
+.button-default-xs
+  font:
+    size: 12px
+    weight: map-get($font-btn, 'weight')
+  height: 28px
+  padding-left: 8px
+  padding-right: 8px
+  margin-left: 5px
+  margin-right: 5px
+  align-items: center
+  transition: 0.2s
+  @include set-border(0px, 14px)
+  &:hover, &:active
+    cursor: pointer
+
 .button-round
   height: 40px
   width: 40px
@@ -28,9 +43,9 @@ button
   @include set-border(0px, 20px)
 
 .button-round-xs
-  height: 24px
-  width: 24px
-  padding: 4px
+  height: 25px
+  width: 25px
+  padding: 3px
   align-items: center
   transition: 0.2s
   @include set-border(0px, 50%)
@@ -79,15 +94,35 @@ input.btn-submit
   &:active
     @include color-dark($bg-color, 'gray', 30%)
 
-.btn-info
-  @extend .button-default
+.btn-info-xs
+  @extend .button-default-xs
   background-color: map-get($bg-color, 'gray')
   color: map-get($font-color, 'primary')
-  width: 80px
+  min-width: 80px
   &:hover
     @include color-dark($bg-color, 'gray', 20%)
   &:active
     @include color-dark($bg-color, 'gray', 30%)
+
+.btn-save-xs
+  @extend .button-default-xs
+  @include color-light($bg-color, 'green', 5%)
+  color: map-get($font-color, 'primary')
+  min-width: 80px
+  &:hover
+    @include color-light($bg-color, 'green', 30%)
+  &:active
+    @include color-light($bg-color, 'green', 30%)
+
+.btn-warning-xs
+  @extend .button-default-xs
+  background-color: map-get($bg-color, 'orange')
+  color: map-get($font-color, 'primary')
+  min-width: 80px
+  &:hover
+    @include color-light($bg-color, 'orange', 10%)
+  &:active
+    @include color-light($bg-color, 'orange', 30%)
 
 .btn-delete
   @extend .button-default
@@ -164,7 +199,7 @@ input.btn-submit
 
 .btn-round-cancel-xs
   @extend .button-round-xs
-  background-color:  map-get($bg-color, 'dark')
+  background-color:  map-get($bg-color, 'gray')
   color: map-get($font-color, 'gray')
   &:hover
     @include color-dark($bg-color, 'dark', 20%)
@@ -204,3 +239,13 @@ input.btn-submit
     color: white
     cursor: pointer
 
+input.btn-confirm
+  @extend .button-default
+  @include color-light($bg-color, 'green', 5%)
+  color: map-get($font-color, 'primary')
+  width: auto
+  margin-top: 50px
+  &:hover
+    @include color-light($bg-color, 'green', 30%)
+  &:active
+    @include color-light($bg-color, 'green', 30%)

@@ -1,8 +1,9 @@
 {
   "user": {
-    "id": "new_user",
+    "username": "new_user",
     "name": "",
     "access_token": "new_user",
+    "email": "new_user@gmail.com",
     "contacts": [
     ],
     "events": [

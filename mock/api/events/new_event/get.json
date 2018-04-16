@@ -1,1 +1,48 @@
-{"event":{"id":"new_event","status":true,"date":[{"drafts":[{"date":"","votes":0}],"confirmed":"2018-04-01T11:25:57.626Z"}],"place":[{"drafts":[{"place":"","votes":0}]}],"members":[]}}
+{
+  "event": {
+    "id": "new_event",
+    "name": "New Some Event",
+    "status": false,
+    "date": [
+      {
+        "drafts": [
+        ],
+        "confirmed": "01.05.2018"
+      }
+    ],
+    "place": [
+      {
+        "drafts": [
+        ],
+        "confirmed": "Egipt, Sharm el Sheikh"
+      }
+    ],
+    "members": [
+      {
+        "invited": [
+          {
+            "id": "001",
+            "name": "Jane Doe",
+            "role": "user",
+            "chat_success": false
+          },
+          {
+            "id": "003",
+            "name": "Samira Doe 3",
+            "role": "user",
+            "chat_success": false
+          }
+        ],
+        "confirmed": [
+          {
+            "id": "005",
+            "name": "Neimar",
+            "role": "admin",
+            "chat_success": true
+          }
+        ]
+      }
+    ],
+    "additional": "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo."
+  }
+}

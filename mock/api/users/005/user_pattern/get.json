@@ -1,6 +1,8 @@
 {
   "user": {
-    "id": "005",
+    "id": 5,
+    "username": "005",
+    "email": "new_user@gmail.com",
     "name": "Neimar",
     "access_token": "005",
     "contacts": [
@@ -66,7 +68,7 @@
         "id": "009"
       },
       {
-        "id": "002"
+        "id": "new_event"
       },
       {
         "id": "010"
