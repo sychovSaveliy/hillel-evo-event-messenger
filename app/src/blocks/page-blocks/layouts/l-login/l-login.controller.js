@@ -9,7 +9,7 @@ app.controller('l-login', function($scope, $state, $flowDataAuth, $transferServi
             let _token = response;
             $transferService.setData({name:'signin',data:response});
             $transferService.setData({name: 'token', data:_token});
-              localStorage.setItem('token', _token);
+              sessionStorage.setItem('token', _token);
               $state.go('main');
             },
             error => $scope.errorMessage = error.message);

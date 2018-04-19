@@ -1,6 +1,6 @@
 app.factory('$data', ['$resource', '$defaultService', '$q', function ($resource, $defaultService, $q) {
   let authorisation_token = function () {
-      return 'Bearer ' + localStorage.getItem("token");
+      return 'Bearer ' + sessionStorage.getItem("token");
     };
 
 	let _$data = {},

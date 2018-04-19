@@ -95,7 +95,8 @@ gulp.task('watch:server',['server', 'sass', 'css:libs'], function () {
 });
 gulp.task('watch:localServer',['localServer', 'sass', 'css:libs'], function () {
     gulp.watch(paths.js, ['localServer']),
-    gulp.watch([paths.sass.common, paths.sass.blocks], ['sass'])
+    gulp.watch([paths.sass.common, paths.sass.blocks], ['sass']),
+      gulp.watch(paths.css.libs, ['css:libs'])
 });
 
 gulp.task('sass:templates', function () {

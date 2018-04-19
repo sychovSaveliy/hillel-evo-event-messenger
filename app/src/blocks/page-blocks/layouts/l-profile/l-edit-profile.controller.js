@@ -5,7 +5,7 @@ app.controller('l-edit-profile', function($scope, $state, $flowDataUser, $transf
   ctrl.$onInit = _onInit;
   $scope.profile = $scope.profile || {};
   function _onInit() {
-    let _token = localStorage.getItem('token');
+    let _token = sessionStorage.getItem('token');
     $scope.readonlyremove = function (id1, id2, id3) {
       var makeEditable = document.getElementById(id1).removeAttribute('readonly');
       var invisbtnedit = document.getElementById(id2).classList.toggle('non-vis');

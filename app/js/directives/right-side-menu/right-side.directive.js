@@ -37,12 +37,16 @@ app.directive("rightSide", function () {
       var oldId = '';
       $scope.onClickEvent = function (id) {
         if(oldId !== id){
+          console.log(id);
           $flowDataEvent.getDataEvent({id: id})
             .then(function(response){
               oldId = response.id;
               $transferService.setData({name: 'one-event', data: response});
-              $state.go('view-event', {'id': id});
+              // $state.go('view-event', {'id': id});
               return id;
+            })
+            .then(function () {
+              $state.go('view-event', {'id': id});
             });
 
         }
@@ -53,7 +57,7 @@ app.directive("rightSide", function () {
               .then(function(response){
                 console.log(response);
                 $transferService.setData({name: 'one-event', data: response});
-                $state.go('view-event');
+                // $state.go('view-event');
               });
           }
         })
