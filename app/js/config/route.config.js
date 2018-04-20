@@ -31,7 +31,7 @@ app.config(function($stateProvider, $urlRouterProvider){
             }
         })
         .state('chat', {
-          url: '/chat',
+          url: '/chat/:id',
           views: {
             "":{
               templateUrl: 'app/src/blocks/page-blocks/layouts/main/l-chat.html',

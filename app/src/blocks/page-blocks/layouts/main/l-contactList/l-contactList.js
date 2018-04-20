@@ -8,12 +8,12 @@ app.controller('main.contactList', function($scope, $flowDataChats, $transferSer
   }
 
   $scope.onClickContact = function (id) {
-    $state.go('chat');
+    $state.go('chat', {'id': id});
     $scope.main.currID = id;
-    $flowDataChats.getDataChats({token: id})
+    $flowDataChats.getDataChats({id: id})
       .then(function(response){
         $transferService.setData({name: 'chats', data: response.messages});
-      })
+      });
     return id;
   };
 

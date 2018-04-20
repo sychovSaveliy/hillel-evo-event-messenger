@@ -14,7 +14,14 @@ app.controller('l-chat.controller', function($scope, $transferService, $timeout,
     $scope.main.hiddenDiv = document.querySelector('.hiddenDiv');
     $scope.main.showArrow = false;
   }
-  
+
+    function idChat () {
+    var id = window.location.href.toString().split("/chat/");
+    for (let i = 0; i < id.length; i++) {
+      return id[1];
+    }
+  };
+
   function scrollHandler () {
     $scope.main.contentChatHeight = $scope.main.chatBox.clientHeight;
     $transferService.setData({name: 'currScroll', data: $scope.main.contentChatHeight-$scope.main.chatHeightVis});
@@ -55,7 +62,7 @@ app.controller('l-chat.controller', function($scope, $transferService, $timeout,
         }
       };
       $scope.scrollDown = function () {
-        $scope.main.chatWrapper.scrollTo(0, $transferService.getData('currScroll')); 
+        $scope.main.chatWrapper.scrollTo(0, $transferService.getData('currScroll'));
         };
       $scope.main.chatWrapper.scrollTo(0, $scope.main.contentChatHeight-$scope.main.chatHeightVis);
   }
@@ -64,6 +71,9 @@ app.controller('l-chat.controller', function($scope, $transferService, $timeout,
     let currentTime = new Date();
     let month = currentTime.getMonth() + 1;
     if (!$scope.main.message) return;
+    if(id == undefined) {
+      id = idChat();
+    }
     let sender = {
       author: author,
       id: id,
@@ -71,7 +81,6 @@ app.controller('l-chat.controller', function($scope, $transferService, $timeout,
       date: currentTime.getDate() + '-'+month+'-'+currentTime.getFullYear(),
       time: currentTime.getHours() +':'+ currentTime.getMinutes() +':'+ currentTime.getSeconds()
     };
-    
     $postSendMes.sendMes(sender)
       .then(response => {
         $scope.main.chats = response.messages;
