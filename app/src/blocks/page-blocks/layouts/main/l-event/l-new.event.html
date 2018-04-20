@@ -3,7 +3,7 @@
                 col-sm-12
                 col-md-12
                 col-lg-12">
-      <!--<form name="newEvent">-->
+      <form name="newEvent">
         <div class="col-xs-12
                     create-event-div-box">
           <span class="event-name-list">Event title: </span>
@@ -15,16 +15,57 @@
         <div class="create-event-spacer"></div>
         <div class="col-xs-12
                     create-event-div-box">
-          <span class="event-name-list">Date: </span>
-          <!--<span class="txt-description"> from: </span>-->
-          <input type="datetime-local"
-                 class="input-primary"
-                 ng-model="params.date"
-                 ng-change="setDate(value)" required>
-          <span class="event-name-list">Add date: </span>
-          <i class="fa fa-plus event-date-vote" aria-hidden="true"></i>
+          <span class="event-name-list">Choose the date: </span>
+          <i class="fa fa-chevron-right event-date-vote" aria-hidden="true" id="showVar" ng-click="openVarList()"></i>
+          <div class="checkDate-div bg-gray-dark non-vis" id="dateList">
+            <ul class="checkbox-ul">
+              <li ng-repeat="item in selectDates" class="checkbox-div-list">
+                <span class="check-dates-list"
+                      ng-attr-id="{{item.id}}"
+                      ng-click="chooseDateType(item.showInpId)">
+                  {{item.text}}
+                </span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="non-vis varlist" id="exDate">
+            <input type="date"
+                   class="input-set-date"
+                   ng-model="params.date"
+                   ng-mouseleave="setDate(params.date)">
+          </div>
+          <div class="non-vis varlist" id="exDateTime">
+            <input type="datetime-local"
+                   class="input-set-date"
+                   ng-model="params.date"
+                   ng-mouseleave="setDate(params.date)">
+          </div>
+          <div class="non-vis varlist" id="exDateDiap">
+            <span class="event-name-list">From: </span>
+            <input type="date"
+                   class="input-set-date">
+            <span class="event-name-list">to: </span>
+            <input type="date"
+                   class="input-set-date">
+          </div>
+          <div class="non-vis varlist" id="exDateDiapTime">
+            <span class="event-name-list">From: </span>
+            <input type="datetime-local"
+                   class="input-set-date">
+            <span class="event-name-list">to: </span>
+            <input type="datetime-local"
+                   class="input-set-date">
+          </div>
           <br>
         </div>
+      <div class="col-xs-12
+                    create-event-div-box">
+
+        <span class="event-name-list">Add date: </span>
+        <i class="fa fa-plus event-date-vote" aria-hidden="true"></i>
+        <br>
+      </div>
           <div class="col-xs-12
                     create-event-div-box">
             <span class="event-name-list">Allow voting for date:&amp;nbsp </span>
@@ -37,7 +78,7 @@
           <input type="text"
                  class="input-primary"
                  id="eventPlace"
-                 ng-model="params.place" required>
+                 ng-model="params.place">
           <i class="fa fa-map-marker event-date-vote" aria-hidden="true" ></i>
           <span class="event-name-list">Add place: </span>
           <i class="fa fa-plus event-date-vote" aria-hidden="true"></i>
@@ -54,7 +95,8 @@
           <i class="fa fa-plus event-date-vote" id="addPpl" aria-hidden="true" ng-click="openList()"></i>
           <div class="checkbox-div bg-gray-dark non-vis" id="nameList">
             <ul class="checkbox-ul">
-              <li ng-repeat="item in main.dataUser.contacts" class="checkbox-div-list"><input ng-attr-id="{{item.id}}" class="names" type="radio"><span class="checkbox-div-list">{{item.name}}</span> </li>
+              <li ng-repeat="item in main.dataUser.contacts" class="checkbox-div-list">
+                <input ng-attr-id="{{item.id}}" class="names" type="radio" value="{{item.name}}"><span class="checkbox-div-list">{{item.name}}</span> </li>
             </ul>
             <div class="col-xs-12 checkbox-btn-block">
               <input type="submit" class="btn-save-xs" ng-click="guestsList()" value="confirm">
@@ -74,7 +116,8 @@
             <span class="event-name-list">Additional information: </span>
             <textarea type="text" rows="6"
                       class="input-primary"
-                      id="additional"></textarea>
+                      id="additional"
+            ng-model="params.additional"></textarea>
           </div>
         <div class="div-row-footer
             col-xs-12
@@ -82,9 +125,15 @@
             col-md-12
             col-lg-12">
           <input type="submit" class="btn-save-xs"  value="send invites" ng-click="sendNewEvent(params)">
-          <input type="submit" class="btn-info-xs"  value="save event">
+          <input type="submit" class="btn-info-xs"  value="save event" ng-click="saveEvent(params)">
           <input type="submit" class="btn-warning-xs"  value="cancel" ng-click="cancel()">
           </div>
-      <!--</form>-->
+      <div class="popup-message" id="myModal">
+        <div class="popup-message-content">
+          <span class="btn-close" ng-click="closePopup()">&times;</span>
+          <span class="txt-primary">{{ errorMessage }}</span>
+        </div>
+      </div>
+      </form>
     </div>
 </div>
