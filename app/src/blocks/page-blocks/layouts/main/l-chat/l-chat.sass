@@ -45,7 +45,7 @@
   z-index: 3
   position: fixed
   top: 60%
-  right: 30%
+  
   cursor: pointer
   height: 46px
   width: 46px
@@ -62,6 +62,11 @@
     @include color-dark($bg-color, 'gray', 30%)
     color: map-get($font-invert, 'color')
 
+.arrow-right
+    right: 5%
+
+.arrow-center
+    right: 30%    
 
 .non-vis
   display: none
