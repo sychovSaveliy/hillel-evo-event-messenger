@@ -107,7 +107,6 @@ app.controller('l-view.event', function($scope, $flowDataEvent, $transferService
       .then(function(response){
         $scope.viewEvent = response;
         renderAll();
-        console.log($scope.viewEvent);
         return $scope.viewEvent;
       });
   }

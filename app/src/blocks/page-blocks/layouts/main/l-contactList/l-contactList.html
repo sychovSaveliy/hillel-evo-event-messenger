@@ -6,11 +6,11 @@
             left-sidebar">
   <div>
     <form class ='search'>
-      <input class="input-search" type="text" placeholder="Искать в контактах...">
+      <input class="input-search" ng-model="query" type="text" placeholder="Искать в контактах...">
       <button type="submit" class="btn-round-ok-xs" value=""><div class="icon"><i class="fa fa-search" aria-hidden="true"></i></div></button>
     </form>
   </div>
-  <div class="contactList-user" ng-repeat="item in main.dataUser.contacts">
+  <div class="contactList-user" ng-repeat="item in main.dataUser.contacts | filter:{name:query}">
     <div class="user-contactList-photo"><img ng-src="{{ item.avatar}}"></div>
     <div class="user-contactList-name" ng-click="onClickContact(item.private_chat)">{{item.name}}</div>
   </div>

@@ -54,7 +54,6 @@ app.directive("rightSide", function () {
           if(newVal===id){
             $flowDataEvent.getDataEvent({id: newVal})
               .then(function(response){
-                console.log(response);
                 $transferService.setData({name: 'one-event', data: response});
               });
           }
