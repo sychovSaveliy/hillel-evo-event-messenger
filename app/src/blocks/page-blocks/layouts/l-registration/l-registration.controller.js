@@ -8,7 +8,6 @@ app.controller('l-registration', function($scope, $state, $flowDataRegistr, $tra
         // $transferService.setData({name: 'token', data:_token});
         // sessionStorage.setItem('token', _token);
         // $state.go('main');
-      console.log("mail sent", response);
       },
       error => $scope.errorMessage = error);
   // $scope.setReg = function (params) {

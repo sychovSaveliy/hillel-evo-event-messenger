@@ -12,6 +12,8 @@ app.controller('calendar.controller', function($scope, $compile, $timeout, uiCal
     {title: 'Birthday Party',start: new Date(y, m, d + 1, 19, 0),end: new Date(y, m, d + 1, 22, 30),allDay: false},
     {title: 'Click for Google',start: new Date(y, m, 28),end: new Date(y, m, 29),url: 'http://google.com/'}
   ];
+  
+
   $scope.eventsF = function (start, end, timezone, callback) {
     let s = new Date(start).getTime() / 1000;
     let e = new Date(end).getTime() / 1000;

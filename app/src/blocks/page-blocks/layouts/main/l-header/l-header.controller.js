@@ -8,7 +8,6 @@ app.controller('l-header.controller', function($scope, $state){
     $scope.main.header = {};
     $scope.main.header.date = new Date();
     $scope.bureger = angular.element(document.querySelector('#bureger'));
-console.log($scope.bureger);
   }
   $scope.openProfile = function () {
     $state.go('profile');

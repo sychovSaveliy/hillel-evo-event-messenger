@@ -143,9 +143,7 @@ app.controller('l-new.event', function($scope, $postNewEvent, $state, $transferS
      messCheckDate = 'You did not set any date and time. Choose the date in "date" field or save the event as draft.',
      messCheckPlace = 'You did not set any place. Choose the date in "Place" field or save the event as draft.';
 
-  //POST
   $scope.sendNewEvent = function(params){
-    console.log(params);
     if(guests.length <= 0){
       checkBeforeSend(messCheckContacts);
     } else if(!$scope.formatedDate(params.date)){
@@ -194,7 +192,6 @@ app.controller('l-new.event', function($scope, $postNewEvent, $state, $transferS
         ],
         "additional": params.additional
       };
-      console.log(paramsSend);
       $postNewEvent.newEvent(paramsSend)
         .then(response => {
             $state.go('main');
@@ -246,10 +243,8 @@ app.controller('l-new.event', function($scope, $postNewEvent, $state, $transferS
         }
       ]
     };
-    console.log(paramsSend);
     $postNewEvent.newEvent(paramsSend)
       .then(response => {
-          console.log(response);
           $state.go('main');
         },
         error => $scope.errorMessage = error.info.message);
