@@ -51,11 +51,11 @@ app.factory('$data', ['$resource', '$defaultService', '$q', function ($resource,
     }
   });
 
-	_$data.chats = $resource(_url + '/chat/:token', {}, {
+	_$data.chats = $resource(_url + '/chat/:id', {}, {
 	  action: {
 	    method: "GET",
       params: {
-	      params: "@token"
+        data:"@id"
       }
     }
   });
