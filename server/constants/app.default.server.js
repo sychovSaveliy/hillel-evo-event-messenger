@@ -1,6 +1,6 @@
 let server ={
   protocol: "http",
   host: "eventmessanger.com",
-  port: "80",
+  port: "5006",
 };
 app.constant('$default', server);
